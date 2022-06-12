@@ -24,3 +24,4 @@ Research: før = 30 dage, efter = 60 dage
 - AI vil grupere flåder sammen lidt mere
 - Frankrig AI, tagere en optimal focus tree
 - Addet forts i Belgium
+- Noget terrain er blevet ændret. (Hills ude foran berlin)
