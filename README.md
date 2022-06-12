@@ -25,3 +25,6 @@ Research: før = 30 dage, efter = 60 dage
 - Frankrig AI, tagere en optimal focus tree
 - Addet forts i Belgium
 - Noget terrain er blevet ændret. (Hills ude foran berlin)
+
+------UTILITIES------
+- Topbar resources tiljøet, en mod der hjælper med at give oversigt
