@@ -6,7 +6,7 @@ state={
 	
 	state_category = pastoral
 	resources={
-		rubber=11 # was: 4
+		rubber=4 # was: 4
 	}
 	history={
 		owner = FRA

@@ -1777,7 +1777,7 @@
 
 	focus = {
 		id = finlands_future
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = prepare_for_the_worst }
 		x = 0
 		y = 1
@@ -1880,7 +1880,6 @@
 		}
 
 		completion_reward = {
-
 			111 = {
 				add_manpower = 15000
 			}
@@ -1951,15 +1950,13 @@
 			}
 		}
 
-		
-	
+
+		}
 	}
-
-
 
 	focus = {
 		id = revenge_war
-		icon = GFX_goal_generic_defence
+		icon = GFX_goal_anti_comintern_pact
 		x = 0
 		y = 1
 		relative_position_id = war_is_upon_us
@@ -1978,11 +1975,12 @@
 			factor = 10
 		}
 		completion_reward = {
+			add_ideas = round_two
 			declare_war_on = {
 				target = SOV
 				type = annex_everything
 			}
-			add_idea = round_two
+			
 		}
 
 	}

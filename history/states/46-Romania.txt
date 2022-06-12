@@ -4,7 +4,7 @@ state={
 	name="STATE_46" # Muntenia
 	manpower = 4461400
 	resources={
-		oil=114 # was: 114
+		oil=109 # was: 114
 	}
 
 	state_category = city
@@ -16,8 +16,8 @@ state={
 		victory_points = { 657 3 }
 		buildings = {
 			infrastructure = 6
-			arms_factory = 4
-			industrial_complex = 1
+			arms_factory = 5
+			industrial_complex = 2
 			air_base = 3
 			657 = {
 				naval_base = 8

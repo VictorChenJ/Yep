@@ -1,0 +1,8 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_to_uraliin"
+		texturefile = "gfx/interface/ideas/to_uraliin.dds"
+	}
+
+}
