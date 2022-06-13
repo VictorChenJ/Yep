@@ -13,6 +13,7 @@
 - Buffet UK. Industrial support for UKs puppet states er blevet bedre samt med burma road.
 - Kina og de små lande er blvet buffet. De har fået lidt flere starter factories.
 - Manchuria har fået lidt olie
+- USA har det nu lidt nemmere at få nukes ;)
 
 ------ANDRE TING------
 
@@ -25,6 +26,10 @@ Research: før = 30 dage, efter = 60 dage
 - Frankrig AI, tagere en optimal focus tree
 - Addet forts i Belgium
 - Noget terrain er blevet ændret. (Hills ude foran berlin)
+- National focus for at forske Jet fly giver hurtigere bonus så det er muligt at faktisk få dem
+	- Tyskland
+	- Japan
+	- UK
 
 ------UTILITIES------
 - Topbar resources tiljøet, en mod der hjælper med at give oversigt
