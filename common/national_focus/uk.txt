@@ -898,13 +898,14 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = UK_secret_focus
-				bonus = 1.0
+				ahead_reduction = 2
+				bonus = 1
 				uses = 2
 				category = rocketry
 			}
 			add_tech_bonus = {
 				name = UK_secret_focus
-				bonus = 1.0
+				bonus = 1.3
 				uses = 1
 				category = nuclear
 			}
@@ -1255,8 +1256,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = uk_jet_focus
+				ahead_reduction = 2
 				bonus = 1.0
-				uses = 4
+				uses = 2
 				category = jet_technology
 			}
 		}
