@@ -14,6 +14,11 @@
 - Kina og de små lande er blvet buffet. De har fået lidt flere starter factories.
 - Manchuria har fået lidt olie
 - USA har det nu lidt nemmere at få nukes ;)
+- Strat bombers har mindre defense (Det er nemmere at skyde dem ned)
+- Strat bombers skader dog lidt mere, men er også dyrer at producere
+- Heavy fighters har fået mere defense og lidt mere attack
+- Normale fighter har dog fået en lille smule mere agility så de kan counter heavy fighters 
+
 
 ------ANDRE TING------
 
