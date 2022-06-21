@@ -18,6 +18,8 @@
 - Strat bombers skader dog lidt mere, men er også dyrer at producere
 - Heavy fighters har fået mere defense og lidt mere attack
 - Normale fighter har dog fået en lille smule mere agility så de kan counter heavy fighters 
+- Rockets skader mere
+- Sub 4 koster mere at bygge (1 mere stål og tagere længere tid), har værre visibility og er lidt langsommere
 
 
 ------ANDRE TING------
