@@ -54,10 +54,10 @@ FRA_historical_plan = {
 		FRA_begin_rearmament
 		FRA_defensive_focus
 		#1939
-		FRA_firepower_kills
-		FRA_infantry_focus
-		FRA_artillery_focus
-		FRA_heavy_armor_focus
+		FRA_methodical_battle
+		FRA_fortification_focus
+		FRA_alpine_forts
+		FRA_extend_the_maginot_line
 		FRA_army_reform
 		#1940
 		FRA_devalue_the_franc
