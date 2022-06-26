@@ -1808,6 +1808,7 @@
 						level = 3
 						instant_build = yes
 					}
+				}
 				150 = { #savo
 					set_building_level = {
 						type = bunker
@@ -1853,8 +1854,10 @@
 					}
 
 				}
-			}
+
+			
 		}
+		
 		}
 	}
 
@@ -1910,43 +1913,43 @@
 		}
 		capital_scope = {
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 			create_unit = { 
-				division = "name = \"Defense of Finland\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
 		}
 

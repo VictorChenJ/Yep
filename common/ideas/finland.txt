@@ -1,5 +1,5 @@
 ideas = {
-
+	
 	country = {
 		sisu = {
 			
@@ -69,6 +69,9 @@ ideas = {
 
 		}
 	}
+	}
+		
+
 
 	# TECHNOLOGY
 
@@ -122,4 +125,5 @@ ideas = {
 			}
 		}
 	}
+
 }
