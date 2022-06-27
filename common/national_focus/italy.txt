@@ -2631,4 +2631,210 @@
 		}
 	}
 
+ ## Min modded tree
+
+ focus = {
+	id = ITA_regia_marina
+	icon = GFX_goal_ITA_Regia_Marina
+	x = 40
+	y = 0
+	cost = 5
+	ai_will_do = {
+		factor = 10
+	}
+
+	available_if_capitulated = yes
+	mutually_exclusive = { focus = ITA_lessons_of_war}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		navy_experience = 50
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = dockyard
+					size > 2
+					include_locked = yes
+				}
+				is_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		add_doctrine_cost_reduction = {
+			name = air_bonus
+			cost_reduction = 0.25
+			uses = 1
+			category = naval_doctrine
+		}
+	}
 }
+
+focus = {
+	id = ITA_lessons_of_war
+	icon = GFX_Italian_Shield
+	x = 10
+	y = 0
+	relative_position_id = ITA_regia_marina
+	mutually_exclusive = { focus = ITA_regia_marina}
+	cost = 5
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available_if_capitulated = yes
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	bypass = {
+	}
+
+	completion_reward = {
+		add_political_power = 50
+		add_war_support = 0.05
+		army_experience = 20
+
+	}
+}
+
+focus = {
+	id = ITA_new_rifle
+	icon = GFX_goal_generic_small_arms
+	prerequisite = { focus = ITA_lessons_of_war}
+	x = -1
+	y = 1
+	relative_position_id = ITA_lessons_of_war
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = doc_bonus
+			bonus = 0.50
+			uses = 2
+			category = infantry_weapons
+		}	
+	}
+}
+
+focus = {
+	id = ITA_new_artillery
+	icon = GFX_goal_generic_army_artillery2
+	prerequisite = { focus = ITA_new_rifle }
+	x = 0
+	y = 1
+	relative_position_id = ITA_new_rifle
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = doc_bonus
+			bonus = 0.50
+			uses = 2
+			category = artillery
+		}
+	}
+}
+
+focus = {
+	id = ITA_sf_expansion
+	icon = GFX_goal_generic_special_forces
+	prerequisite = { focus = ITA_lessons_of_war }
+	x = 1
+	y = 1
+	relative_position_id = ITA_lessons_of_war
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = sf_bonus
+			bonus = 0.5
+			uses = 2
+			category = marine_tech
+			category = para_tech
+		}
+	}
+}
+
+focus = {
+	id = ITA_alpini
+	icon = GFX_focus_generic_strike_at_democracy1
+	prerequisite = { focus = ITA_sf_expansion }
+	x = 0
+	y = 1
+	relative_position_id = ITA_sf_expansion
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = sf_bonus
+			bonus = 0.75
+			ahead_reduction = 0.5
+			uses = 1
+			category = mountaineers_tech
+		}
+		swap_ideas = {
+			add_ideas = ITA_arditi_legacy
+		}
+	}
+}
+
+focus = {
+	id = ITA_legacy_of_the_arditi
+	icon = GFX_goal_ITA_Regio_Esercito
+	prerequisite = { focus = ITA_alpini }
+	prerequisite = {focus = ITA_new_artillery }
+	x = -1
+	y = 1
+	relative_position_id = ITA_alpini
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_idea = ITA_arditi_legacy2
+		remove_idea = ITA_arditi_legacy
+	}
+}
+
+
+}
+
+
