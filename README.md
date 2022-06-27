@@ -40,3 +40,17 @@ Research: før = 30 dage, efter = 60 dage
 
 ------UTILITIES------
 - Topbar resources tiljøet, en mod der hjælper med at give oversigt
+
+
+------National Focus------
+Italien har fået en focus der expander deres muligheder i krigen
+
+
+------To Do------
+Forstørre Japans national focus
+Forstørre Tysklands national focus
+Forstørre UKs national focus
+Forstørre USAs national focus
+Lidt mere på Italien (Amph og marine)
+
+Måske forstørre Rumænien og Ungarns national focus 
