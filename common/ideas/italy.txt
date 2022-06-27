@@ -119,7 +119,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				army_org_factor = 0.025
+				army_org_factor = 0.03
 				planning_speed = 0.10
 				army_leader_start_level = 1
 				military_leader_cost_factor = -0.50
@@ -296,6 +296,22 @@ ideas = {
 				special_forces_cap = 0.05
 			}
 		}
+
+		ITA_xmas = {			
+			
+			allowed = {
+				original_tag = "ITA"
+			}
+			
+			picture = xmas
+			
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_cap = 0.05
+				naval_torpedo_screen_penetration_factor = 0.10
+			}
+		}
 	
 		ITA_incompetent_officers = {			
 			
@@ -308,8 +324,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_attack_factor = -0.1
-				army_defence_factor = -0.1
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
 			}
 		}
 
@@ -362,9 +378,6 @@ ideas = {
 			
 			modifier = {
 				local_resources_factor = 0.15
-				production_speed_synthetic_refinery_factor = 0.1
-				production_speed_synthetic_rubber_refinery_factor = 0.1
-				production_speed_steel_refinery_factor = 0.1
 			}
 		}
 	
@@ -380,9 +393,6 @@ ideas = {
 			
 			modifier = {
 				local_resources_factor = 0.05
-				production_speed_synthetic_refinery_factor = 0.1
-				production_speed_synthetic_rubber_refinery_factor = 0.1
-				production_speed_steel_refinery_factor = 0.1
 			}
 		}
 	

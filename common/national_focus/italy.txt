@@ -2636,7 +2636,7 @@
  focus = {
 	id = ITA_regia_marina
 	icon = GFX_goal_ITA_Regia_Marina
-	x = 40
+	x = 27
 	y = 0
 	cost = 5
 	ai_will_do = {
@@ -2649,6 +2649,8 @@
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
+		add_political_power = 50
+		add_war_support = 0.05
 		navy_experience = 50
 		random_owned_controlled_state = {
 			limit = {
@@ -2805,9 +2807,7 @@ focus = {
 			uses = 1
 			category = mountaineers_tech
 		}
-		swap_ideas = {
-			add_ideas = ITA_arditi_legacy
-		}
+		add_ideas = ITA_arditi_legacy
 	}
 }
 
@@ -2819,6 +2819,138 @@ focus = {
 	x = -1
 	y = 1
 	relative_position_id = ITA_alpini
+	cost = 10
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+
+		swap_ideas = {
+
+			add_idea = ITA_arditi_legacy2
+			remove_idea = ITA_arditi_legacy
+
+		}
+	}
+}
+
+focus = {
+	id = ITA_reject_innovation
+	icon = GFX_goal_ita_vittorio_ambrosio
+	prerequisite = { focus = ITA_legacy_of_the_arditi }
+	mutually_exclusive = { focus = ITA_drain_the_swamp  }
+	x = -2
+	y = 1
+	relative_position_id = ITA_legacy_of_the_arditi
+	cost = 10
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_ideas = ITA_new_army_idea
+	}
+}
+
+focus = {
+	id = ITA_trench_warfare
+	icon = GFX_focus_generic_provoke_border_clashes
+	prerequisite = { focus = ITA_reject_innovation }
+	x = 0
+	y = 1
+	relative_position_id = ITA_reject_innovation
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = sf_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = cat_grand_battle_plan
+		}
+	}
+}
+
+focus = {
+	id = ITA_assault_tactics
+	icon = GFX_focus_generic_manpower
+	prerequisite = { focus = ITA_trench_warfare }
+	mutually_exclusive = { focus = ITA_infiltration_tactics }
+	x = -3
+	y = 1
+	relative_position_id = ITA_trench_warfare
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = doc_bonus
+			cost_reduction = 0.40
+			uses = 2
+			technology = grand_mechanized_offensive
+			technology = assault_concentration
+			technology = branch_interoperation
+			technology = assault_breakthrough
+			technology = armored_operations
+			technology = c3i_theory
+		}
+	}
+}
+
+focus = {
+	id = ITA_well_planned
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = ITA_assault_tactics }
+	x = 0
+	y = 1
+	relative_position_id = ITA_assault_tactics
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		swap_ideas = {
+			add_idea = ITA_arditi_legacy3
+			remove_idea = ITA_arditi_legacy2
+		}
+	}
+}
+
+focus = {
+	id = ITA_infiltration_tactics
+	icon = GFX_focus_prc_infiltration
+	prerequisite = { focus = ITA_trench_warfare }
+	mutually_exclusive = { focus = ITA_assault_tactics }
+	x = -1
+	y = 1
+	relative_position_id = ITA_trench_warfare
 	cost = 5
 	ai_will_do = {
 		factor = 1
@@ -2829,10 +2961,965 @@ focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
-		add_idea = ITA_arditi_legacy2
-		remove_idea = ITA_arditi_legacy
+		add_doctrine_cost_reduction = {
+			name = doc_bonus
+			cost_reduction = 0.40
+			uses = 2
+			technology = infantry_offensive
+			technology = central_planning
+			technology = infiltration_assault
+			technology = night_assault_tactics
+			technology = attritional_containment
+			technology = infiltration_in_depth
+		}
 	}
 }
+
+focus = {
+	id = ITA_night_warfare
+	icon = GFX_goal_generic_secret_weapon
+	prerequisite = { focus = ITA_infiltration_tactics }
+	x = 0
+	y = 1
+	relative_position_id = ITA_infiltration_tactics
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = doc_bonus
+			bonus = 0.50
+			ahead_reduction = 0.5
+			uses = 2
+			category = night_vision
+		}
+	}
+}
+
+focus = {
+	id = ITA_expand_shock_tactics
+	icon = GFX_superior_tactics
+	prerequisite = { focus = ITA_trench_warfare }
+	x = 1
+	y = 1
+	relative_position_id = ITA_trench_warfare
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_ideas = ITA_shock_tactics
+	}
+}
+
+focus = {
+	id = ITA_embrace_tradition
+	icon = GFX_ww1_tactics
+	prerequisite = { focus = ITA_expand_shock_tactics }
+	x = 0
+	y = 1
+	relative_position_id = ITA_expand_shock_tactics
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_ideas = ITA_WW1_Tactics
+	}
+}
+
+focus = {
+	id = ITA_arditi_camouflage_tactics
+	icon = GFX_arditi_camo
+	prerequisite = { focus = ITA_embrace_tradition }
+	x = 0
+	y = 1
+	relative_position_id = ITA_embrace_tradition
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		swap_ideas = {
+			add_idea = ITA_shock_tactics2
+			remove_idea = ITA_shock_tactics
+		}
+	}
+}
+
+focus = {
+	id = ITA_learn_from_war
+	icon = GFX_focus_chi_army_reform
+	prerequisite = { focus = ITA_arditi_camouflage_tactics }
+	x = 0
+	y = 1
+	relative_position_id = ITA_arditi_camouflage_tactics
+	cost = 5
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = {
+		has_army_experience > 150
+		OR = {
+			has_war_with = ENG
+			has_war_with = FRA
+			has_war_with = USA
+			has_war_with = SOV
+		}
+	}
+	
+	cancel_if_invalid = yes
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		remove_ideas = ITA_incompetent_officers
+		army_experience = -150
+	}
+}
+
+focus = {
+	id = ITA_drain_the_swamp
+	icon = GFX_ITA_innovative_theories
+	prerequisite = { focus = ITA_legacy_of_the_arditi }
+	mutually_exclusive = { focus = ITA_reject_innovation }
+	x = 2
+	y = 1
+	relative_position_id = ITA_legacy_of_the_arditi
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+	
+	available = {
+		NOT = { has_idea = ITA_reforming }
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = ITA_reforming
+			days = 180
+		}
+	}
+}
+
+focus = {
+	id = ITA_cavalry_modernisation
+	icon = GFX_goal_generic_build_tank
+	prerequisite = { focus = ITA_drain_the_swamp }
+	x = 0
+	y = 1
+	relative_position_id = ITA_drain_the_swamp
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = at_bonus
+			bonus = 0.5
+			uses = 1
+			category = cat_mechanized_equipment
+		}
+		add_tech_bonus = {
+			name = at_bonus
+			bonus = 0.5
+			uses = 2
+			category = cat_light_armor
+		}
+	}
+}
+
+focus = {
+	id = ITA_mobile_tanks
+	icon = GFX_focus_generic_license_production
+	prerequisite = { focus = ITA_cavalry_modernisation }
+	x = -1
+	y = 1
+	relative_position_id = ITA_cavalry_modernisation
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = arm_bonus
+			bonus = 0.50
+			uses = 1
+			category = cat_medium_armor
+			category = cat_light_armor
+		}	
+	}
+}
+
+focus = {
+	id = ITA_combined_arms
+	icon = GFX_focus_generic_combined_arms
+	prerequisite = { focus = ITA_cavalry_modernisation }
+	x = 1
+	y = 1
+	relative_position_id = ITA_cavalry_modernisation
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = mw_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = cat_mobile_warfare
+		}
+	}
+}
+
+focus = {
+	id = ITA_bersaglieri
+	icon = GFX_goal_generic_army_motorized
+	prerequisite = { focus = ITA_combined_arms }
+	x = 0
+	y = 1
+	relative_position_id = ITA_combined_arms
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = mot_bonus
+			bonus = 0.5
+			uses = 1
+			category = motorized_equipment
+		}
+		add_doctrine_cost_reduction = {
+			name = mw_bonus
+			cost_reduction = 0.35
+			uses = 1
+			category = cat_mobile_warfare
+		}
+	}
+}
+
+focus = {
+	id = ITA_new_armour
+	icon = GFX_ITA_tank
+	prerequisite = { focus = ITA_mobile_tanks }
+	x = 0
+	y = 1
+	relative_position_id = ITA_mobile_tanks
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = arm_bonus
+			bonus = 0.75
+			uses = 1
+			category = armor
+		}
+	}
+}
+
+focus = {
+	id = ITA_learn_from_wehrmacht
+	icon = GFX_focus_ger_oppose_hitler
+	prerequisite = { focus = ITA_bersaglieri focus = ITA_new_armour }
+	x = -1
+	y = 1
+	relative_position_id = ITA_bersaglieri
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+	
+	available = {
+		is_in_faction_with = GER
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = sf_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = cat_mobile_warfare
+		}
+		add_doctrine_cost_reduction = {
+			name = sf_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = battlefield_support_tree
+		}
+		add_ideas = german_cooperation_focus 
+	}
+}
+
+focus = {
+	id = ITA_german_tanks
+	icon = GFX_goal_generic_military_deal
+	prerequisite = { focus = ITA_learn_from_wehrmacht }
+	x = 1
+	y = 1
+	relative_position_id = ITA_learn_from_wehrmacht
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = arm_bonus
+			bonus = 0.90
+			uses = 1
+			category = armor
+		}
+		GER = {
+			add_tech_bonus = {
+				name = arm_bonus
+				bonus = 0.90
+				uses = 1
+				category = armor
+			}
+		}
+	}
+}
+
+focus = {
+	id = ITA_new_ncos
+	icon = GFX_focus_chi_army_reform
+	prerequisite = { focus = ITA_learn_from_wehrmacht }
+	x = -1
+	y = 1
+	relative_position_id = ITA_learn_from_wehrmacht
+	cost = 5
+	ai_will_do = {
+		factor = 10
+	}
+
+	available_if_capitulated = yes
+	
+	available = {
+		NOT = { has_idea = ITA_reforming }
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		remove_ideas = ITA_incompetent_officers
+	}
+}
+
+focus = {
+	id = ITA_dockyard_expansion_one
+	icon = GFX_goal_generic_construct_naval_dockyard
+	prerequisite = { focus = ITA_regia_marina }
+	x = 0
+	y = 1
+	relative_position_id = ITA_regia_marina
+	cost = 5
+	ai_will_do = {
+		factor = 10
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+
+		add_timed_idea = {
+			idea = ITA_reforming
+			days = 180
+		}
+
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = dockyard
+					size > 2
+					include_locked = yes
+				}
+				is_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = dockyard
+					size > 2
+					include_locked = yes
+				}
+				is_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id = ITA_dockyard_expansion
+	icon = GFX_goal_generic_construct_naval_dockyard
+	prerequisite = { focus = ITA_dockyard_expansion_one }
+	x = 0
+	y = 1
+	relative_position_id = ITA_dockyard_expansion_one
+	cost = 5
+	ai_will_do = {
+		factor = 10
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = dockyard
+					size > 2
+					include_locked = yes
+				}
+				is_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = dockyard
+					size > 2
+					include_locked = yes
+				}
+				is_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id = ITA_escape_the_cage
+	icon = GFX_ITA_escape_the_cage
+	prerequisite = { focus = ITA_dockyard_expansion }
+	mutually_exclusive = { focus = ITA_green_water_navy }
+	x = 3
+	y = 1
+	relative_position_id = ITA_dockyard_expansion
+	cost = 10
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = air_bonus
+			cost_reduction = 0.40
+			uses = 2
+			category = cat_base_strike
+		}
+	}
+}
+
+focus = {
+	id = ITA_fleet_air_arm
+	icon = GFX_goal_generic_navy_carrier
+	prerequisite = { focus = ITA_escape_the_cage }
+	x = 1
+	y = 1
+	relative_position_id = ITA_escape_the_cage
+	cost = 5
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = air_bonus
+			bonus = 1
+			uses = 2
+			category = cv_tech
+		}
+	}
+}
+
+focus = {
+	id = ITA_naval_air_coordination
+	icon = GFX_goal_generic_air_naval_bomber
+	prerequisite = { focus = ITA_fleet_air_arm }
+	x = 1
+	y = 1
+	relative_position_id = ITA_fleet_air_arm
+	cost = 10
+	ai_will_do = {
+		factor = 5
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_ideas = ITA_naval_air
+		add_tech_bonus = {
+			name = air_bonus
+			bonus = 1
+			uses = 2
+			category = naval_air
+		}
+	}
+}
+
+focus = {
+	id = ITA_new_dd
+	icon = GFX_focus_generic_destroyer
+	prerequisite = { focus = ITA_green_water_navy focus = ITA_escape_the_cage }
+	x = 5
+	y = 1
+	relative_position_id = ITA_green_water_navy
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = doc_bonus
+			bonus = 0.50
+			uses = 2
+			category = dd_tech
+		}
+	}
+}
+
+focus = {
+	id = ITA_convoy_defence
+	icon = GFX_goal_generic_navy_cruiser
+	prerequisite = { focus = ITA_new_dd }
+	x = 0
+	y = 1
+	relative_position_id = ITA_new_dd
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = doc_bonus
+			bonus = 0.50
+			uses = 1
+			category = asw_tech
+		}
+		add_doctrine_cost_reduction = {
+			name = doc_bonus
+			cost_reduction = 0.25
+			uses = 2
+			category = convoy_defense_tree
+		}
+	}
+}
+
+focus = {
+	id = ITA_flottiglia_mas
+	icon = GFX_focus_ITA_xmas
+	prerequisite = { focus = ITA_convoy_defence }
+	x = -1
+	y = 1
+	relative_position_id = ITA_convoy_defence
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_ideas = ITA_xmas
+		add_tech_bonus = {
+			name = doc_bonus
+			bonus = 0.50
+			uses = 1
+			category = marine_tech
+		}
+	}
+}
+
+focus = {
+	id = ITA_esploratori
+	icon = GFX_goal_generic_construct_naval_dockyard
+	prerequisite = { focus = ITA_convoy_defence }
+	x = 1
+	y = 1
+	relative_position_id = ITA_convoy_defence
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		add_ideas = ITA_idea_esploratori
+		add_tech_bonus = {
+			name = ITA_escort_effort
+			bonus = 1.0
+			uses = 1
+			category = cl_tech
+		}
+	}
+}
+
+focus = {
+	id = ITA_green_water_navy
+	icon = GFX_goal_generic_navy_battleship
+	prerequisite = { focus = ITA_dockyard_expansion }
+	mutually_exclusive = { focus = ITA_escape_the_cage }
+	x = -3
+	y = 1
+	relative_position_id = ITA_dockyard_expansion
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = air_bonus
+			cost_reduction = 0.50
+			uses = 3
+			category = cat_fleet_in_being
+		}
+	}
+}
+
+focus = {
+	id = ITA_new_cruisers
+	icon = GFX_focus_generic_cruiser2
+	prerequisite = { focus = ITA_green_water_navy focus = ITA_escape_the_cage }
+	x = 1
+	y = 1
+	relative_position_id = ITA_green_water_navy
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = cv_bonus
+			bonus = 0.50
+			uses = 3
+			category = cl_tech
+			category = ca_tech
+		}
+	}
+}
+
+focus = {
+	id = ITA_range_finders
+	icon = GFX_goal_generic_build_navy_shine
+	prerequisite = { focus = ITA_new_cruisers }
+	x = 0
+	y = 1
+	relative_position_id = ITA_new_cruisers
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = cv_bonus
+			bonus = 0.85
+			uses = 2
+			technology = basic_fire_control_system
+			technology = improved_fire_control_system
+			technology = advanced_fire_control_system
+		}
+	}
+}
+
+focus = {
+	id = ITA_new_bb
+	icon = GFX_ITA_roma_class_battleship
+	prerequisite = { focus = ITA_green_water_navy }
+	x = -1
+	y = 1
+	relative_position_id = ITA_green_water_navy
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = bb_bonus
+			bonus = 1
+			ahead_reduction = 0.5
+			uses = 1
+			category = bb_tech
+		}
+	}
+}
+
+focus = {
+	id = ITA_gunnery
+	icon = GFX_goal_generic_navy_doctrines_tactics
+	prerequisite = { focus = ITA_new_bb }
+	x = 0
+	y = 1
+	relative_position_id = ITA_new_bb
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = cv_bonus
+			bonus = 0.75
+			uses = 3
+			technology = improved_medium_battery
+			technology = advanced_medium_battery
+			technology = improved_heavy_battery
+			technology = advanced_heavy_battery
+			technology = modern_heavy_battery
+		}
+	}
+}
+
+focus = {
+	id = ITA_fire_control
+	icon = GFX_goal_generic_build_navy
+	prerequisite = { focus = ITA_range_finders }
+	prerequisite = { focus = ITA_gunnery }
+	x = -1
+	y = 1
+	relative_position_id = ITA_range_finders
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = cv_bonus
+			bonus = 0.75
+			uses = 2
+			technology = fire_control_methods_1
+			technology = fire_control_methods_2
+			technology = fire_control_methods_3
+		}
+		add_tech_bonus = {
+			name = cv_bonus
+			bonus = 0.75
+			uses = 2
+			technology = damage_control_1
+			technology = damage_control_2
+			technology = damage_control_3
+		}
+	}
+}
+
+focus = {
+	id = ITA_csir
+	icon = GFX_focus_generic_little_entente
+	prerequisite = { focus = ITA_learn_from_wehrmacht }
+	x = 3
+	y = 1
+	relative_position_id = ITA_learn_from_wehrmacht
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+	
+	available = {
+		has_war_with = SOV
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_ideas = ITA_csir_idea
+	}
+}
+
+focus = {
+	id = ITA_eastern_experience
+	icon = GFX_baionette
+	prerequisite = { focus = ITA_csir }
+	x = 0
+	y = 1
+	relative_position_id = ITA_csir
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		army_experience = 50
+	}
+}
+
+focus = {
+	id = ITA_armir
+	icon = GFX_focus_ITA_volunteers
+	prerequisite = { focus = ITA_eastern_experience }
+	x = 0
+	y = 1
+	relative_position_id = ITA_eastern_experience
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		swap_ideas = {
+			add_idea = ITA_armir_idea
+			remove_idea = ITA_csir_idea
+		}
+	}
+}
+
 
 
 }

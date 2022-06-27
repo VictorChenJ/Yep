@@ -87,8 +87,10 @@
  ITA_heavy_industry_desc:0 "Italy has become a modern industrial superpower, among the giants of Britain and Germany. Yet there is no dictate that states we must stop here. Let us continue on and surpass all who dare stand between Italy and the glory of Rome!"
  ITA_military_industry:0 "Focus on Military Industry" #not a focus
  ITA_military_industry2:0 "Italian War Machine" #not a focus
+ ITA_dockyard_expansion_one:0 "Investments into the Navy"
+ ITA_dockyard_expansion_one_desc:0 "The Italian Navy is among the largest in the world, reigning supreme in the Mediterranean undisputed. It is unthinkable that we would allow the army to take precedence over the navy."
  ITA_dockyard_expansion:0 "Focus on Naval Industry"
- ITA_dockyard_expansion_desc:0 "The Italian Navy is among the largest in the world, reigning supreme in the Mediterranean undisputed. It is unthinkable that we would allow the army to take precedence over the navy."
+ ITA_dockyard_expansion_desc:0 "The Navy must have more resources to work with if we want to compete with our enemies"
  ITA_dockyard_expansion2:0 "Dockyard Expansion" #not a focus
  ITA_proclaim_the_empire:0 "Proclaim the Empire"
  ITA_proclaim_the_empire_desc:0 "Tirelessly we have toiled beneath the glaring sunlight, desperate to stake our claim upon the world. At last, the effort has paid due. We sowed the seeds of grandeur, and from the soil shall sprout the Italian Empire!"
@@ -99,7 +101,7 @@
  ITA_pact_of_steel:0 "Pact of Steel" #has vanilla loc, unneeded
  ITA_mare_nostrum:0 "Mare Nostrum"
  ITA_mare_nostrum_desc:0 "These great few years have seen the rapid expansion of the Italian state to borders near what the Romans possessed at the height of their empire. The time has come to proclaim the Mare Nostrum!"
- ITA_lessons_of_war:0 "Army First"
+ ITA_lessons_of_war:0 "The Army First"
  ITA_lessons_of_war_desc:0 "Italy may be more experienced in war than most, but this does not mean we have grown more proficient. The more experience we gain, the more we realize how inexperienced we truly are."
  ITA_old_guard:0 "Support the Old Guard"
  ITA_old_guard_desc:0 "Rapid change never yields true results, simply facades that fade into the ways of old. For lasting reforms, we must rely on those that have gotten us this far."
