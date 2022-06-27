@@ -1,5 +1,7 @@
 ﻿l_english:
  #### FOCUSES ####
+ ITA_expand_marines:0 "Expanded Navy"
+ ITA_expand_marines_desc:0 "The final big expansion of our mighty navy, shall make it available for us to make strategic amphibious invasions."
  ITA_denounce_the_sanctions:0 "Denounce the Sanctions"
  ITA_denounce_the_sanctions_desc:0 "What the League of Nations fails to realize is that we are simply carving out our own place in the sun. Ethiopia shall be ours."
  ITA_increase_trade:0 "Increase Foreign Trade"
@@ -292,6 +294,8 @@ ITA_arditi_camouflage_tactics_desc:0 "In order to negate the Allies their Air Su
  italy.air.d:0 "Our aircraft are made from lasagne sheets."
  italy.air.a:0 "Obselete Air Industry"
  ### IDEAS ###
+ ITA_the_italian_fleet:0 "The Italian Fleet"
+ ITA_the_italian_fleet_desc:0 "Regina Marina, oh so mighty and big"
  ITA_shock_tactics:0 "Shock Tactics"
  ITA_shock_tactics2:0 "Shock Tactics"
  ITA_WW1_Tactics:0 "WW1 Tactics"

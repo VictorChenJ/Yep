@@ -34,6 +34,11 @@ spriteTypes = {
 		name = "GFX_idea_mare_nostrum"
 		textureFile = "gfx/interface/ideas/idea_mare_nostrum.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_idea_the_italian_fleet"
+		textureFile = "gfx/interface/ideas/the_italian_fleet.dds"
+	}
 	##### FOCUSES #####
 
 	SpriteType = {

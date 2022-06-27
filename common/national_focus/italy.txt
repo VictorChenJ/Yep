@@ -3920,7 +3920,65 @@ focus = {
 	}
 }
 
+focus = {
+	id = ITA_expand_marines
+	icon = GFX_goal_generic_amphibious_assault
+	prerequisite = { focus = ITA_fire_control focus = ITA_flottiglia_mas }
+	x = 2
+	y = 1
+	cost = 70
+	relative_position_id = ITA_fire_control
 
+	completion_reward = {
+		add_ideas = ITA_the_italian_fleet
+		add_tech_bonus = {
+			name = italian_navy
+			bonus = 1
+			uses = 4
+			category = marine_tech
+			category = tp_tech
+			category = naval_equipment
+
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 3
+			category = naval_doctrine
+		}
+	}
+}
+
+focus = {
+	id = ITA_sub_raiders
+	icon = GFX_goal_generic_navy_submarine
+	prerequisite = { focus = ITA_green_water_navy focus = ITA_escape_the_cage }
+	x = 3
+	y = 1
+	relative_position_id = ITA_green_water_navy
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = GER_u_boat_effort
+			bonus = 0.5
+			uses = 1
+			category = ss_tech
+		}
+		if = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			set_technology = { cruiser_submarines = 1 }
+		}
+	}
+}
 
 }
 

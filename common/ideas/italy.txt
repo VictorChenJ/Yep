@@ -528,6 +528,23 @@ ideas = {
 				research_speed_factor = 0.025
 			}
 		}
+
+		ITA_the_italian_fleet = {
+
+			allowed = {
+				original_tag = "ITA"
+			}
+			removal_cost = -1
+			picture = the_italian_fleet
+
+			modifier = {
+				amphibious_invasion = 0.05
+				amphibious_invasion_defence = 0.1
+				special_forces_cap = 0.05
+				naval_damage_factor = 0.1
+				naval_defense_factor = 0.1
+			}
+		}
 	
 		victor_emmanuel = {
 			
@@ -811,5 +828,7 @@ ideas = {
 			traits = { naval_manufacturer }
 		}
 	}
+
+
 	
 }	
