@@ -4470,33 +4470,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_war_plan_black
-		icon = GFX_focus_attack_germany
-		prerequisite = { focus = USA_intervention_in_europe }
-		available = {
-		}
-
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		x = 0
-		y = 2
-		relative_position_id = USA_intervention_in_europe
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		completion_reward = {
-			GER = {
-				add_opinion_modifier = { target = USA modifier = war_plan_black }
-			}
-			unlock_decision_tooltip = { decision = USA_execute_war_plan_black show_effect_tooltip = yes show_modifiers = yes }
-		}
-	}
-	focus = {
 		id = USA_destroyers_for_bases
 		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = USA_war_plan_black }
+		prerequisite = { focus = USA_liberty_ships }
 		available = {
 			country_exists = GER
 			is_subject = no
@@ -4524,7 +4500,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = USA_war_plan_black
+		relative_position_id = USA_liberty_ships
 		cost = 10
 		#ai_will_do = {
 		#	factor = 1
@@ -4714,35 +4690,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_war_plan_orange
-		icon = GFX_focus_attack_japan
-		prerequisite = { focus = USA_intervention_in_asia }
-		available = {
-			
-		}
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		x = -1
-		y = 1
-		relative_position_id = USA_intervention_in_asia
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-
-		completion_reward = {
-			JAP = {
-				add_opinion_modifier = { target = USA modifier = war_plan_orange }
-			}
-			unlock_decision_tooltip = { decision = USA_execute_war_plan_orange show_effect_tooltip = yes show_modifiers = yes }
-		}
-	}
-	focus = {
 		id = USA_war_plan_yellow
 		icon = GFX_focus_attack_china
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = USA_intervention_in_asia }
 		relative_position_id = USA_intervention_in_asia
@@ -4771,7 +4721,6 @@ focus_tree = {
 	focus = {
 		id = USA_defense_of_the_pacific
 		icon = GFX_goal_generic_occupy_states_coastal
-		prerequisite = { focus = USA_war_plan_yellow }
 		prerequisite = { focus = USA_war_plan_orange }
 		available = {
 			JAP = {
@@ -4781,8 +4730,8 @@ focus_tree = {
 		}
 		will_lead_to_war_with = JAP
 		x = 0
-		y = 2
-		relative_position_id = USA_intervention_in_asia
+		y = 1
+		relative_position_id = USA_war_plan_orange
 		cost = 10
 		#ai_will_do = {
 		#	factor = 1
@@ -6173,8 +6122,177 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = USA_four_freedoms
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = USA_wartime_industry }
+		x = 0
+		y = 1
+		relative_position_id = USA_wartime_industry
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+			has_government = democratic
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_war_support = 0.2
+			add_political_power = 100
+		}
+	}
 	
+	focus = {
+		id = USA_casablanca_conference
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = USA_four_freedoms }
+		x = 0
+		y = 1
+		relative_position_id = USA_four_freedoms
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+			has_government = democratic
+			is_in_faction_with = ENG
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 5 }
+			ENG = {
+				add_offsite_building = { type = industrial_complex level = 5 }
+			}
+			FRA = {
+				add_offsite_building = { type = industrial_complex level = 5 }
+			}
+		}
+	}
+
+	focus = {
+		id = USA_japan_first
+		icon = GFX_focus_usa_focus_on_asia
+		prerequisite = { focus = USA_casablanca_conference }
+		mutually_exclusive = { focus = USA_germany_first }
+		x = -1
+		y = 1
+		relative_position_id = USA_casablanca_conference
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+			has_war_with = JAP
+			has_war_with = GER
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_timed_idea = {
+				idea = USA_japan_first_idea
+				days = 730
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_war_plan_orange
+		icon = GFX_focus_attack_japan
+		prerequisite = { focus = USA_japan_first }
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		x = 0
+		y = 1
+		relative_position_id = USA_japan_first
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
 
 
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = { target = USA modifier = war_plan_orange }
+			}
+			unlock_decision_tooltip = { decision = USA_execute_war_plan_orange show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+	
+	focus = {
+		id = USA_germany_first
+		icon = GFX_focus_usa_focus_on_europe
+		prerequisite = { focus = USA_casablanca_conference }
+		mutually_exclusive = { focus = USA_japan_first }
+		x = 1
+		y = 1
+		relative_position_id = USA_casablanca_conference
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+			has_war_with = JAP
+			has_war_with = GER
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_timed_idea = {
+				idea = USA_germany_first_idea
+				days = 730
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_war_plan_black
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = USA_germany_first }
+
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		x = 0
+		y = 1
+		relative_position_id = USA_germany_first
+		cost = 5
+		#ai_will_do = {
+		#	factor = 1
+		#}
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = { target = USA modifier = war_plan_black }
+			}
+			unlock_decision_tooltip = { decision = USA_execute_war_plan_black show_effect_tooltip = yes show_modifiers = yes }
+		}
+	}
+
+
+	focus = {
+		id = USA_hello_to_ford
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_armored_infantry }
+		relative_position_id = USA_armored_infantry
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_ideas = { USA_ford }
+		}
+	}
 	
 }

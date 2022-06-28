@@ -1128,8 +1128,8 @@ ideas = {
 			picture = jap_supremacy_of_technology
 			
 			research_bonus = {
-				infantry_weapons = 0.05
-				armor = 0.05
+				infantry_weapons = 0.15
+				armor = 0.15
 			}
 		}
 

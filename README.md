@@ -20,6 +20,7 @@
 - Normale fighter har dog fået en lille smule mere agility så de kan counter heavy fighters 
 - Rockets skader mere
 - Sub 4 koster mere at bygge (1 mere stål og tagere længere tid), har værre visibility og er lidt langsommere
+- Japan focus er lidt bedre
 
 
 ------ANDRE TING------
@@ -43,14 +44,17 @@ Research: før = 30 dage, efter = 60 dage
 
 
 ------National Focus------
-Italien har fået en focus der expander deres muligheder i krigen
+- Italien har fået en focus der expander deres muligheder i krigen
+- Japan har fået en tree, hvor der bliver bygget fabrikker
+- UK har fået bedre rearmement
+- Tyskland har fået 3 valg til rearmement (Production, Balanced eller Construction)
+- USA kan fokusere enten på Japan eller Germany, hvor det så giver bonus til hvad bliver valgt
 
 
 ------To Do------
-Forstørre Japans national focus
-Forstørre Tysklands national focus
-Forstørre UKs national focus
-Forstørre USAs national focus
-Lidt mere på Italien (Amph og marine)
+- Forstørre Japans national focus
+- Forstørre Tysklands national focus
+- Tilføje lidt mere til UKs national focus
+- Tilføje lidt mere til national focus
 
-Måske forstørre Rumænien og Ungarns national focus 
+- Måske forstørre Rumænien og Ungarns national focus 
