@@ -6295,4 +6295,102 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = USA_tiger_hunting
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = USA_hello_to_ford }
+		available = {
+			has_war_with = GER
+			has_war_with = JAP
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = USA_hello_to_ford
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+
+			effect_tooltip = {
+				create_equipment_variant = {
+					name = "M26 Pershing"
+					type = heavy_tank_chassis_3
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_heavy_cannon_3
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_torsion_bar_suspension
+						armor_type_slot = tank_cast_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_3
+						special_type_slot_2 = sloped_armor
+						special_type_slot_3 = additional_machine_guns
+						special_type_slot_4 = additional_machine_guns
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 6
+						tank_nsb_armor_upgrade = 6
+					}
+					icon = "GFX_USA_advanced_heavy_tank_medium"
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = USA_spawn_pershing
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = USA_tiger_hunting }
+		x = 0
+		y = 1
+		relative_position_id = USA_tiger_hunting
+		cost = 10
+		
+		available = {
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				division_template = {
+					name = "Army group noget"
+					regiments = {
+						heavy_armor = { x = 0 y = 0 }
+						heavy_armor = { x = 0 y = 1 }
+						heavy_armor = { x = 0 y = 2 }
+
+						heavy_armor = { x = 1 y = 0 }
+						heavy_armor = { x = 1 y = 1 }
+						heavy_armor = { x = 1 y = 2 }
+
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+
+						artillery_brigade = { x = 3 y = 0}
+
+					}
+					support = {
+						engineer = { x = 0 y = 1 }   
+						recon = { x = 0 y = 2 }
+						logistics_company  = { x = 0 y = 3 }
+						anti_air = { x = 0 y = 0 }
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = 361 } }
+				prioritize = { 64 }
+				create_unit = {
+					division = "division_template = \"Army group noget\" start_experience_factor = 1"
+					owner = USA
+				}
+			}
+		}
+	}
+
+
 }

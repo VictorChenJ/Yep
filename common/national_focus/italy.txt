@@ -3802,7 +3802,7 @@ focus = {
 	completion_reward = {
 		add_tech_bonus = {
 			name = cv_bonus
-			bonus = 0.75
+			bonus = 0.85
 			uses = 3
 			technology = improved_medium_battery
 			technology = advanced_medium_battery
@@ -3833,7 +3833,7 @@ focus = {
 	completion_reward = {
 		add_tech_bonus = {
 			name = cv_bonus
-			bonus = 0.75
+			bonus = 1
 			uses = 2
 			technology = fire_control_methods_1
 			technology = fire_control_methods_2
@@ -3926,7 +3926,7 @@ focus = {
 	prerequisite = { focus = ITA_fire_control focus = ITA_flottiglia_mas }
 	x = 2
 	y = 1
-	cost = 70
+	cost = 5
 	relative_position_id = ITA_fire_control
 
 	completion_reward = {

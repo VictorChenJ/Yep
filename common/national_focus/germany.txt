@@ -2309,14 +2309,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_autobahn
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 
 		available_if_capitulated = no
 		available = {
-			has_war_support > 0.49
+			has_war_support > 0.40
 		}
 		complete_tooltip = {
 			every_state = {
@@ -2390,6 +2390,234 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_prepare_army
+		icon = GFX_prepare_army
+		prerequisite = { focus = GER_german_war_economy }
+		relative_position_id = GER_german_war_economy
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			# Balance research bonus for 2 techs under land_doctrine
+			
+			army_experience = 20
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_german_war_economy
+			}
+			
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}			
+		}
+	}
+
+	focus = {
+		id = GER_prepare_navy
+		icon = GFX_prepare_navy
+		prerequisite = { focus = GER_prepare_army }
+		relative_position_id = GER_prepare_army
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		complete_tooltip = {
+			every_state = {
+				limit = {	has_state_flag = GER_naval_rearmament_2dockyards }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {	has_state_flag = GER_naval_rearmament_1dockyard }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_2dockyards
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = GER_naval_rearmament_1dockyard
+			}
+			add_doctrine_cost_reduction = {
+				name = navy_doc_bonus
+				cost_reduction = 1
+				uses = 4
+				category = land_doctrine
+		}
+		
+		}
+	}
+
+	focus = {
+		id = GER_prepare_air
+		icon = GFX_prepare_air
+		prerequisite = { focus = GER_prepare_army }
+		relative_position_id = GER_prepare_army
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			
+			air_experience = 50
+
+			add_doctrine_cost_reduction = {
+				name = air_sup_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = battlefield_support_tree
+			}
+
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							air_base > 3
+							air_base < 9
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 5
+						}
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = GER_air_innovation_6air
+				}				
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 3
+					air_base < 9
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_air_innovation_2air
+			}
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 3
+					air_base < 9
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_air_innovation_2air
+			}
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 2
+					air_base < 9
+				}
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = GER_air_innovation_2air
+			}
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 2
+					air_base < 9
+				}
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = GER_air_innovation_2air
+			}
+		}
+	}
+
+
+	focus = {
 		id = GER_grosraumwirtschaft
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = GER_four_year_plan }
@@ -2404,6 +2632,126 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = GER_grosraumwirtschaft
+		}
+	}
+
+	focus = {
+		id = GER_feed_dogs
+		prerequisite = { focus = GER_integrate_war_economies }
+		relative_position_id = GER_integrate_war_economies
+		x = 0
+		y = 1
+		available = {
+			any_country = {
+				original_tag = HUN
+				original_tag = ROM
+				is_in_faction_with = ROOT
+			}
+		}
+		bypass = {
+			OR = {
+				HUN = { exists = no }
+				HUN = {
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size < 1
+								include_locked = yes
+							}
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = arms_factory_effort_tt
+						all_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size < 1
+								include_locked = yes
+							}
+						}
+					}
+				}
+			}
+		}
+
+		icon = GFX_german_gold
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			HUN = {
+
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+
+			}
+
+			ROM = {
+
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+
+			}
 		}
 	}
 
@@ -2473,10 +2821,10 @@ focus_tree = {
 
 	focus = {
 		id = GER_develop_hungary
-		prerequisite = { focus = GER_align_hungary }
-		relative_position_id = GER_align_hungary
-		x = 0
-		y = 3
+		prerequisite = { focus = GER_feed_dogs }
+		relative_position_id = GER_feed_dogs
+		x = 1
+		y = 1
 		available = {
 			any_country = {
 				original_tag = HUN
@@ -2637,10 +2985,10 @@ focus_tree = {
 
 	focus = {
 		id = GER_develop_romania
-		prerequisite = { focus = GER_align_romania }
-		relative_position_id = GER_align_romania
-		x = 0
-		y = 3
+		prerequisite = { focus = GER_feed_dogs }
+		relative_position_id = GER_feed_dogs
+		x = -1
+		y = 1
 		available = {
 			any_country = {
 				original_tag = ROM
@@ -2736,13 +3084,132 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_develop_spain
+		prerequisite = { focus = GER_develop_hungary }
+		prerequisite = { focus = GER_develop_romania }
+		relative_position_id = GER_develop_hungary
+		x = -1
+		y = 1
+		icon = GFX_legion_condor
+		available = {
+			any_country = {
+				original_tag = ROM
+				original_tag = HUN
+				original_tag = ITA
+				is_in_faction_with = ROOT
+			}
+			has_war_together_with = HUN
+			has_war_together_with = ROM
+			has_war_together_with = ITA
+			has_war_with = SOV
+			has_war_with = ENG
+			has_war_with = USA
+			country_exists = SPR
+			SPR = { 
+				has_idea = SPA_recovering_from_civil_war_2
+			}
+		}
+		bypass = {
+			OR = {
+				SPR = { exists = no }
+				SPR = {
+					custom_trigger_tooltip = {
+						tooltip = construction_effort_tt
+						all_owned_state = {
+							free_building_slots = {
+								building = industrial_complex
+								size < 1
+								include_locked = yes
+							}
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = arms_factory_effort_tt
+						all_owned_state = {
+							free_building_slots = {
+								building = arms_factory
+								size < 1
+								include_locked = yes
+							}
+						}
+					}
+				}
+			}
+		}
+
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			SPR = {
+
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 3
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 3
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 3
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+					set_state_flag = GER_industrial_effort_2_2IC
+				}
+
+			}
+			SPR = {
+				remove_ideas = SPA_recovering_from_civil_war_2
+			}
+
+
+		}
+	}
+
+
+	focus = {
 		id = GER_integrate_war_economies
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = GER_align_hungary }
 		prerequisite = { focus = GER_align_romania }
 		mutually_exclusive = { focus = GER_german_war_economy }
 		x = -1
-		y = 2
+		y = 1
 		relative_position_id = GER_align_hungary
 		cost = 10
 		ai_will_do = {
@@ -3051,7 +3518,7 @@ focus_tree = {
 		available = {
 			has_government = fascism
 		}
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_integrate_war_economies
 		cost = 10
@@ -3068,6 +3535,8 @@ focus_tree = {
 			unlock_decision_tooltip = GER_reichskommissariat_ukraine
 		}
 	}
+
+
 
 
 	focus = {

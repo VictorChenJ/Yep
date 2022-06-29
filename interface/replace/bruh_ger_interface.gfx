@@ -49,6 +49,32 @@ spriteTypes = {
 	##### FOCUSES #####
 
 	SpriteType = {
+		name = "GFX_prepare_navy"
+		textureFile = "gfx/interface/goals/ger/goal_ger_kriegsmarine.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_prepare_air"
+		textureFile = "gfx/interface/goals/ger/GER_sonic_planes.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_prepare_army"
+		textureFile = "gfx/interface/goals/ger/ger_sign_up_lads.dds"
+	}
+
+
+	SpriteType = {
+		name = "GFX_german_gold"
+		textureFile = "gfx/interface/goals/ger/GER_seize_foreign_economy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_legion_condor"
+		textureFile = "gfx/interface/goals/ger/GER_legion_condor.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_roa"
 		textureFile = "gfx/interface/goals/ger/ger_roa.dds"
 	}

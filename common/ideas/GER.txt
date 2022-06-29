@@ -2467,7 +2467,6 @@ ideas = {
 				armor = 0.2
 			}
 			
-			traits = { porsche_manufacturer }
 
 			ai_will_do = {
 				factor = 10
@@ -2486,7 +2485,6 @@ ideas = {
 				armor = 0.2
 			}
 			
-			traits = { henschel_manufacturer }
 			
 			ai_will_do = {
 				factor = 1
@@ -2505,7 +2503,6 @@ ideas = {
 				armor = 0.2
 			}
 			
-			traits = { man_manufacturer }
 
 			ai_will_do = {
 				factor = 1
@@ -2570,7 +2567,6 @@ ideas = {
 				air_equipment = 0.15
 			}
 			
-			traits = { messerschmitt_manufacturer }
 			
 			equipment_bonus = {
 				
@@ -2669,14 +2665,12 @@ ideas = {
 			}
 			
 			available = {
-				has_completed_focus = GER_ig_farben
+				has_completed_focus = GER_oil_storage
 			}
 			
 			research_bonus = {
 				synth_resources = 0.20
 			}
-			
-			traits = { ig_faben }
 			
 			ai_will_do = {
 				factor = 1

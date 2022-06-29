@@ -1,5 +1,15 @@
 ﻿l_english:
  #### FOCUSES ####
+ GER_prepare_navy:0 "Prepare the Kriegsmarine"
+ Ger_prepare_navy_desc:0 ""
+ GER_prepare_air:0 "Prepare the Luftwaffe"
+ Ger_prepare_air_desc:0 ""
+ GER_prepare_army:0 "Prepare the Wehrmacht"
+ Ger_prepare_army_desc:0 ""
+ GER_develop_spain:0 "Lure the Fish"
+ GER_develop_spain_desc:0 "We will lure Spain right into our struggle for victory"
+ GER_feed_dogs:0 "Feed the Dogs"
+ GER_feed_dogs:0 "Since Hungary and Romania is in our hands, we shall make Romania and Hungary war capable if something happens."
  GER_develop_romania:0 "Develop Romania"
  GER_develop_romania_desc:0 "We must be sure that the oil fields in Romania is going to us and not the enemies"
  GER_develop_hungary:0 "Develop Hungary"
