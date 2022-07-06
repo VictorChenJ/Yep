@@ -6302,8 +6302,8 @@ focus_tree = {
 		available = {
 			has_war_with = GER
 			has_war_with = JAP
+			date > 1943.1.1
 		}
-
 		x = 0
 		y = 1
 		relative_position_id = USA_hello_to_ford
@@ -6313,29 +6313,46 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			set_technology = {
+				mechanised_infantry1 = 1
+			}
 
-			effect_tooltip = {
-				create_equipment_variant = {
-					name = "M26 Pershing"
-					type = heavy_tank_chassis_3
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_heavy_cannon_3
-						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_torsion_bar_suspension
-						armor_type_slot = tank_cast_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_3
-						special_type_slot_2 = sloped_armor
-						special_type_slot_3 = additional_machine_guns
-						special_type_slot_4 = additional_machine_guns
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 6
-						tank_nsb_armor_upgrade = 6
-					}
-					icon = "GFX_USA_advanced_heavy_tank_medium"
+			create_equipment_variant = {
+				name = "Tank Destroyer"
+				type = medium_tank_destroyer_chassis_3
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_3
+					turret_type_slot = tank_heavy_three_man_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_cast_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = sloped_armor
 				}
+
+			}
+
+			create_equipment_variant = {
+				name = "M26 Pershing"
+				type = heavy_tank_chassis_3
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_heavy_cannon_3
+					turret_type_slot = tank_heavy_three_man_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_cast_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_3
+					special_type_slot_2 = sloped_armor
+					special_type_slot_3 = additional_machine_guns
+					special_type_slot_4 = additional_machine_guns
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 6
+					tank_nsb_armor_upgrade = 6
+				}
+				icon = "GFX_USA_advanced_heavy_tank_medium"
 			}
 
 		}
@@ -6354,43 +6371,530 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			hidden_effect = {
 				division_template = {
 					name = "Army group noget"
 					regiments = {
-						heavy_armor = { x = 0 y = 0 }
-						heavy_armor = { x = 0 y = 1 }
-						heavy_armor = { x = 0 y = 2 }
+						medium_armor = { x = 0 y = 0 }
+						medium_armor = { x = 0 y = 1 }
+						medium_armor = { x = 0 y = 2 }
+						medium_armor = { x = 0 y = 3 }
 
-						heavy_armor = { x = 1 y = 0 }
-						heavy_armor = { x = 1 y = 1 }
-						heavy_armor = { x = 1 y = 2 }
+						mechanized = { x = 1 y = 0 }
+						mechanized = { x = 1 y = 1 }
+						mechanized = { x = 1 y = 2 }
 
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 2 y = 2 }
+						medium_tank_destroyer_brigade = { x = 2 y = 0 }
+						medium_tank_destroyer_brigade = { x = 2 y = 1 }
+						light_armor = { x = 2 y = 2 }
+						light_armor = { x = 2 y = 3 }
 
-						artillery_brigade = { x = 3 y = 0}
+						heavy_armor = { x = 4 y = 0 }
+						heavy_armor = { x = 4 y = 1 }
+						heavy_armor = { x = 4 y = 2 }
+
+						motorized = { x = 5 y = 0 }
 
 					}
 					support = {
-						engineer = { x = 0 y = 1 }   
-						recon = { x = 0 y = 2 }
-						logistics_company  = { x = 0 y = 3 }
-						anti_air = { x = 0 y = 0 }
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						signal_company = { x = 0 y = 2 }
+						artillery = { x = 0 y = 3 }
+						maintenance_company = { x = 0 y = 4}
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = 361 } }
+					prioritize = { 361 }
+					create_unit = {
+						division = "division_template = \"Army group noget\" start_experience_factor = 1"
+						owner = USA
 					}
 				}
 			}
-			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = 361 } }
-				prioritize = { 64 }
-				create_unit = {
-					division = "division_template = \"Army group noget\" start_experience_factor = 1"
-					owner = USA
+		}
+
+
+		focus = {
+			id = USA_support_china
+			icon = GFX_USA_support_china
+			mutually_exclusive = {  }
+			relative_position_id = USA_intervention_in_asia
+			x = 0
+			y = 4
+			cost = 2
+			ai_will_do = {
+				factor = 10
+			}
+			available_if_capitulated = yes		
+			
+			available = {
+			   JAP = { has_completed_focus =  JAP_intervene_in_china }	 	  
+			}
+	
+			bypass = {
+			NOT = { country_exists = CHI }
+			}
+			completion_reward = {
+				CHI = {
+					add_opinion_modifier = { target = USA modifier = offered_support }
+					add_offsite_building = { type = arms_factory level = 4}
 				}
+				army_experience = 40
 			}
 		}
+	
+		focus = {
+			id = USA_provide_monetary_support_for_china
+			icon = GFX_USA_provide_monetary_support_for_china
+			prerequisite = { focus = USA_support_china }
+			mutually_exclusive = { focus = USA_procure_equipment_through_other_means }
+			relative_position_id = USA_support_china
+			x = 1
+			y = 1
+			cost = 5
+			ai_will_do = {
+				factor = 10
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				CHI = {
+					add_timed_idea = { 
+						idea = USA_economic_aid
+						days = 365 
+					}
+					CHI_hyper_inflation_level_down = yes
+				}
+				army_experience = 50
+			}
+		}	
+	
+		focus = {
+			id = USA_procure_equipment_through_other_means
+			icon = GFX_USA_procure_equipment_through_other_means
+			prerequisite = { focus = USA_support_china }
+			mutually_exclusive = { focus = USA_provide_monetary_support_for_china }
+			relative_position_id = USA_support_china
+			x = -1
+			y = 1
+			cost = 5
+			ai_will_do = {
+				factor = 10
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				CHI = {
+					add_timed_idea = { 
+						idea = USA_buying_guns_for_us
+						days = 365 
+					}
+					CHI_hyper_inflation_level_down = yes				
+				}
+				army_experience = 50
+			}
+		}	
+	
+		focus = {
+			id = USA_denounce_japanese_war_crimes
+			icon = GFX_USA_denounce_japanese_war_crimes
+			prerequisite = { focus = USA_provide_monetary_support_for_china focus = USA_procure_equipment_through_other_means }
+			relative_position_id = USA_support_china
+			x = 0
+			y = 2
+			cost = 5
+			ai_will_do = {
+				factor = 10 
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				add_stability = 0.1
+				add_political_power = 150
+			}
+		}	
+	
+		focus = {
+			id = USA_form_modern_chinese_airforce
+			icon = GFX_USA_form_modern_chinese_airforce
+			mutually_exclusive = { focus = USA_lost_but_not_forgotten }
+			prerequisite = { focus = USA_denounce_japanese_war_crimes }
+			relative_position_id = USA_support_china
+			x = -1
+			y = 3
+			cost = 5
+			ai_will_do = {
+				factor = 10
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+				USA = {
+					has_tech = usa_fighter_1
+					has_tech = usa_cas_1
+				}
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				CHI = {
+					add_tech_bonus = {
+						uses = 2
+						category = air_equipment
+						bonus = 1 
+						name = USA_form_modern_chinese_airforce
+					}
+					add_tech_bonus = {
+						uses = 2
+						category = air_doctrine
+						bonus = 1 
+						name = USA_form_modern_chinese_airforce
+					}	
+					add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 300 producer = USA }
+					add_equipment_to_stockpile = { type = CAS_equipment_1 amount = 200 producer = USA }			
+				}
+				USA = {
+					add_tech_bonus = {
+						uses = 1
+						category = air_equipment
+						bonus = 1 
+						name = USA_form_modern_chinese_airforce
+					}
+					add_tech_bonus = {
+						uses = 1
+						category = air_doctrine
+						bonus = 1 
+						name = USA_form_modern_chinese_airforce
+					}
+				}
+				air_experience = 50	
+				army_experience = 50
+			}
+		}		
+	
+		focus = { 
+			id = USA_increase_equipment_shipments
+			icon = GFX_USA_increase_equipment_shipments
+			prerequisite = { focus = USA_form_modern_chinese_airforce }
+			relative_position_id = USA_support_china
+			x = -1
+			y = 4
+			cost = 5
+			ai_will_do = {
+				factor = 10 
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				CHI = {
+					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = USA }
+					add_equipment_to_stockpile = { type = support_equipment_1 amount = 2000 producer = USA }
+					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = USA }
+					CHI_hyper_inflation_level_down = yes
+				}
+				army_experience = 50
+				air_experience = 50
+			}
+		}		
+	
+		focus = { 
+			id = USA_X_force
+			icon = GFX_USA_X_force
+			prerequisite = { focus = USA_increase_equipment_shipments }
+			relative_position_id = USA_support_china
+			x = -1
+			y = 5
+			cost = 5
+			ai_will_do = {
+				factor = 100 
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				CHI = {
+					if = {
+						limit = { has_idea = CHI_army_corruption_1 }
+						swap_ideas = {
+							remove_idea = CHI_army_corruption_1
+							add_idea = CHI_army_corruption_2
+						}
+					}
+					else_if = {
+						limit = { has_idea = CHI_army_corruption_2 }
+						swap_ideas = {
+							remove_idea = CHI_army_corruption_2
+							add_idea = CHI_army_corruption_3
+						}
+					}
+					else_if = {
+						limit = { has_idea = CHI_army_corruption_3 }
+						remove_ideas = CHI_army_corruption_3
+					}
+	
+					division_template = {
+						name = "US Trained Division"
+						priority = 2
+	
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+								
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+	
+							artillery_brigade = { x = 3 y = 0 }		
+							artillery_brigade = { x = 3 y = 1 }
+							artillery_brigade = { x = 3 y = 2 }
+							artillery_brigade = { x = 3 y = 3 }
+							
+						}
+	
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+					}
+	
+					every_state = {
+						limit = { state = 605 }
+						create_unit = {
+							division = "name = \"1st. US Trained Division division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}	
+						create_unit = {
+							division = "name = \"2nd US Trained Division\" division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}	
+						create_unit = {
+							division = "name = \"3rd. US Trained Division\" division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}	
+						create_unit = {
+							division = "name = \"4th. US Trained Division\" division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}	
+						create_unit = {
+							division = "name = \"5th. US Trained Division\" division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}	
+						create_unit = {
+							division = "name = \"6th. US Trained Division\" division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}
+						create_unit = {
+							division = "name = \"6th. US Trained Division\" division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}	
+					}
+				}
+				army_experience = 50
+			}
+		}			
+	
+	
+		focus = {
+			id = USA_lost_but_not_forgotten
+			icon = GFX_USA_lost_but_not_forgotten
+			prerequisite = { focus = USA_denounce_japanese_war_crimes }
+			mutually_exclusive = { focus = USA_form_modern_chinese_airforce }
+			relative_position_id = USA_support_china
+			x = 1
+			y = 3
+			cost = 5
+			ai_will_do = {
+				factor = 10
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+				OR = { 
+					CHI = {
+						has_capitulated = yes 
+					}
+					CHI = {
+						exists = no
+					}
+					CHI = {
+						is_puppet = yes
+					}
+				}
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				CHI = {
+					become_exiled_in = { target = USA legitimacy = 0.1 }	
+				}
+			}
+		}		
+	
+		focus = {
+			id = USA_fund_the_guerillas
+			icon = GFX_USA_fund_the_guerillas
+			prerequisite = { focus = USA_lost_but_not_forgotten }
+			relative_position_id = USA_support_china
+			x = 1
+			y = 4
+			cost = 5
+			ai_will_do = {
+				factor = 100 
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+				network_national_coverage = {
+					target = JAP
+					value > 25
+				}
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				every_state = {
+					limit = {
+						is_core_of = CHI 
+					}
+					add_resistance_target = {
+						amount = 20
+					}
+				}
+				CHI = {
+					add_ideas = USA_funding_chinese_resistance
+				}
+				army_experience = 50
+			}
+		}		
+	
+		focus = {
+			id = USA_organized_resistance
+			icon = GFX_USA_organized_resistance
+			prerequisite = { focus = USA_fund_the_guerillas }
+			relative_position_id = USA_support_china
+			x = 1
+			y = 5
+			cost = 5
+			ai_will_do = {
+				factor = 100 
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+				network_national_coverage = {
+					target = JAP
+					value > 45
+				}
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				every_state = {
+					limit = {
+						is_core_of = CHI 
+					}
+					add_resistance_target = {
+						amount = 13
+					}
+				}
+				CHI = {
+					add_legitimacy = 0.1 
+				}
+			}
+		}		
+	
+		focus = {
+			id = USA_procure_the_defeat_of_japan
+			icon = GFX_USA_procure_the_defeat_of_japan
+			prerequisite = { focus = USA_organized_resistance focus = USA_X_force }
+			relative_position_id = USA_support_china
+			x = 0
+			y = 6
+			cost = 5
+			ai_will_do = {
+				factor = 100 
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				add_tech_bonus = {
+					category = land_doctrine
+					uses = 1
+					bonus = 2
+					name = USA_procure_the_defeat_of_japan
+				}
+				add_tech_bonus = {
+					category = naval_doctrine
+					uses = 1
+					bonus = 2
+					name = USA_procure_the_defeat_of_japan
+				}
+				add_ideas = USA_secure_defeat_of_japan_idea
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 	}
-
-
-}

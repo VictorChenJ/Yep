@@ -1,5 +1,19 @@
 ﻿l_english:
  #### FOCUSES ####
+ ENG_growth_of_advanced_industries:0 "Growth of Advanced Industries"
+ ENG_growth_of_advanced_industries_desc:0 "Growth of the advanced industries, such as chemicals, electronics and car industry, this is the direct cause of World War One as most of these products became unavailable for purchase overseas and the country needed to develop its own sources of the three."
+ ENG_major_loans_to_shipyards:0 "Major Loans to Shipyards"
+ ENG_major_loans_to_shipyards_desc:0 "By providing major loans to Shipyards, we can help stimulate the production of convoys and lighter naval vehicles, as a result existing naval wharfs will grow in capacity and other commissions that they currently have will be produced more quickly."
+ ENG_deal_with_irish_treaty_ports:0 "Secure Irish Treaty Ports"
+ ENG_deal_with_irish_treaty_ports_desc:0 "The Irish Treaty Ports will help secure the Western Approaches in the event of a war, they were promised ever since Ireland seceeded from the United Kingdom, although we are dependant on having access to the eastern part of the Atlantic Ocean. And the easiest way to reach, is through our old possession, Ireland."
+ ENG_modernize_home_industry:0 "Modernize Home Industry"
+ ENG_modernize_home_industr_desc:0 "The British Industry has been slacking ever since the Great Depression, and never truly recovered from the effects of the Great War. The curse of the early 
+ ENG_domestic_industrial_reforms:0 "Domestic Industrial Reforms"
+ ENG_domestic_industrial_reforms_desc:0 "Our current country leader, has started calls for reforming how our countries treats its employees, as seen in Germany and abroad, incentives and rewards, such as a longer break time from work will surely help increase productivity."
+ ENG_visit_france:0 "State Visit To France"
+ ENG_visit_france_desc:0 "Our brothers and sisters in France paid a large sacrifice in the Great War, and they share our enthusiasm for peace with Germany. We must ensure they keep this mentality."
+ ENG_bilateral_trade:0 "Bilateral Trade Agreements"
+ ENG_bilateral_trade_desc:0 "The invisible hand and the free market works, but it could use a little supportive nudge every once in a while. By signing new trade agreements with France and the United States, all our economies will benefit."
  ENG_general_rearmament:0 "General Rearmament"
  ENG_air_rearmament:0 "Air Rearmament"
  ENG_shadow_factories:0 "Shadow Factories"

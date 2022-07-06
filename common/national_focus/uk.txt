@@ -19,7 +19,7 @@ focus_tree = {
 	}
 	default = no
 
-	continuous_focus_position = { x = 1300 y = 1350 }
+	continuous_focus_position = { x = 1000 y = 1600 }
 
 	focus = {
 		id = crypto_bomb_focus
@@ -1799,7 +1799,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = general_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2070,7 +2070,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = naval_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -2086,6 +2086,202 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = ENG_britannia_waves
+		icon = GFX_focus_eng_unite_the_anglosphere
+		prerequisite = { focus = ENG_expand_the_repair_yards }
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = 	ENG_expand_the_repair_yards
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			navy_experience = 25
+			add_doctrine_cost_reduction = {
+				name = shp_bonus
+				cost_reduction = 0.25
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_new_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ENG_britannia_waves }
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = ENG_britannia_waves
+		ai_will_do = {
+			factor = 5
+		}	
+		completion_reward = {
+			132 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			133 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_convoy_tactics
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = ENG_britannia_waves }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ENG_britannia_waves
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = shp_bonus
+				cost_reduction = 0.25
+				uses = 3
+				category = convoy_defense_tree
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_merchant_fleet
+		icon = GFX_focus_generic_africa_naval
+		prerequisite = { focus = ENG_convoy_tactics }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ENG_convoy_tactics
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_ideas = ENG_merchant_navy
+		}
+	}
+
+	focus = {
+		id = ENG_anti_sub_weapons
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = ENG_britannia_waves }
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = ENG_britannia_waves
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_tech_bonus = {
+				name = shp_bonus
+				bonus = 0.50
+				uses = 2
+				category = asw_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_anti_sub_doc
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = ENG_anti_sub_weapons }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = ENG_anti_sub_weapons
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = shp_bonus
+				cost_reduction = 0.40
+				uses = 2
+				category = convoy_defense_tree
+			}
+			add_ideas = ENG_anti_submarine_training_school
+		}
+	}
+	
+	focus = {
+		id = ENG_admiralty
+		icon = GFX_focus_eng_the_sun_never_sets
+		prerequisite = { focus = ENG_merchant_fleet }
+		prerequisite = { focus = ENG_anti_sub_doc }
+		available = { has_completed_focus = ENG_war_office}
+		x = 1
+		y = 1
+		cost = 1
+		relative_position_id = ENG_merchant_fleet
+		ai_will_do = {
+			factor = 5
+		}	
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = ENG_watu
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = ENG_admiralty }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = ENG_admiralty
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_ideas = ENG_watu_idea
+		}
+	}
+
+	focus = {
+		id = ENG_carrier
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = ENG_admiralty }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = ENG_admiralty
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_tech_bonus = {
+				name = shp_bonus
+				bonus = 0.55
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = shp_bonus
+				bonus = 0.6
+				uses = 1
+				category = naval_air
+			}
+		}
+	}
+	
+
 	focus = {
 		id = uk_carrier_focus
 		prerequisite = { focus = uk_waves_focus }
@@ -2371,6 +2567,355 @@ focus_tree = {
 			add_ideas = ENG_service_overseas_idea
 		}
 	}
+
+	focus = {
+		id = ENG_bilateral_trade
+		icon = GFX_focus_eng_imperial_federation
+		prerequisite = { focus = uk_service_focus }
+		
+		relative_position_id = uk_service_focus
+		x = 3
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 150
+
+		}
+	}
+
+	focus = {
+		id = ENG_visit_france
+		icon = GFX_focus_chi_reach_out_to_france
+		prerequisite = { focus = ENG_bilateral_trade }
+		relative_position_id = ENG_bilateral_trade
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			FRA = { 
+				exists = yes   
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 121 }
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+			}			
+			add_political_power = 100 		
+			FRA = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 4
+						add_building_construction = {
+							type = industrial_complex
+							level = 4
+							instant_build = yes
+						}
+				}
+			}					
+		}
+	}
+
+	focus = {
+		id = ENG_domestic_industrial_reforms
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = ENG_bilateral_trade }
+		relative_position_id = ENG_bilateral_trade
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			FRA = { 
+				exists = yes   
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry 
+				bonus = 1.0
+				uses = 2 
+				name = ENG_domestic_industrial_reforms
+			}					
+		}
+	}
+
+	focus = {
+		id = ENG_modernize_home_industry 
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = ENG_visit_france focus = ENG_domestic_industrial_reforms }
+
+		relative_position_id = ENG_bilateral_trade
+		x = 0
+		y = 2
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			FRA = { 
+				exists = yes   
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			126 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			125 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_deal_with_irish_treaty_ports 
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = ENG_modernize_home_industry }
+
+		relative_position_id = ENG_modernize_home_industry
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			FRA = { 
+				exists = yes   
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			119 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2 
+					instant_build = yes 
+				}
+			}
+				IRE = {
+					diplomatic_relation = {
+						country = ENG
+						relation = docking_rights
+						active = yes
+					}
+				}	
+		}
+	}
+
+	focus = {
+		id = ENG_major_loans_to_shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ENG_modernize_home_industry }
+
+		relative_position_id = ENG_modernize_home_industry
+		x = 1
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_growth_of_advanced_industries
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ENG_modernize_home_industry }
+	
+		relative_position_id = ENG_modernize_home_industry
+		x = -1
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+			}				
+		}
+	}
+	
 	focus = {
 		id = uk_mediterranean_focus 
 		prerequisite = { focus = uk_service_focus }
@@ -2385,7 +2930,7 @@ focus_tree = {
 			}
 		} 
 		icon = GFX_goal_generic_construct_military
-		x = 5
+		x = 9
 		y = 1
 		relative_position_id = uk_service_focus
 		cost = 10
@@ -2987,7 +3532,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 33
+		x = 37
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -5316,7 +5861,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = uk_asia_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -5367,12 +5912,12 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 3
+						level = 5
 						instant_build = yes
 					}
 					add_building_construction = {
 						type = air_base
-						level = 3
+						level = 5
 						instant_build = yes
 					}
 				}
@@ -5390,12 +5935,12 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 3
+						level = 5
 						instant_build = yes
 					}
 					add_building_construction = {
 						type = air_base
-						level = 3
+						level = 5
 						instant_build = yes
 					}
 				}
@@ -5412,18 +5957,18 @@ focus_tree = {
 						} }
 					add_building_construction = {
 						type = infrastructure
-						level = 3
+						level = 4
 						instant_build = yes
 					}
 					add_building_construction = {
 						type = air_base
-						level = 2
+						level = 3
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 5
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 5
 						instant_build = yes
 					}
 				}
@@ -6041,7 +6586,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = uk_commonwealth_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -6737,7 +7282,7 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = uk_commonwealth_focus
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 

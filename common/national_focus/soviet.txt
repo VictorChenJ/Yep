@@ -324,7 +324,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_infrastructure_effort_nsb
-		cost = 10
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
@@ -1722,10 +1722,10 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1750,10 +1750,10 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1770,7 +1770,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_eastern_development
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -3874,7 +3874,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SOV_found_the_pcdi
-		cost = 10
+		cost = 5
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -11183,7 +11183,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_collectivist_propaganda }
 
@@ -11214,7 +11214,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_positive_heroism
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -11321,7 +11321,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_positive_heroism }
 
@@ -11349,7 +11349,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_collectivist_propaganda
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -12973,7 +12973,7 @@ ai_will_do = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_baltic_security
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -13060,7 +13060,7 @@ ai_will_do = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_respect_baltic_self_determination
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 1

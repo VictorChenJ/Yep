@@ -1,6 +1,12 @@
 spriteTypes = {
 
 	##### IDEAS #####
+
+	SpriteType = {
+		name = "GFX_idea_plan_to_conquer"
+		textureFile = "gfx/interface/goals/ger/GER_plan_to_conquer.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_idea_GER_ration_fuel"
 		textureFile = "gfx/interface/ideas/GER_ration_fuel.dds"
@@ -47,6 +53,96 @@ spriteTypes = {
 	}
 
 	##### FOCUSES #####
+
+	spriteType = {
+		name = "GFX_GER_ambush_tactics"
+		texturefile = "gfx/interface/goals/ger/GER_pakfront.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_GER_mobile_fortresses"
+		texturefile = "gfx/interface/goals/ger/GER_tigers_in_the_east.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_the_final_crusade"
+		texturefile = "gfx/interface/goals/ger/GER_final_crusade.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_GER_division_support_structure"
+		texturefile = "gfx/interface/goals/ger/GER_modern_support_structure.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_modern_grenadiers"
+		texturefile = "gfx/interface/goals/ger/GER_modern_infantry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_charge_of_the_light_brigade"
+		texturefile = "gfx/interface/goals/ger/GER_charge_of_the_light_brigade.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_endless_offensives"
+		texturefile = "gfx/interface/goals/ger/GER_endless_offensives.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_the_wild_cats_that_roam_in_russia"
+		texturefile = "gfx/interface/goals/ger/GER_the_wild_cats_that_roam_russia.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_GER_offense_is_the_best_defense"
+		texturefile = "gfx/interface/goals/ger/GER_offense_best_defense.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_GER_new_weapons"
+		texturefile = "gfx/interface/goals/ger/GER_new_weapons.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GER_award_heroes"
+		texturefile = "gfx/interface/goals/ger/GER_award_heroes.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_GER_winter_of_1941"
+		texturefile = "gfx/interface/goals/ger/GER_winter_of_1941.dds"
+	}		
+
+	spriteType = {
+		name = "GFX_GER_festung_principle"
+		texturefile = "gfx/interface/goals/ger/GER_festung_principle.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ger_osttruppen"
+		texturefile = "gfx/interface/goals/ger/ger_osttruppen.dds"			
+	}
+
+	SpriteType = {
+		name = "GFX_crush_reds"
+		textureFile = "gfx/interface/goals/ger/GER_break_the_reds.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_help_the_spanish"
+		textureFile = "gfx/interface/goals/ger/GER_spanish_civil_war.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_plan_to_conquer"
+		textureFile = "gfx/interface/goals/ger/GER_plan_to_conquer.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_hitlerjugend"
+		textureFile = "gfx/interface/goals/ger/GER_hitlerjugend.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_prepare_navy"

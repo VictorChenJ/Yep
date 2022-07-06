@@ -30,6 +30,76 @@ ideas = {
 			}
 		}
 	
+		USA_buying_guns_for_us = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1			
+
+			modifier = {
+				industrial_capacity_factory = 0.1  
+			}
+		}
+
+		USA_secure_defeat_of_japan_idea = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1			
+
+			targeted_modifier = { 
+				tag = JAP 
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1 
+			} 
+		}
+
+		USA_funding_chinese_resistance = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1			
+
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.15
+				compliance_growth_on_our_occupied_states = -0.1
+			}
+		}
+
+		USA_economic_aid = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1			
+
+			modifier = {
+				consumer_goods_factor = -0.05 
+			}
+		}
+
 		USA_full_mob_idea = {
 			allowed = {
 				always = no

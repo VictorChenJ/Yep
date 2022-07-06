@@ -1,0 +1,83 @@
+spriteTypes = {
+
+###Ideas
+
+
+
+
+
+
+
+
+###Focuses
+
+SpriteType = {
+	name = "GFX_USA_support_china"
+	texturefile = "gfx/interface/goals/usa/USA_support_china.dds"
+}	
+
+SpriteType = {
+	name = "GFX_USA_procure_equipment_through_other_means"
+	texturefile = "gfx/interface/goals/usa/USA_support_china_guns.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_USA_provide_monetary_support_for_china"
+	texturefile = "gfx/interface/goals/USA/USA_support_china_cash.dds"
+}
+
+SpriteType = {
+	name = "GFX_USA_denounce_japanese_war_crimes"
+	texturefile = "gfx/interface/goals/usa/USA_denounce_japanese_war_crimes.dds"
+}
+
+SpriteType = {
+	name = "GFX_USA_form_modern_chinese_airforce"
+	texturefile = "gfx/interface/goals/usa/USA_support_china_airforce.dds"
+}
+
+SpriteType = {
+	name = "GFX_USA_increase_equipment_shipments"
+	texturefile = "gfx/interface/goals/usa/USA_increase_support_china_guns.dds"
+}
+
+SpriteType = {
+	name = "GFX_USA_X_force"
+	texturefile = "gfx/interface/goals/usa/USA_support_china_X_force.dds"
+}
+
+SpriteType = {
+	name = "GFX_USA_procure_the_defeat_of_japan"
+	texturefile = "gfx/interface/goals/usa/USA_secure_defeat_of_japan.dds"
+}
+
+
+SpriteType = {
+	name = "GFX_USA_lost_but_not_forgotten"
+	texturefile = "gfx/interface/goals/usa/USA_lost_but_not_forgotten.dds"
+}
+
+SpriteType = {
+	name = "GFX_USA_fund_the_guerillas"
+	texturefile = "gfx/interface/goals/usa/USA_fund_resistance.dds"
+}
+
+SpriteType = {
+	name = "GFX_USA_organized_resistance"
+	texturefile = "gfx/interface/goals/usa/USA_organized_resistance.dds"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

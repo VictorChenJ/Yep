@@ -52,17 +52,20 @@ focus_tree = {
 		relative_position_id = GER_grosraumwirtschaft
 		cost = 15
 		ai_will_do = {
-			factor = 1
+			factor = 12
 		}
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			OR = {
+				has_idea = GER_mefo_bills_1
+				has_idea = GER_mefo_bills_2
+				has_idea = GER_mefo_bills_3
+				has_idea = GER_mefo_bills_4
+			}
 			has_completed_focus = GER_rhineland
 		}
-		complete_tooltip = {
-		}
-		
+
 		completion_reward = {
 			add_ideas = GER_expand_mefo
 			random_owned_controlled_state = {
@@ -98,7 +101,7 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			has_idea = GER_expand_mefo
 		}
 		complete_tooltip = {
 		}
@@ -125,7 +128,7 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			has_idea = GER_expand_mefo_fast
 		}
 		complete_tooltip = {
 		}
@@ -178,7 +181,7 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			has_idea = GER_expand_mefo_fast
 		}
 		complete_tooltip = {
 		}
@@ -207,10 +210,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -222,10 +225,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -247,7 +250,7 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			has_idea = GER_expand_mefo
 		}
 		complete_tooltip = {
 		}
@@ -289,10 +292,9 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			has_idea = GER_expand_mefo_slow
 		}
-		complete_tooltip = {
-		}
+
 		
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -342,7 +344,7 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			has_idea = GER_expand_mefo_slow
 		}
 		complete_tooltip = {
 		}
@@ -381,7 +383,7 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			has_idea = GER_expand_mefo
 		}
 		complete_tooltip = {
 		}
@@ -423,7 +425,7 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			has_idea = GER_expand_mefo_balance
 		}
 		complete_tooltip = {
 		}
@@ -543,7 +545,7 @@ focus_tree = {
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_mefo_bills_1
+			has_idea = GER_expand_mefo
 		}
 		complete_tooltip = {
 		}
@@ -1722,6 +1724,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_ideas = scraping_the_barrel
 			64 = {
 				add_building_construction = {
 					type = bunker
@@ -2435,6 +2438,42 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_infantry_tactics
+		icon = GFX_ger_infantry_tactics
+		prerequisite = { focus = GER_prepare_army }
+		relative_position_id = GER_prepare_army
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			# Balance research bonus for 2 techs under land_doctrine
+			
+			army_experience = 15
+			
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 1
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = inf_bonus
+				bonus = 0.75
+				uses = 1
+				technology = improved_infantry_weapons
+				technology = advanced_infantry_weapons
+			}
+
+		}
+	}
+
+	focus = {
 		id = GER_prepare_navy
 		icon = GFX_prepare_navy
 		prerequisite = { focus = GER_prepare_army }
@@ -2616,6 +2655,134 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = GER_fighter_tactics
+		icon = GFX_GER_heavy_fighter
+		prerequisite = { focus = GER_prepare_air }
+		relative_position_id = GER_prepare_air
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			
+			air_experience = 15
+			
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.75
+				uses = 1
+				category = light_fighter
+			}
+
+		}
+	}
+
+	focus = {
+		id = GER_luft_2
+		icon = GFX_GER_luftwaffe_expansion
+		prerequisite = { focus = GER_fighter_tactics }
+		x = 0
+		y = 1
+		relative_position_id = GER_fighter_tactics
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = { 
+			air_experience = 50
+
+			add_ideas = GER_luft_2_idea
+			add_tech_bonus = {
+				name = radar_tech_bonus
+				bonus = 1.0
+				uses = 1
+				category = radar_tech
+			}
+			if = {
+				limit = {
+					has_opinion_modifier = sov_ger_treaty
+					NOT = { has_war_with = SOV }
+				}
+				SOV = {
+					country_event = { id = germany.78 days = 1 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_reorganise_war_industry
+		icon = GFX_ger_new_subsidiaries
+		prerequisite = { focus = GER_infantry_tactics }
+		relative_position_id = GER_infantry_tactics
+		
+		available = {
+			has_war_with = SOV
+		}
+		
+		cancel_if_invalid = yes
+		x = 2
+		y = 1
+		
+		cost = 10
+		
+		completion_reward = {
+			add_timed_idea = { idea = GER_armaments_miracle days = 365 }
+		}
+	}
+
+	focus = {
+		id = GER_prioritise_tanks
+		icon = GFX_GER_the_wild_cats_that_roam_russia
+		prerequisite = { focus = GER_reorganise_war_industry }
+		mutually_exclusive = { focus = GER_prioritise_aircraft }
+		relative_position_id = GER_reorganise_war_industry
+		
+		available = {
+			has_war_with = SOV
+		}
+		
+		cancel_if_invalid = yes
+		x = 0
+		y = 2
+		
+		cost = 5
+		
+		completion_reward = {
+			add_timed_idea = { idea = GER_prioritise_tanks_idea days = 365 }
+		}
+	}
+
+	focus = {
+		id = GER_prioritise_aircraft
+		icon = GFX_GER_luftwaffe_investment
+		prerequisite = { focus = GER_luft_2 }
+		mutually_exclusive = { focus = GER_prioritise_tanks }
+		relative_position_id = GER_luft_2
+		
+		available = {
+			has_war_with = SOV
+		}
+		
+		cancel_if_invalid = yes
+		x = 1
+		y = 1
+		
+		cost = 5
+		
+		completion_reward = {
+			add_timed_idea = { idea = GER_prioritise_aircraft_idea days = 365 }
+		}
+	}
 
 	focus = {
 		id = GER_grosraumwirtschaft
@@ -2642,9 +2809,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			any_country = {
-				original_tag = HUN
-				original_tag = ROM
+			HUN = {
+				is_in_faction_with = ROOT
+			}
+			ROM = {
 				is_in_faction_with = ROOT
 			}
 		}
@@ -2677,7 +2845,7 @@ focus_tree = {
 		}
 
 		icon = GFX_german_gold
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -3092,10 +3260,13 @@ focus_tree = {
 		y = 1
 		icon = GFX_legion_condor
 		available = {
-			any_country = {
-				original_tag = ROM
-				original_tag = HUN
-				original_tag = ITA
+			ROM = {
+				is_in_faction_with = ROOT
+			}
+			HUN = {
+				is_in_faction_with = ROOT
+			}
+			ITA = {
 				is_in_faction_with = ROOT
 			}
 			has_war_together_with = HUN
@@ -3105,8 +3276,11 @@ focus_tree = {
 			has_war_with = ENG
 			has_war_with = USA
 			country_exists = SPR
+			date > 1941.1.1
+
 			SPR = { 
 				has_idea = SPA_recovering_from_civil_war_2
+				has_government = fascism
 			}
 		}
 		bypass = {
@@ -3797,6 +3971,45 @@ focus_tree = {
 			}
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = walther_von_brauchitsch			
+		}
+	}
+
+	focus = {
+		id = GER_spain_help
+		icon = GFX_help_the_spanish
+		prerequisite = { focus = GER_army_innovation }
+		relative_position_id = GER_army_innovation
+		x = 1
+		y = 1
+		available = {
+			SPR = { has_civil_war = yes }
+			country_exists = D01
+			D01 = { has_war = yes}
+
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 10
+
+			D01 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 2000
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 350
+				}
+
+			}
+
+		
 		}
 	}
 	
@@ -4683,7 +4896,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = 3
+		x = 4
 		y = 2
 		relative_position_id = GER_rhineland
 		cost = 10
@@ -5258,7 +5471,7 @@ focus_tree = {
 			}
 		}
 		cancel_if_invalid = no
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
@@ -5765,11 +5978,48 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_crush_the_reds
+		icon = GFX_crush_reds
+		prerequisite = { focus = GER_italy_ally }
+		mutually_exclusive = { focus = GER_nationalist_spain_ally }
+		cost = 10
+		relative_position_id = GER_italy_ally
+		x = 2
+		y = 1
+		available = {
+			SPR = { has_civil_war = no }
+				any_other_country = {
+					original_tag = SPR
+					OR = { 
+						has_government = communism
+						has_government = democratic
+					}
+					NOT = { has_war_with = GER }
+					NOT = { is_in_faction_with = GER }
+				}
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SPR
+				expire = 0
+			}
+
+		}
+
+	}
+
+
 	
 	focus = {
 		id = GER_nationalist_spain_ally
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = GER_italy_ally }
+		mutually_exclusive = { focus = GER_crush_the_reds }
 		available = {
 			if = {
 				limit = {
@@ -6110,7 +6360,7 @@ focus_tree = {
 	focus = {
 		id = GER_naval_rearmament
 		icon = GFX_goal_generic_build_navy
-		x = 35
+		x = 36
 		y = 1
 		cost = 5
 		ai_will_do = {
@@ -7426,7 +7676,7 @@ focus_tree = {
 			is_subject = no
 			has_government = fascism
 		}
-		x = 47
+		x = 48
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -10560,4 +10810,613 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = GER_total_war
+		icon = GFX_GER_total_war
+		relative_position_id = GER_reintegrate_luxemburg_and_alsace_lorraine
+		
+		available = {
+			has_war_with = SOV
+			has_war_with = ENG
+			has_war_with = USA
+			date > 1943.1.1
+		}
+		
+		cancel_if_invalid = yes
+		x = -2
+		y = 0
+		
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+			add_political_power = 50
+			add_stability = -0.05
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = GER_desperate_time
+		icon = GFX_hitlerjugend
+		prerequisite = { focus = GER_total_war }
+		relative_position_id = GER_total_war
+		
+		available = {
+			has_war_with = SOV
+			date > 1943.1.1
+		}
+		
+		cancel_if_invalid = yes
+		x = 0
+		y = 1
+		
+		cost = 5
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 10000
+			}
+			add_ideas = scraping_the_barrel
+			add_stability = -0.1
+			add_war_support = 0.12
+		}
+	}
+
+	focus = {
+		id = GER_wacht_am_rhein
+        icon = GFX_plan_to_conquer
+		prerequisite = { focus = GER_desperate_time }
+		available = {
+			ROOT = {
+				NOT = { 
+				controls_state = 6
+				controls_state = 16
+			}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_desperate_time
+		cost = 3
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		completion_reward = {
+			add_timed_idea = { idea = GER_wacht_am_rhein_idea days = 15 }
+
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "King Tiger"
+					type = heavy_tank_chassis_3
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_heavy_cannon_3
+						turret_type_slot = tank_heavy_three_man_tank_turret
+						suspension_type_slot = tank_interleaved_suspension
+						armor_type_slot = tank_cast_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = sloped_armor
+						special_type_slot_2 = additional_machine_guns
+						special_type_slot_3 = armor_skirts
+						special_type_slot_4 = tank_radio_3
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 8
+						tank_nsb_armor_upgrade = 12
+					}
+					icon = "GFX_GER_advanced_heavy_tank_medium"
+				}
+				division_template = {
+					name = "King Tiger"
+					template_counter = 05
+
+					regiments = {
+
+						heavy_armor = { x = 0 y = 0 }
+						heavy_armor = { x = 0 y = 1 }
+						heavy_armor = { x = 0 y = 2 }
+
+						motorized = { x = 1 y = 0 }
+
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						field_hospital = { x = 0 y = 2 }
+						signal_company = { x = 0 y = 3}
+						maintenance_company = { x = 0 y = 4}
+
+					}
+				}
+
+				division_template = {
+					name = "Volks Grenadier"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+
+						artillery_brigade = { x = 3 y = 0}
+
+					}
+					support = {
+						engineer = { x = 0 y = 0 }   
+						artillery  = { x = 0 y = 1 }
+						field_hospital = { x = 0 y = 2 }
+
+					}
+				}
+
+		}
+		capital_scope = {
+			55 = {
+			create_unit = { 
+				division = "name = \"King Tiger\" division_template = \"King Tiger\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"King Tiger\" division_template = \"King Tiger\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"Volks Grenadier\" division_template = \"Volks Grenadier\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"Volks Grenadier\" division_template = \"Volks Grenadier\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"Volks Grenadier\" division_template = \"Volks Grenadier\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"Volks Grenadier\" division_template = \"Volks Grenadier\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"Volks Grenadier\" division_template = \"Volks Grenadier\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"Volks Grenadier\" division_template = \"Volks Grenadier\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"Volks Grenadier\" division_template = \"Volks Grenadier\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"Volks Grenadier\" division_template = \"Volks Grenadier\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
+			}
+		}
+			
+		}
+		}
+	}
+
+	focus = { 
+		id = GER_the_winter_of_1941
+		icon = GFX_GER_winter_of_1941
+		prerequisite = { focus = GER_kampfgruppes }
+		relative_position_id = GER_long_range_escorts
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+
+		available = {
+			date > 1942.01.01
+			has_war_with = SOV
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = GER_general_staff3
+				
+		}
+	}
+
+	focus = { 
+		id = GER_festung_principle
+		icon = GFX_GER_festung_principle
+		prerequisite = { focus = GER_the_winter_of_1941 }
+		mutually_exclusive = { focus = GER_offense_is_the_best_defense }
+		relative_position_id = GER_the_winter_of_1941
+		x = -2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = OB_ost_turtle
+			custom_effect_tooltip = GER_osttruppen_tt				
+		}
+	}			
+
+	focus = { 
+		id = GER_Osttruppen
+		icon = GFX_focus_ger_osttruppen
+		prerequisite = { focus = GER_festung_principle }
+		relative_position_id = GER_the_winter_of_1941
+		x = -2
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			every_army_leader = {
+				add_defense = 1
+			}		
+		}
+	}
+	focus = { 
+		id = GER_mobile_fortresses
+		icon = GFX_GER_mobile_fortresses
+		prerequisite = { focus = GER_festung_principle }
+		relative_position_id = GER_festung_principle
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				uses = 1
+				bonus = 2
+				name = GER_mobile_fortresses 
+			}
+			add_tech_bonus = {
+				technology = mechanised_infantry
+				uses = 1
+				bonus = 1
+				name = GER_mobile_fortresses 
+			}
+		}
+	}
+
+	focus = { 
+		id = GER_grenadiers_never_retreat
+		icon = GFX_GER_award_heroes
+		prerequisite = { focus = GER_festung_principle }
+		relative_position_id = GER_festung_principle
+		x = -1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+				if = {
+					limit = {
+						has_idea = OB_ost_turtle
+					}
+					swap_ideas = { 
+						remove_idea = OB_ost_turtle
+						add_idea = OB_ost_turtle2
+					}
+				}
+			
+		}
+	}
+
+	focus = { 
+		id = GER_new_weapons
+		icon = GFX_GER_new_weapons
+		prerequisite = { focus = GER_grenadiers_never_retreat }
+		relative_position_id = GER_festung_principle
+		x = -1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				technology = infantry_at
+				technology = infantry_at2
+				uses = 2
+				bonus = 2 
+			}			
+		}
+	}
+
+	focus = { 
+		id = GER_ambush_tactics
+		icon = GFX_GER_ambush_tactics
+		prerequisite = { focus = GER_mobile_fortresses }
+		relative_position_id = GER_mobile_fortresses
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_ambush_tactics
+				uses = 2
+				bonus = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = GER_ambush_tactics
+				uses = 2
+				bonus = 2
+				technology = infantry_weapons
+			}
+		}
+	}
+
+	focus = { 
+		id = GER_offense_is_the_best_defense
+		icon = GFX_GER_offense_is_the_best_defense
+		prerequisite = { focus = GER_the_winter_of_1941 }
+		mutually_exclusive = { focus = GER_festung_principle }
+		relative_position_id = GER_the_winter_of_1941
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = OB_ost_wolf
+		}
+	}	
+
+	focus = { 
+		id = GER_the_wild_cats_that_roam_in_russia
+		icon = GFX_GER_the_wild_cats_that_roam_in_russia
+		prerequisite = { focus = GER_offense_is_the_best_defense }
+		relative_position_id = GER_the_winter_of_1941
+		x = 1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_the_wild_cats_that_roam_in_russia
+				bonus = 1
+				uses = 2
+				category = armor
+			}				
+			add_tech_bonus = {
+				technology = mechanised_infantry
+				uses = 1
+				bonus = 1
+				name = GER_the_wild_cats_that_roam_in_russia 
+			}
+		}			
+	}	
+
+	focus = { 
+		id = GER_endless_offensives
+		icon = GFX_GER_endless_offensives
+		prerequisite = { focus = GER_the_wild_cats_that_roam_in_russia }
+		relative_position_id = GER_the_winter_of_1941
+		x = 1
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			show_ideas_tooltip = OB_ost_wolf2
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = OB_ost_wolf
+					}
+					swap_ideas = { 
+						remove_idea = OB_ost_wolf
+						add_idea = OB_ost_wolf2
+					}
+				}
+			}			
+		}
+	}
+	focus = { 
+		id = GER_cossacks
+		icon = GFX_GER_charge_of_the_light_brigade
+		prerequisite = { focus = GER_offense_is_the_best_defense }
+		relative_position_id = GER_endless_offensives
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		available  = {
+			GER = { has_full_control_of_state = 202 }
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+
+				division_template = {
+					name = "Cossack Cavalry Corp"
+					priority = 1
+
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+					
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+					
+						cavalry = { x = 2 y = 0 }
+						cavalry = { x = 2 y = 1 }
+						
+						cavalry = { x = 3 y = 0 }
+						armored_car = { x = 3 y = 1 }	
+						
+					}
+					support = {
+						engineer = { x = 0 y = 0  } 
+						maintenance_company = { x = 0 y = 1 }
+						logistics_company = { x = 0 y = 2 }
+					}
+				}
+
+				every_state = {
+					limit = { state = 202 }
+					create_unit = {
+						division = "name = \"1st Cossack Cavalry Corp\" division_template = \"Cossack Cavalry Corp\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = GER
+					}	
+					create_unit = {
+						division = "name = \"2nd Cossack Cavalry Corp\" division_template = \"Cossack Cavalry Corp\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = GER
+					}	
+					create_unit = {
+						division = "name = \"3rd Cossack Cavalry Corp\" division_template = \"Cossack Cavalry Corp\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = GER
+					}	
+					create_unit = {
+						division = "name = \"4th Cossack Cavalry Corp\" division_template = \"Cossack Cavalry Corp\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = GER
+					}	
+					create_unit = {
+						division = "name = \"5th Cossack Cavalry Corp\" division_template = \"Cossack Cavalry Corp\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = GER
+					}	
+					create_unit = {
+						division = "name = \"6th Cossack Cavalry Corp\" division_template = \"Cossack Cavalry Corp\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = GER
+					}	
+					create_unit = {
+						division = "name = \"7th Cossack Cavalry Corp\" division_template = \"Cossack Cavalry Corp\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = GER
+					}	
+					create_unit = {
+						division = "name = \"8th Cossack Cavalry Corp\" division_template = \"Cossack Cavalry Corp\" start_experience_factor = 0.6 start_equipment_factor = 0.1" 
+						owner = GER
+					}	
+				}			
+		}
+	}
+	focus = { 
+		id = GER_modern_grenadiers
+		icon = GFX_GER_modern_grenadiers
+		prerequisite = { focus = GER_offense_is_the_best_defense }
+		relative_position_id = GER_the_winter_of_1941
+		x = 3
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				uses = 3
+				bonus = 1 
+				ahead_reduction = 1 
+			}		
+			add_tech_bonus = {
+				technology = mechanised_infantry
+				uses = 1 
+				bonus = 1 
+				ahead_reduction = 1 
+
+			}
+		}
+	}
+
+	focus = { 
+		id = GER_division_support_structure
+		icon = GFX_GER_division_support_structure
+		prerequisite = { focus = GER_modern_grenadiers }
+		relative_position_id = GER_the_winter_of_1941
+		x = 3
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				category = support_tech
+				uses = 3
+				bonus = 1 
+				ahead_reduction = 1 
+			}		
+		}
+	}
+
+	focus = { 
+		id = GER_the_final_crusade
+		icon = GFX_GER_the_final_crusade
+		prerequisite = { focus = GER_new_weapons focus = GER_division_support_structure  } 
+		prerequisite = { focus = GER_endless_offensives focus = GER_ambush_tactics }
+		relative_position_id = GER_the_winter_of_1941
+		x = 0
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = OB_ost_wolf2
+				}
+				remove_ideas = OB_ost_wolf2
+				swap_ideas = { 				
+					remove_idea = general_staff3
+					add_idea = general_staff4					
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = OB_ost_turtle2
+				}
+				remove_ideas = OB_ost_turtle2
+				swap_ideas = { 				
+					remove_idea = general_staff3
+					add_idea = general_staff5
+				}
+			}
+
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

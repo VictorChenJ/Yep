@@ -83,8 +83,8 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				navy_submarine_detection_factor = 0.25
-				convoy_escort_efficiency = 0.25
+				navy_submarine_detection_factor = 0.15
+				convoy_escort_efficiency = 0.15
 			}
 		}
 	
