@@ -12,6 +12,21 @@ spriteTypes = {
 ###Focuses
 
 SpriteType = {
+	name = "GFX_USA_quality_and_quantity"
+	texturefile = "gfx/interface/goals/usa/USA_quantity_and_quality.dds"
+}
+
+SpriteType = {
+	name = "GFX_USA_airbases_close_to_japan"
+	texturefile = "gfx/interface/goals/usa/USA_b_25.dds"
+}
+
+SpriteType = {
+	name = "GFX_USA_semper_fi"
+	texturefile = "gfx/interface/goals/usa/USA_semper_fidelis.dds"
+}
+
+SpriteType = {
 	name = "GFX_USA_support_china"
 	texturefile = "gfx/interface/goals/usa/USA_support_china.dds"
 }	

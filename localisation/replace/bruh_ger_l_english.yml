@@ -1,5 +1,7 @@
 ﻿l_english:
  #### FOCUSES ####
+ GER_make_them_suffer:0 "Make Them Suffer"
+ GER_spring_awakening:0 "Spring Awakening"
  GER_cossacks:0 "Arm the Cossacks" 
  GER_cossacks_desc:0 "The Cossacks have enthusiastically welcomed in Ukraine, we may arm them and use them in order to compensate for our lack of manpower."
  GER_division_support_structure:0 "Division Support Structure"
@@ -278,8 +280,29 @@
  germany.104.f:0 "Nothing lol"
  germany.104.d:0 "Italy is asking for French lands after joining the war. What should we give them?"
  anschluss_mefo_bills_double_reduction:0 "Modify §YMEFO Bills§! by £political_power_texticon  §G+0.10§! Daily Political Power Gain\n"
- 
+ GER_endsieg:0 "Endsieg"
+ GER_endsieg_desc:0 "Germany and her people will overcome any obstacle and achieve ultimate victory over its many foes. In the East we shall strike at their center and drive them out to Moscow. In the West we will launch a final offensive against the allies to force them into a peace settlement. History shall remember our glorious triumph against the world. ‘As the curve sometimes goes down, so one day it will go up again.’"
+ GER_volksgewehr:0 "Volkssturmgewehr"
+ GER_volksgewehr_desc:0 "As the first Volkssturm battalions have already been sent to the front, we have realized the need to equip future troops with rifles. To do this, we shall create a new easier to produce standard rifle. The Volkssturmgewehr. This rifle will be able to be mass produced and stamped without any artisanal support hastening production substantially. Every Volkssturm shall have his rifle."
+ GER_panzerfausts_for_all:0 "Panzerfausts For All"
+ GER_panzerfausts_for_all_desc:0 "Every man pressed into the army shall be armed with our most effective and modern tank killer. The panzerfaust. Equipping every man with these fearsome yet cheap weapons will force enemy armor to slow down their advance to wait for their infantry screens or risk utter destruction. Our brave crusaders will wait in every bush, hedgerow and building to destroy as many tanks as possible. Gott mit uns."
+
  ### IDEAS ###
+ GER_spring_awakening_idea:0 "Spring Awaking"
+ GER_the_last_stand_of_the_reich:0 "The Last Stand of The Reich "
+ GER_standard_panzer:0 " Standard Panzer"
+ OB_ost_turtle:0 "Oberkommando des Heeres: Defensive Posture"
+ OB_ost_turtle2:0 "Oberkommando des Heeres: Every City a Fortress"
+ OB_ost_wolf:0 "Oberkommando des Heeres: Aggressive Posture"
+ OB_ost_wolf2:0 "Oberkommando des Heeres: Every Attack an Opportunity"
+ general_staff2:0 "General Staff"
+ general_staff2_desc:0 "The German General staff was responsible for the continuous study of all aspects of war, including the drawing up and reviewing of plans for mobilization or campaign. This contributed to a higher level of Organization in the army."
+ general_staff3:0 "General Staff"
+ general_staff3_desc:0 "The German General staff was responsible for the continuous study of all aspects of war, including the drawing up and reviewing of plans for mobilization or campaign. This contributed to a higher level of Organization in the army."
+ general_staff4:0 "General Staff"
+ general_staff4_desc:0 "The German General staff was responsible for the continuous study of all aspects of war, including the drawing up and reviewing of plans for mobilization or campaign. This contributed to a higher level of Organization in the army."
+ general_staff5:0 "General Staff"
+ general_staff5_desc:0 "The German General staff was responsible for the continuous study of all aspects of war, including the drawing up and reviewing of plans for mobilization or campaign. This contributed to a higher level of Organization in the army."
  GER_wacht_am_rhein_idea:0 "Wacht am Rhein"
  GER_wacht_am_rhein_idea_desc:0 "The war has been on for many years now, and Germany haven't seen a decisive victory since the battle of France. But the times will soon turn, because after Hitler had a good dream he got an idea, lets do the same tactic we did in 1940 just bugger and with a winning chance less than 20%. What can possible go wrong?"
  GER_expand_mefo_balance:0 "A Balanced Approach"

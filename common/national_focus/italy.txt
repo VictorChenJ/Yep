@@ -668,10 +668,10 @@
 						}
 						is_core_of = ROM
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -686,10 +686,10 @@
 						}
 						is_core_of = HUN
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -741,10 +741,10 @@
 						is_core_of = ROM
 					}
 					prioritize = { 81 }
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -778,10 +778,10 @@
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -795,10 +795,10 @@
 						}
 						is_core_of = HUN
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -849,10 +849,10 @@
 						}
 						is_core_of = BUL
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -2431,7 +2431,7 @@
 		x = -1
 		y = 1
 		relative_position_id = ITA_pact_of_steel
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4073,7 +4073,6 @@ focus = {
 			technology = advanced_medium_battery
 			technology = improved_heavy_battery
 			technology = advanced_heavy_battery
-			technology = modern_heavy_battery
 		}
 	}
 }
@@ -4244,6 +4243,155 @@ focus = {
 		}
 	}
 }
+
+focus = {
+	id = ITA_german_trade
+	icon = GFX_focus_chi_mission_to_germany
+	prerequisite = { focus = ITA_german_rd_treaty }
+	prerequisite = { focus = ITA_german_millitary_cooperation }
+	x = 0
+	y = 2
+	relative_position_id = ITA_german_rd_treaty
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 2
+					include_locked = yes
+				}
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		GER = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_core_of = GER
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+focus = {
+	id = ITA_german_industrial_cooperation
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = ITA_german_trade }
+	x = 0
+	y = 1
+	relative_position_id = ITA_german_trade
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = GER_four_year_plan
+			bonus = 0.5
+			uses = 2
+			category = industry
+		}
+		GER = {
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+}
+
+
+focus = {
+	id = ITA_integrate_economies
+	icon = GFX_goal_tripartite_pact
+	prerequisite = { focus = ITA_german_industrial_cooperation }
+	x = 0
+	y = 1
+	relative_position_id = ITA_german_industrial_cooperation
+	cost = 5
+	ai_will_do = {
+		factor = 1
+	}
+
+	available_if_capitulated = yes
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 3
+					include_locked = yes
+				}
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+			}
+		}
+		GER = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+					is_core_of = GER
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
 
 }
 

@@ -47,7 +47,7 @@ JAP_historical_plan = {
 		JAP_fighter_modernization #September 30 1937 	før JAP_fighter_modernization
 		JAP_carrier_warfare_experiments #December 10 1937	
 		#1938
-		JAP_supremacy_of_technology #February 20 1938	
+		JAP_supremacy_of_will #February 20 1938	
 		JAP_national_mobilization_law #April 30 1938	
 		JAP_national_research_policy #July 10 1938	
 		JAP_expand_the_big_four
@@ -77,8 +77,9 @@ JAP_historical_plan = {
 		#1941
 		#August 30 1940	
 		 #November 10 1940	
+		JAP_alliance_with_siam
 		JAP_non_aggression_pact_with_the_soviet_union
-		JAP_alliance_with_siam #March 30 1941	
+		 #March 30 1941	
 		 #August 20 1941	
 		 #October 30 1941	
 		JAP_secure_china

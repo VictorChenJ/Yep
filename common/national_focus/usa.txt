@@ -1829,7 +1829,7 @@ focus_tree = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
 		x = 2
-		y = 2
+		y = 1
 		prerequisite = { focus = USA_neutrality_act focus = USA_limited_intervention }
 		relative_position_id = USA_limited_intervention
 		cost = 10
@@ -1931,6 +1931,56 @@ focus_tree = {
 				USA_congress_medium_opposition = yes
 			}
 		}
+	}
+	focus = {
+		id = USA_england_focus
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = USA_lend_lease_act }
+		relative_position_id = USA_lend_lease_act
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = { target = USA modifier = aided_industry }
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+						type = industrial_complex
+						level = 5
+						instant_build = yes
+					}
+					set_state_flag = ENG_uk_australia_focus_1IC
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = ENG_uk_australia_focus_1IC
+				}
+			}
+		}
+	
 	}
 	focus = {
 		id = USA_arsenal_of_democracy
@@ -6298,7 +6348,7 @@ focus_tree = {
 	focus = {
 		id = USA_tiger_hunting
 		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = USA_hello_to_ford }
+		prerequisite = { focus = USA_war_plan_black }
 		available = {
 			has_war_with = GER
 			has_war_with = JAP
@@ -6306,7 +6356,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
-		relative_position_id = USA_hello_to_ford
+		relative_position_id = USA_war_plan_black
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -6314,7 +6364,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			set_technology = {
-				mechanised_infantry1 = 1
+				mechanised_infantry = 1
 			}
 
 			create_equipment_variant = {
@@ -6423,7 +6473,7 @@ focus_tree = {
 			relative_position_id = USA_intervention_in_asia
 			x = 0
 			y = 4
-			cost = 2
+			cost = 10
 			ai_will_do = {
 				factor = 10
 			}
@@ -6441,7 +6491,7 @@ focus_tree = {
 					add_opinion_modifier = { target = USA modifier = offered_support }
 					add_offsite_building = { type = arms_factory level = 4}
 				}
-				army_experience = 40
+				army_experience = 20
 			}
 		}
 	
@@ -6473,7 +6523,7 @@ focus_tree = {
 					}
 					CHI_hyper_inflation_level_down = yes
 				}
-				army_experience = 50
+				army_experience = 10
 			}
 		}	
 	
@@ -6505,7 +6555,7 @@ focus_tree = {
 					}
 					CHI_hyper_inflation_level_down = yes				
 				}
-				army_experience = 50
+				army_experience = 10
 			}
 		}	
 	
@@ -6550,8 +6600,8 @@ focus_tree = {
 			
 			available = { 
 				USA = {
-					has_tech = usa_fighter_1
-					has_tech = usa_cas_1
+					has_tech = fighter1
+					has_tech = cas1
 				}
 			}
 	
@@ -6590,7 +6640,7 @@ focus_tree = {
 					}
 				}
 				air_experience = 50	
-				army_experience = 50
+				army_experience = 10
 			}
 		}		
 	
@@ -6620,7 +6670,7 @@ focus_tree = {
 					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = USA }
 					CHI_hyper_inflation_level_down = yes
 				}
-				army_experience = 50
+				army_experience = 10
 				air_experience = 50
 			}
 		}		
@@ -6726,7 +6776,7 @@ focus_tree = {
 						}	
 					}
 				}
-				army_experience = 50
+				army_experience = 10
 			}
 		}			
 	
@@ -6804,7 +6854,7 @@ focus_tree = {
 				CHI = {
 					add_ideas = USA_funding_chinese_resistance
 				}
-				army_experience = 50
+				army_experience = 10
 			}
 		}		
 	
@@ -6837,11 +6887,11 @@ focus_tree = {
 						is_core_of = CHI 
 					}
 					add_resistance_target = {
-						amount = 13
+						amount = 25
 					}
 				}
 				CHI = {
-					add_legitimacy = 0.1 
+					add_legitimacy = 0.2 
 				}
 			}
 		}		
@@ -6869,13 +6919,13 @@ focus_tree = {
 				add_tech_bonus = {
 					category = land_doctrine
 					uses = 1
-					bonus = 2
+					bonus = 1
 					name = USA_procure_the_defeat_of_japan
 				}
 				add_tech_bonus = {
 					category = naval_doctrine
 					uses = 1
-					bonus = 2
+					bonus = 1
 					name = USA_procure_the_defeat_of_japan
 				}
 				add_ideas = USA_secure_defeat_of_japan_idea
@@ -6883,10 +6933,122 @@ focus_tree = {
 		}
 
 
+		focus = {
+			id = USA_semper_fi
+			icon = GFX_USA_semper_fi
+			prerequisite = { focus = USA_defense_of_the_pacific }
+			relative_position_id = USA_defense_of_the_pacific
+			x = 0
+			y = 1
+			cost = 5
+			ai_will_do = {
+				factor = 10
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				add_ideas = USMC
+				add_tech_bonus = {
+					category = para_tech
+					category = marine_tech
+					uses = 2
+					bonus = 1 
+					name = USA_semper_fi
+				}
+			}
+		}	
+	
+		focus = {
+			id = USA_airbases_close_to_japan
+			icon = GFX_USA_airbases_close_to_japan
+			prerequisite = { focus = USA_semper_fi }
+			relative_position_id = USA_semper_fi
+			x = 0
+			y = 1
+			cost = 7.16
+			ai_will_do = {
+				factor = 100 
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+				AND = {
+					has_full_control_of_state = 645 
+					has_full_control_of_state = 648
+					has_full_control_of_state = 646
+					has_full_control_of_state = 684
+				}
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				645 = {
+					add_building_construction = {
+						type = air_base
+						level = 10
+						instant_build = yes 
+					}
+					add_building_construction = {
+						type = infrastructure 
+						level = 1
+						instant_build = yes 
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 5
+						instant_build = yes
+						province = 13025
+					}
+				}
+				JAP = {
+					add_ideas = USA_continous_air_raids 
+				}
+			}
+		}
 
 
-
-
+		focus = {
+			id = USA_quality_and_quantity 
+			icon = GFX_USA_quality_and_quantity
+			prerequisite = { focus = USA_war_plan_black }
+			relative_position_id = USA_war_plan_black
+			x = 2
+			y = 1
+			cost = 5
+			ai_will_do = {
+				factor = 10
+			}
+			available_if_capitulated = yes		
+			
+			available = { 
+			}
+	
+			bypass = {
+			}
+			
+			completion_reward = {
+				add_tech_bonus = {
+					category = armor
+					uses = 2 
+					bonus = 1 
+					name = USA_detroit_vehicle_arsenal
+				}
+				add_tech_bonus = {
+					category = cat_mobile_warfare
+					uses = 2
+					bonus = 1
+					name = USA_detroit_vehicle_arsenal
+				}
+			}
+		}
 
 
 

@@ -18,6 +18,26 @@ ideas = {
 		
 		}
 
+		GER_spring_awakening_idea = {
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_Factor = 0.1
+			}
+
+			picture = general_staff
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.05
+
+			}
+
+
+		}
+
 		general_staff5 = {
 			
 			allowed = {
@@ -152,6 +172,47 @@ ideas = {
 				non_core_manpower = 0.001
 			}
 		}
+
+		GER_the_last_stand_of_the_reich = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_air_payment
+
+			modifier = {
+				dig_in_speed_factor = 0.5
+				army_speed_factor = 0.1 
+				cas_damage_reduction = 0.5				
+			}
+		}	
+		
+		GER_standard_panzer = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_wall_line
+
+			modifier = {
+			}
+
+			equipment_bonus = {
+				medium_tank_equipment = {
+					build_cost_ic = -0.1 
+					reliability = -0.2 
+				}
+
+				heavy_tank_equipment = {
+					build_cost_ic = -0.1
+					reliability = -0.2 
+				}				
+			}	
+		}	
 
 		general_staff3 = {
 			

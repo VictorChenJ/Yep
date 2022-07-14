@@ -1332,7 +1332,6 @@
 		relative_position_id = JAP_non_aggression_pact_with_the_soviet_union
 
 		available = {
-			NOT = { has_war_with = CHI }
 		}
 
 		completion_reward = {
@@ -1615,7 +1614,7 @@
 		y = 1
 		relative_position_id = JAP_purge_the_kodoha_faction
 
-		cost = 12
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -1641,7 +1640,7 @@
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1669,10 +1668,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = JAP_zaibatsus_factories
@@ -1719,7 +1718,7 @@
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1729,7 +1728,7 @@
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1753,10 +1752,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = JAP_nationalize_war_industry_AF
@@ -1778,10 +1777,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = JAP_nationalize_war_industry_IC
@@ -1832,10 +1831,10 @@
 					}
 				}
 				prioritize = { 528 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5489,7 +5488,7 @@
 		icon = GFX_focus_generic_self_management
 		x = 29
 		y = 4
-		cost = 12
+		cost = 10
 
 		available = {
 			has_completed_focus = JAP_guide_the_zaibatsus
@@ -5634,7 +5633,7 @@
 		prerequisite = { focus = JAP_bank_loans }
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		relative_position_id = JAP_mining_expansion
 
 		available = {
@@ -5873,6 +5872,48 @@
 			}
 		}
 	}
+
+	focus = {
+		id = JAP_alliance_with_siam
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = JAP_strike_south_doctrine }
+		x = 1
+		y = 1
+		relative_position_id = JAP_strike_south_doctrine
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_faction_leader = yes
+			country_exists = SIA
+		}
+
+		bypass = {
+			is_in_faction_with = SIA
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			SIA = { country_event = generic.5 }
+			add_ai_strategy = {
+				type = protect
+				id = "SIA"
+				value = 100
+			}
+		}
+	}
+
+
+
+
 
 
 

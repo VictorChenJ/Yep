@@ -2,6 +2,48 @@ ideas = {
 
 	country = {
 		
+		USA_continous_air_raids = {
+			picture = combined_bomber_offensive
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			cancel = {
+				has_war_with = USA 
+			}
+
+			removal_cost = -1			
+
+			modifier = {
+				stability_factor = -0.2
+			}
+		}
+		
+		USMC = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = eng_preparing_the_second_front
+			
+			modifier = {
+				special_forces_cap = 0.015
+				amphibious_invasion = 0.1
+				naval_invasion_capacity = 8
+			}
+		}
+
 		USA_germany_first_idea = {
 			allowed = {
 				always = no

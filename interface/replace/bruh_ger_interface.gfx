@@ -54,6 +54,31 @@ spriteTypes = {
 
 	##### FOCUSES #####
 
+	SpriteType = {
+		name = "GFX_GER_loyalty_to_the_fatherland"
+		texturefile = "gfx/interface/goals/GER/ger_loyalty_to_the_fatherland.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_standard_panzer"
+		texturefile = "gfx/interface/goals/GER/GER_standard_panzer.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_panzerfausts_for_all"
+		texturefile = "gfx/interface/goals/GER/GER_panzerfausts_for_all.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_volksturm"
+		texturefile = "gfx/interface/goals/GER/ger_volkssturm.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_hitlers_meddling"
+		textureFile = "gfx/interface/goals/ger/GER_hitlers_meddling.dds"
+	}
+
 	spriteType = {
 		name = "GFX_GER_ambush_tactics"
 		texturefile = "gfx/interface/goals/ger/GER_pakfront.dds"
