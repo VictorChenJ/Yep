@@ -196,10 +196,16 @@ focus_tree = {
 				limit = { 
 					has_state_flag = SOV_finish_five_year_plan_2IC 
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -234,6 +240,12 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 					set_state_flag = SOV_finish_five_year_plan_2IC
 				}
 			}
@@ -246,6 +258,12 @@ focus_tree = {
 							size > 0
 							include_locked = yes
 						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
 					}
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
@@ -286,6 +304,12 @@ focus_tree = {
 						level = 2
 						instant_build = yes
 					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
 					set_state_flag = SOV_finish_five_year_plan_2IC
 				}
 			}
@@ -302,6 +326,12 @@ focus_tree = {
 							include_locked = yes
 						}
 						NOT = { has_state_flag = SOV_finish_five_year_plan_2IC }
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
 					}
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
@@ -344,7 +374,16 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
 			}
+			
+			
 		}
 
 		completion_reward = { #TODO_Manu: This is just copy-pasted from the old focus -> Is this what we want?
@@ -363,6 +402,12 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
 			random_owned_controlled_state = {
@@ -373,6 +418,12 @@ focus_tree = {
 						size > 1
 						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -813,7 +864,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 10
+		cost = 5
 
 		available = {
 			any_owned_state = {
@@ -851,15 +902,15 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				add_resource = {
 					type = steel
-					amount = 7
+					amount = 10
 				}
 				set_state_flag = SOV_steel_casting_industry_flag
 			}
@@ -891,15 +942,15 @@ focus_tree = {
 						}
 						NOT = {	has_state_flag = SOV_steel_casting_industry_flag }
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 					add_resource = {
 						type = steel
-						amount = 7
+						amount = 10
 					}
 					set_state_flag = SOV_steel_casting_industry_flag
 				}
@@ -940,7 +991,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = synthetic_refinery
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -963,7 +1014,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = synthetic_refinery
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1015,7 +1066,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes						
 				}
 				hidden_effect = {
@@ -1025,7 +1076,7 @@ focus_tree = {
 						}				
 						add_building_construction = {
 							type = fuel_silo
-							level = 1
+							level = 2
 							instant_build = yes						
 						}
 						add_to_temp_variable = { SOV_silos_from_focus = 1 }
@@ -1471,13 +1522,13 @@ focus_tree = {
 				408 = { #VLADIVOSTOK
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 3
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -1499,13 +1550,13 @@ focus_tree = {
 				566 = { #IRKUTSK
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 3
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -1526,13 +1577,13 @@ focus_tree = {
 				409 = { #KHABAROVSK
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 3
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -1554,13 +1605,13 @@ focus_tree = {
 				564 = { #ULAN UDE
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 3
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -1664,13 +1715,13 @@ focus_tree = {
 				572 = { #CHELYABISNK
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 4
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -1692,13 +1743,13 @@ focus_tree = {
 				582 = { #MAGNITOGORSK
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 4
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -1719,13 +1770,13 @@ focus_tree = {
 				573 = { #ZLATOUST
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 4
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -1747,13 +1798,13 @@ focus_tree = {
 				653 = { #SVERDLOVSK
 					add_building_construction = {
 						type = infrastructure
-						level = 2
+						level = 4
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -18964,6 +19015,9 @@ focus = {
 					infantry = { x = 1 y = 0 }
 					infantry = { x = 1 y = 1 }
 					infantry = { x = 1 y = 2 }
+
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
 				}
 				support = {
 				}

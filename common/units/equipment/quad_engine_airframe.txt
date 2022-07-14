@@ -29,8 +29,6 @@ equipments = {
 			plane_engine_upgrade
 			plane_reliability_upgrade
 		}
-
-		air_superiority = 0.01
 		reliability = 0.8
 
 		# Air vs Navy - high damage / low hit chance / hard to hurt
@@ -40,7 +38,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 15
 		
-		build_cost_ic = 65
+		build_cost_ic = 80
 		resources = {
 			#oil = 1
 			aluminium = 4
@@ -109,10 +107,10 @@ equipments = {
 		
 		air_range = 2500
 		maximum_speed = 400
-		air_agility = 6
+		air_agility = 4
 		air_attack = 50
-		air_defence = 25
-		air_bombing = 30
+		air_defence = 11
+		air_bombing = 28
 		
 		# build_cost_ic = 36
 	}
@@ -127,12 +125,12 @@ equipments = {
 
 		air_range = 3500
 		maximum_speed = 450
-		air_agility = 9
-		air_attack = 105
-		air_defence = 30
-		air_bombing = 50
+		air_agility = 7
+		air_attack = 90
+		air_defence = 17
+		air_bombing = 40
 		
-		build_cost_ic = 78
+		build_cost_ic = 110
 		resources = {
 			#oil = 1
 			aluminium = 6
@@ -150,12 +148,12 @@ equipments = {
 		
 		air_range = 5000
 		maximum_speed = 500
-		air_agility = 11
-		air_attack = 150
-		air_defence = 50
-		air_bombing = 70
+		air_agility = 9
+		air_attack = 130
+		air_defence = 30
+		air_bombing = 60
 		
-		build_cost_ic = 90
+		build_cost_ic = 145
 		resources = {
 			#oil = 1
 			aluminium = 7

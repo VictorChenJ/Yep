@@ -1524,7 +1524,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1936
 		folder = {
 			name = air_techs_folder
@@ -1563,7 +1563,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1940
 		folder = {
 			name = air_techs_folder
@@ -1602,7 +1602,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1944
 		folder = {
 			name = air_techs_folder
@@ -1636,7 +1636,7 @@ technologies = {
 			jet_strat_bomber_equipment_1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1950
 
 		dependencies = {

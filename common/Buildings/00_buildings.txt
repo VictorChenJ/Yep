@@ -142,13 +142,13 @@ buildings = {
 	
 	anti_air_building = {
 		show_on_map = 3
-		base_cost = 3000
+		base_cost = 2800
 		icon_frame = 9
 		anti_air = yes
 		disabled_in_dmz = yes
 		air_defence = 2
 		max_level = 5 # This is the max unlock level
-		damage_factor = 0.12
+		damage_factor = 0.16
 		value = 1
 		infrastructure_construction_effect = yes
 	}

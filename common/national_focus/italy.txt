@@ -3572,7 +3572,6 @@ focus = {
 			uses = 2
 			category = battlefield_support_tree
 		}
-		add_ideas = german_cooperation_focus 
 	}
 }
 
