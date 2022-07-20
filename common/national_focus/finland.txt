@@ -14,11 +14,11 @@
 	reset_on_civilwar = no
 
 	initial_show_position = {
-		focus = industrial_effort
+		focus = FIN_industrial_effort
 	}
 
 	focus = {
-		id = army_effort
+		id = FIN_army_effort
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 1
 		y = 0
@@ -39,12 +39,12 @@
 	}
 
 	focus = {
-		id = equipment_effort
+		id = FIN_equipment_effort
 		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = army_effort }
+		prerequisite = { focus = FIN_army_effort }
 		x = -1
 		y = 1
-		relative_position_id = army_effort
+		relative_position_id = FIN_army_effort
 		cost = 5
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -63,13 +63,13 @@
 	}
 
 	focus = {
-		id = motorization_effort
+		id = FIN_motorization_effort
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = army_effort }
+		prerequisite = { focus = FIN_army_effort }
 		bypass = { has_tech = motorised_infantry }
 		x = 1
 		y = 1
-		relative_position_id = army_effort
+		relative_position_id = FIN_army_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -86,12 +86,12 @@
 	}
 
 	focus = {
-		id = doctrine_effort
+		id = FIN_doctrine_effort
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = army_effort }
+		prerequisite = { focus = FIN_army_effort }
 		x = 0
 		y = 2
-		relative_position_id = army_effort
+		relative_position_id = FIN_army_effort
 		cost = 15
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -110,12 +110,12 @@
 	}
 
 	focus = {
-		id = equipment_effort_2
+		id = FIN_equipment_effort_2
 		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = equipment_effort }
+		prerequisite = { focus = FIN_equipment_effort }
 		x = 0
 		y = 2
-		relative_position_id = equipment_effort
+		relative_position_id = FIN_equipment_effort
 		cost = 5
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -134,12 +134,12 @@
 	}
 
 	focus = {
-		id = mechanization_effort
+		id = FIN_mechanization_effort
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = motorization_effort }
+		prerequisite = { focus = FIN_motorization_effort }
 		x = 0
 		y = 2
-		relative_position_id = motorization_effort
+		relative_position_id = FIN_motorization_effort
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -157,12 +157,12 @@
 	}
 
 	focus = {
-		id = doctrine_effort_2
+		id = FIN_doctrine_effort_2
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = doctrine_effort }
+		prerequisite = { focus = FIN_doctrine_effort }
 		x = 0
 		y = 2
-		relative_position_id = doctrine_effort
+		relative_position_id = FIN_doctrine_effort
 		cost = 15
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -181,12 +181,12 @@
 	}
 
 	focus = {
-		id = equipment_effort_3
+		id = FIN_equipment_effort_3
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = equipment_effort_2 }
+		prerequisite = { focus = FIN_equipment_effort_2 }
 		x = 0
 		y = 2
-		relative_position_id = equipment_effort_2
+		relative_position_id = FIN_equipment_effort_2
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -205,12 +205,12 @@
 	}
 
 	focus = {
-		id = armor_effort
+		id = FIN_armor_effort
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = mechanization_effort }
+		prerequisite = { focus = FIN_mechanization_effort }
 		x = 0
 		y = 2
-		relative_position_id = mechanization_effort
+		relative_position_id = FIN_mechanization_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -228,14 +228,14 @@
 	}
 
 	focus = {
-		id = special_forces
+		id = FIN_special_forces
 		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = equipment_effort_3 }
-		prerequisite = { focus = doctrine_effort_2 }
-		prerequisite = { focus = armor_effort }
+		prerequisite = { focus = FIN_equipment_effort_3 }
+		prerequisite = { focus = FIN_doctrine_effort_2 }
+		prerequisite = { focus = FIN_armor_effort }
 		x = 1
 		y = 1
-		relative_position_id = equipment_effort_3
+		relative_position_id = FIN_equipment_effort_3
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -259,7 +259,7 @@
 	}
 
 	focus = {
-		id = aviation_effort
+		id = FIN_aviation_effort
 		icon = GFX_goal_generic_build_airforce
 		x = 5
 		y = 0
@@ -347,13 +347,13 @@
 	}
 
 	focus = {
-		id = fighter_focus
+		id = FIN_fighter_focus
 		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = aviation_effort }
-		mutually_exclusive = { focus = bomber_focus }
+		prerequisite = { focus = FIN_aviation_effort }
+		mutually_exclusive = { focus = FIN_bomber_focus }
 		x = -1
 		y = 1
-		relative_position_id = aviation_effort
+		relative_position_id = FIN_aviation_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -377,10 +377,10 @@
 	}
 
 	focus = {
-		id = bomber_focus
+		id = FIN_bomber_focus
 		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = aviation_effort }
-		mutually_exclusive = { focus = fighter_focus }
+		prerequisite = { focus = FIN_aviation_effort }
+		mutually_exclusive = { focus = FIN_fighter_focus }
 		x = 1
 		y = 1
 		relative_position_id = aviation_effort
@@ -404,12 +404,12 @@
 	}
 
 	focus = {
-		id = aviation_effort_2
+		id = FIN_aviation_effort_2
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = bomber_focus focus = fighter_focus }
+		prerequisite = { focus = FIN_bomber_focus focus = FIN_fighter_focus }
 		x = -1
 		y = 1
-		relative_position_id = bomber_focus
+		relative_position_id = FIN_bomber_focus
 		cost = 10
 
 		search_filters = {   FOCUS_FILTER_RESEARCH }
@@ -493,13 +493,13 @@
 	}
 
 	focus = {
-		id = CAS_effort
+		id = FIN_CAS_effort
 		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = aviation_effort_2 }
-		prerequisite = { focus = motorization_effort }
+		prerequisite = { focus = FIN_aviation_effort_2 }
+		prerequisite = { focus = FIN_motorization_effort }
 		x = -1
 		y = 1
-		relative_position_id = aviation_effort_2
+		relative_position_id = FIN_aviation_effort_2
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -518,13 +518,13 @@
 	}
 
 	focus = {
-		id = rocket_effort
+		id = FIN_rocket_effort
 		icon = GFX_focus_rocketry
-		prerequisite = { focus = aviation_effort_2 }
-		prerequisite = { focus = infrastructure_effort }
+		prerequisite = { focus = FIN_aviation_effort_2 }
+		prerequisite = { focus = FIN_infrastructure_effort }
 		x = 0
 		y = 2
-		relative_position_id = aviation_effort_2
+		relative_position_id = FIN_aviation_effort_2
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -551,13 +551,13 @@
 	}
 
 	focus = {
-		id = NAV_effort
+		id = FIN_NAV_effort
 		icon = GFX_goal_generic_air_naval_bomber
-		prerequisite = { focus = aviation_effort_2 }
-		prerequisite = { focus = flexible_navy }
+		prerequisite = { focus = FIN_aviation_effort_2 }
+		prerequisite = { focus = FIN_flexible_navy }
 		x = 1
 		y = 1
-		relative_position_id = aviation_effort_2
+		relative_position_id = FIN_aviation_effort_2
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -580,7 +580,7 @@
 
 
 	focus = {
-		id = naval_effort
+		id = FIN_naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 9
 		y = 0
@@ -712,13 +712,13 @@
 	}
 
 	focus = {
-		id = flexible_navy
+		id = FIN_flexible_navy
 		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = naval_effort }
-		mutually_exclusive = { focus = large_navy }
+		prerequisite = { focus = FIN_naval_effort }
+		mutually_exclusive = { focus = FIN_large_navy }
 		x = -1
 		y = 1
-		relative_position_id = naval_effort
+		relative_position_id = FIN_naval_effort
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -754,13 +754,13 @@
 	}
 
 	focus = {
-		id = large_navy
+		id = FIN_large_navy
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = naval_effort }
-		mutually_exclusive = { focus = flexible_navy }
+		prerequisite = { focus = FIN_naval_effort }
+		mutually_exclusive = { focus = FIN_flexible_navy }
 		x = 1
 		y = 1
-		relative_position_id = naval_effort
+		relative_position_id = FIN_naval_effort
 		cost = 10
 		
 		search_filters = {   FOCUS_FILTER_RESEARCH }
@@ -792,12 +792,12 @@
 	}
 
 	focus = {
-		id = submarine_effort
+		id = FIN_submarine_effort
 		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = flexible_navy focus = large_navy }
+		prerequisite = { focus = FIN_flexible_navy focus = FIN_large_navy }
 		x = 0
 		y = 1
-		relative_position_id = flexible_navy
+		relative_position_id = FIN_flexible_navy
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -830,12 +830,12 @@
 	}
 
 	focus = {
-		id = cruiser_effort
+		id = FIN_cruiser_effort
 		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = large_navy focus = flexible_navy }
+		prerequisite = { focus = FIN_large_navy focus = FIN_flexible_navy }
 		x = 0
 		y = 1
-		relative_position_id = large_navy
+		relative_position_id = FIN_large_navy
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -869,12 +869,12 @@
 	}
 
 	focus = {
-		id = destroyer_effort
+		id = FIN_destroyer_effort
 		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = submarine_effort }
+		prerequisite = { focus = FIN_submarine_effort }
 		x = 0
 		y = 1
-		relative_position_id = submarine_effort
+		relative_position_id = FIN_submarine_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -907,12 +907,12 @@
 	}
 
 	focus = {
-		id = capital_ships_effort
+		id = FIN_capital_ships_effort
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = cruiser_effort }
+		prerequisite = { focus = FIN_cruiser_effort }
 		x = 0
 		y = 1
-		relative_position_id = cruiser_effort
+		relative_position_id = FIN_cruiser_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -947,7 +947,7 @@
 	}
 
 	focus = {
-		id = industrial_effort
+		id = FIN_industrial_effort
 		icon = GFX_goal_generic_production
 		x = 13
 		y = 0
@@ -990,12 +990,12 @@
 	}
 
 	focus = {
-		id = construction_effort
+		id = FIN_construction_effort
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = industrial_effort }
+		prerequisite = { focus = FIN_industrial_effort }
 		x = -1
 		y = 1
-		relative_position_id = industrial_effort
+		relative_position_id = FIN_industrial_effort
 		cost = 7
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -1022,10 +1022,10 @@
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 3
+			add_extra_state_shared_building_slots = 5
 			add_building_construction = {
 				type = industrial_complex
-				level = 3
+				level = 5
 				instant_build = yes
 			}			
 		}
@@ -1054,10 +1054,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -1065,12 +1065,12 @@
 	}
 
 	focus = {
-		id = production_effort
+		id = FIN_production_effort
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = industrial_effort }
+		prerequisite = { focus = FIN_industrial_effort }
 		x = 1
 		y = 1
-		relative_position_id = industrial_effort
+		relative_position_id = FIN_industrial_effort
 		cost = 7
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -1096,10 +1096,10 @@
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 3
+			add_extra_state_shared_building_slots = 6
 			add_building_construction = {
 				type = arms_factory
-				level = 3
+				level = 6
 				instant_build = yes
 			}
 		}
@@ -1128,10 +1128,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 6
 					instant_build = yes
 				}
 			}
@@ -1139,12 +1139,12 @@
 	}
 
 	focus = {
-		id = construction_effort_2
+		id = FIN_construction_effort_2
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = construction_effort }
+		prerequisite = { focus = FIN_construction_effort }
 		x = 0
 		y = 1
-		relative_position_id = construction_effort
+		relative_position_id = FIN_construction_effort
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -1170,10 +1170,10 @@
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 3
+			add_extra_state_shared_building_slots = 5
 			add_building_construction = {
 				type = industrial_complex
-				level = 3
+				level = 5
 				instant_build = yes
 			}
 		}		
@@ -1202,10 +1202,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -1213,12 +1213,12 @@
 	}
 
 	focus = {
-		id = production_effort_2
+		id = FIN_production_effort_2
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = production_effort }
+		prerequisite = { focus = FIN_production_effort }
 		x = 0
 		y = 1
-		relative_position_id = production_effort
+		relative_position_id = FIN_production_effort
 		cost = 7
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -1244,10 +1244,10 @@
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 3
+			add_extra_state_shared_building_slots = 6
 			add_building_construction = {
 				type = arms_factory
-				level = 3
+				level = 6
 				instant_build = yes
 			}
 		}		
@@ -1276,10 +1276,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 6
 					instant_build = yes
 				}
 			}
@@ -1287,12 +1287,12 @@
 	}
 
 	focus = {
-		id = infrastructure_effort
+		id = FIN_infrastructure_effort
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = construction_effort_2 }
+		prerequisite = { focus = FIN_construction_effort_2 }
 		x = 0
 		y = 1
-		relative_position_id = construction_effort_2
+		relative_position_id = FIN_construction_effort_2
 		cost = 7
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1383,12 +1383,12 @@
 	}
 
 	focus = {
-		id = production_effort_3
+		id = FIN_production_effort_3
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = production_effort_2 }
+		prerequisite = { focus = FIN_production_effort_2 }
 		x = 0
 		y = 1
-		relative_position_id = production_effort_2
+		relative_position_id = FIN_production_effort_2
 		cost = 7
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -1414,10 +1414,10 @@
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 4
+			add_extra_state_shared_building_slots = 6
 			add_building_construction = {
 				type = arms_factory
-				level = 4
+				level = 6
 				instant_build = yes
 			}
 		}		
@@ -1446,10 +1446,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -1457,13 +1457,13 @@
 	}
 
 	focus = {
-		id = infrastructure_effort_2
+		id = FIN_infrastructure_effort_2
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = infrastructure_effort }
+		prerequisite = { focus = FIN_infrastructure_effort }
 		x = 0
 		y = 1
-		relative_position_id = infrastructure_effort
-		cost = 10
+		relative_position_id = FIN_infrastructure_effort
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -1484,12 +1484,12 @@
 		complete_tooltip = {
 			add_building_construction = {
 				type = infrastructure
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 		}
@@ -1518,7 +1518,7 @@
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1553,12 +1553,12 @@
 	}
 
 	focus = {
-		id = construction_effort_3
+		id = FIN_construction_effort_3
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = infrastructure_effort }
+		prerequisite = { focus = FIN_infrastructure_effort }
 		x = 2
 		y = 1
-		relative_position_id = infrastructure_effort
+		relative_position_id = FIN_infrastructure_effort
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
@@ -1584,10 +1584,10 @@
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = industrial_complex
-				level = 2
+				level = 4
 				instant_build = yes
 			}
 		}
@@ -1616,10 +1616,10 @@
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1627,12 +1627,12 @@
 	}
 
 	focus = {
-		id = nuclear_effort
+		id = FIN_nuclear_effort
 		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = infrastructure_effort_2 }
+		prerequisite = { focus = FIN_infrastructure_effort_2 }
 		x = -2
 		y = 1
-		relative_position_id = infrastructure_effort_2
+		relative_position_id = FIN_infrastructure_effort_2
 		cost = 10
 		
 		search_filters = { FOCUS_FILTER_RESEARCH } 
@@ -1657,12 +1657,12 @@
 	}
 
 	focus = {
-		id = extra_tech_slot
+		id = FIN_extra_tech_slot
 		icon = GFX_focus_research
-		prerequisite = { focus = infrastructure_effort_2 }
+		prerequisite = { focus = FIN_infrastructure_effort_2 }
 		x = 0
 		y = 1
-		relative_position_id = infrastructure_effort_2
+		relative_position_id = FIN_infrastructure_effort_2
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
@@ -1678,9 +1678,9 @@
 	}
 	
 	focus = {
-		id = extra_tech_slot_2
+		id = FIN_extra_tech_slot_2
 		icon = GFX_focus_research
-		prerequisite = { focus = extra_tech_slot }
+		prerequisite = { focus = FIN_extra_tech_slot }
 		available = {
 			num_of_factories > 40
 		}
@@ -1688,7 +1688,7 @@
 		continue_if_invalid = yes
 		x = 0
 		y = 1
-		relative_position_id = extra_tech_slot
+		relative_position_id = FIN_extra_tech_slot
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
@@ -1704,12 +1704,12 @@
 	}	
 
 	focus = {
-		id = secret_weapons
+		id = FIN_secret_weapons
 		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = infrastructure_effort_2 }
+		prerequisite = { focus = FIN_infrastructure_effort_2 }
 		x = 2
 		y = 1
-		relative_position_id = infrastructure_effort_2
+		relative_position_id = FIN_infrastructure_effort_2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
@@ -1737,7 +1737,7 @@
 	}
 
 	focus = {
-		id = political_effort
+		id = FIN_political_effort
 		icon = GFX_goal_generic_demand_territory
 		x = 19
 		y = 0
@@ -1748,19 +1748,19 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 350
 		}
 	}
 
 
 	focus = {
-		id = prepare_for_the_worst
+		id = FIN_prepare_for_the_worst
 		icon = GFX_goal_generic_defence
-		prerequisite = { focus = political_effort }
+		prerequisite = { focus = FIN_political_effort }
 		x = 0
 		y = 1
-		relative_position_id = political_effort
-		cost = 10
+		relative_position_id = FIN_political_effort
+		cost = 5
 	
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -1776,13 +1776,13 @@
 	}
 
 	focus = {
-		id = finlands_future
+		id = FIN_finlands_future
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = prepare_for_the_worst }
+		prerequisite = { focus = FIN_prepare_for_the_worst }
 		x = 0
 		y = 1
-		relative_position_id = prepare_for_the_worst
-		cost = 10
+		relative_position_id = FIN_prepare_for_the_worst
+		cost = 5
 	
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -1863,16 +1863,16 @@
 
 
 	focus = {
-		id = war_is_upon_us
+		id = FIN_war_is_upon_us
         icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = finlands_future }
+		prerequisite = { focus = FIN_finlands_future }
 		available = {
 			has_defensive_war = yes
 		}
 		x = 0
 		y = 1
-		relative_position_id = finlands_future
-		cost = 2
+		relative_position_id = FIN_finlands_future
+		cost = 1
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
@@ -1883,9 +1883,8 @@
 		}
 
 		completion_reward = {
-			111 = {
-				add_manpower = 15000
-			}
+				add_manpower = 75000
+
 
 			hidden_effect = {
 				division_template = {
@@ -1951,6 +1950,12 @@
 			create_unit = { 
 				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
 			}
+			create_unit = { 
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+			}
+			create_unit = { 
+				division = "name = \"Finish defense force\" division_template = \"Finish defense force\" start_experience_factor = 1 start_equipment_factor = 1.0" owner = ROOT
+			}
 		}
 
 
@@ -1958,7 +1963,7 @@
 	}
 
 	focus = {
-		id = revenge_war
+		id = FIN_revenge_war
 		icon = GFX_goal_anti_comintern_pact
 		x = 0
 		y = 1

@@ -1813,6 +1813,113 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_plant_expansion
+		icon = GFX_SOV_tractor_factories
+		prerequisite = { focus = SOV_eastern_development }
+		x = 0
+		y = 2
+		relative_position_id = SOV_eastern_development
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			249 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			251 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			252 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_seize_assets
+		icon = GFX_SOV_borrow_spanish_gold
+		prerequisite = { focus = SOV_plant_expansion }
+		prerequisite = { focus = SOV_auto_industry }
+		x = 0
+		y = 1
+		relative_position_id = SOV_plant_expansion
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SOV_church_gold
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_auto_industry
+		icon = GFX_SOV_tractor_factories
+		prerequisite = { focus = SOV_develop_the_urals }
+		x = 0
+		y = 2
+		relative_position_id = SOV_develop_the_urals
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			264 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			247 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_the_ussr_academy_of_sciences
 
 		icon = GFX_focus_research
@@ -18077,6 +18184,9 @@ focus = {
 	available_if_capitulated = yes
 
 	completion_reward = {
+		hidden_effect = {
+			play_song = Red_Army
+		}
 		add_to_variable = { SOV_the_red_army_mobilization_speed = 0.05 }
 		add_to_variable = { SOV_the_red_army_conscription_factor = 0.03 }
 		add_to_variable = { SOV_the_red_army_heat_attrition_factor = -0.01 }
@@ -18983,6 +19093,9 @@ focus = {
 	}
 
 	completion_reward = {
+		hidden_effect = {
+			play_song = Soviet
+		}
 		add_timed_idea = { idea = SOV_invade_germany_idea days = 90 }
 	}
 
@@ -19000,6 +19113,10 @@ focus = {
 	available = {
 		casualties > 2000000
 		surrender_progress > 0.38
+		NOT = {
+			controls_province = 11370
+			controls_province = 525
+		}
 	}
 
 	completion_reward = {
@@ -19015,9 +19132,6 @@ focus = {
 					infantry = { x = 1 y = 0 }
 					infantry = { x = 1 y = 1 }
 					infantry = { x = 1 y = 2 }
-
-					infantry = { x = 2 y = 0 }
-					infantry = { x = 2 y = 1 }
 				}
 				support = {
 				}
@@ -19034,15 +19148,11 @@ focus = {
 						}
 					}
 					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+						division = "division_template = \"Strelki\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = SOV
 					}
 					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
-						owner = SOV
-					}
-					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+						division = "division_template = \"Strelki\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = SOV
 					}
 				}
@@ -19056,15 +19166,11 @@ focus = {
 						}
 					}
 					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+						division = "division_template = \"Strelki\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = SOV
 					}
 					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
-						owner = SOV
-					}
-					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+						division = "division_template = \"Strelki\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
 						owner = SOV
 					}
 				}
@@ -19085,8 +19191,13 @@ focus = {
 	cost = 1
 	
 	available = {
-		casualties > 3000000
-			surrender_progress > 0.53
+		casualties > 4000000
+		surrender_progress > 0.68
+		NOT = {
+			controls_province = 11370
+			controls_province = 525
+			controls_province = 3686
+		}
 	}
 
 	completion_reward = {
@@ -19105,11 +19216,11 @@ focus = {
 
 					infantry = { x = 2 y = 0 }
 					infantry = { x = 2 y = 1 }
-					infantry = { x = 2 y = 2 }
+					infantry = { x = 2 y = 1 }
 				}
 				support = {
-					engineer = { x = 0 y = 1 }   
-					recon = { x = 0 y = 2 }
+					engineer = { x = 0 y = 0 }   
+					recon = { x = 0 y = 1 }
 				}
 			}
 			if = {
@@ -19124,13 +19235,13 @@ focus = {
 						}
 					}
 					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+						division = "division_template = \"Strelki\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
 						owner = SOV
 					}
 					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+						division = "division_template = \"Strelki\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
 						owner = SOV
-					}						
+					}					
 				}
 			}
 			else = {
@@ -19142,13 +19253,13 @@ focus = {
 						}
 					}
 					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
+						division = "division_template = \"Strelki\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
 						owner = SOV
 					}
 					create_unit = {
-						division = "division_template = \"Strelki\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
+						division = "division_template = \"Strelki\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
 						owner = SOV
-					}						
+					}					
 				}
 			}
 		}
@@ -19170,10 +19281,16 @@ focus = {
 	}
 	available = {
 		date > 1944.1.1
+		NOT = {
+			controls_province = 3151
+			controls_province = 11370
+			controls_province = 525
+			controls_province = 3686
+		}
 	}
 
 	completion_reward = {
-		add_timed_idea = { idea = SOV_invade_germany_idea_2 days = 200 }
+		add_timed_idea = { idea = SOV_invade_germany_idea_2 days = 180 }
 	}
 
 }

@@ -5899,6 +5899,8 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
+			add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 300 producer = ENG }
+			add_equipment_to_stockpile = { type = CAS_equipment_1 amount = 200 producer = ENG }	
 			640 = {
 				if = {
 					limit = { 
@@ -6403,6 +6405,8 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 4000 producer = ENG }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 700 producer = ENG }
 			event_target:WTT_current_china_leader = {
 				add_offsite_building = { type = arms_factory level = 6 }
 				add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
@@ -9268,6 +9272,9 @@ focus_tree = {
 			factor = 1
 		}	
 		completion_reward = {
+			hidden_effect = {
+				play_song = BigShaq
+			}
 			remove_ideas = ENG_the_war_to_end_all_wars
 			set_rule = { can_send_volunteers = yes }
 		}

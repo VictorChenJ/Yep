@@ -2324,7 +2324,6 @@ ideas = {
 				infantry_weapons = 0.15
 			}
 			
-			traits = { enfield }
 			
 			modifier = {
 			}
@@ -2426,7 +2425,6 @@ ideas = {
 			}
 			
 			traits = { medium_tank_manufacturer }
-			traits = { vauxhall_trait }
 			
 			modifier = {
 			}

@@ -1966,6 +1966,15 @@
 			factor = 1
 		}	
 		completion_reward = {
+			D01 = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 4000
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 300
+				}
 			if = {
 				limit = {
 					NOT = { has_dlc = "La Resistance" }
@@ -1985,6 +1994,7 @@
 				SPA = { add_opinion_modifier = { target = ITA modifier = ita_supported_spain_civil_war } }
 			}
 		}
+	}
 	}
 
 	focus = {
@@ -2038,7 +2048,7 @@
 		x = 1
 		y = 3
 		relative_position_id = ITA_support_nationalist_spain
-		cost = 10
+		cost = 2
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		ai_will_do = {
@@ -2108,7 +2118,7 @@
 			country_exists = ALB
 		}
 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 			modifier = {

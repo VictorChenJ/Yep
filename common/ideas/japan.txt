@@ -1678,7 +1678,6 @@ ideas = {
 				air_equipment = 0.15
 			}
 			
-			traits = { nakajima_manufacturer }
 
 		}
 		

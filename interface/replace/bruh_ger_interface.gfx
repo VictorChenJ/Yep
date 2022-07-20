@@ -51,8 +51,13 @@ spriteTypes = {
 		name = "GFX_idea_erich_hartmann"
 		texturefile ="gfx/interface/ideas/idea_generic_air_europe_3.dds"
 	}
-
+	
 	##### FOCUSES #####
+
+	SpriteType = {
+		name = "GFX_FIN_eastern_defence.dds"
+		texturefile = "gfx/interface/goals/GER/FIN_eastern_defence.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_GER_loyalty_to_the_fatherland"

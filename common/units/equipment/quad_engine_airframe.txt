@@ -110,7 +110,7 @@ equipments = {
 		air_agility = 4
 		air_attack = 50
 		air_defence = 11
-		air_bombing = 28
+		air_bombing = 30
 		
 		# build_cost_ic = 36
 	}
@@ -127,8 +127,8 @@ equipments = {
 		maximum_speed = 450
 		air_agility = 7
 		air_attack = 90
-		air_defence = 17
-		air_bombing = 40
+		air_defence = 18
+		air_bombing = 45
 		
 		build_cost_ic = 110
 		resources = {
@@ -151,9 +151,9 @@ equipments = {
 		air_agility = 9
 		air_attack = 130
 		air_defence = 30
-		air_bombing = 60
+		air_bombing = 70
 		
-		build_cost_ic = 145
+		build_cost_ic = 140
 		resources = {
 			#oil = 1
 			aluminium = 7

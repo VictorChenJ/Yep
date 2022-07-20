@@ -50,7 +50,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = GER_grosraumwirtschaft
-		cost = 15
+		cost = 12
 		ai_will_do = {
 			factor = 12
 		}
@@ -67,6 +67,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				play_song = Hitler_flad
+			}
 			add_ideas = GER_expand_mefo
 			random_owned_controlled_state = {
 				limit = {
@@ -111,6 +114,21 @@ focus_tree = {
 				add_idea = GER_expand_mefo_fast
 				remove_idea = GER_expand_mefo
 			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -142,10 +160,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -157,10 +175,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -471,7 +489,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_rearm_balance2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 4
 		}
@@ -500,14 +518,14 @@ focus_tree = {
 				prioritize = { 60 }
 				limit = {
 					free_building_slots = {
-						building = fuel_silo
+						building = synthetic_refinery
 						size > 2
 						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = fuel_silo
+					type = synthetic_refinery
 					level = 2
 					instant_build = yes
 				}
@@ -538,14 +556,18 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_oil_storage
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
 
 		available_if_capitulated = no
 		available = {
-			has_idea = GER_expand_mefo
+			OR = {
+				has_idea = GER_expand_mefo_balance
+				has_idea = GER_expand_mefo_slow
+				has_idea = GER_expand_mefo_fast
+			}
 		}
 		complete_tooltip = {
 		}
@@ -2549,7 +2571,7 @@ focus_tree = {
 				name = navy_doc_bonus
 				cost_reduction = 1
 				uses = 4
-				category = land_doctrine
+				category = naval_doctrine
 		}
 		
 		}
@@ -2760,6 +2782,9 @@ focus_tree = {
 		cost = 5
 		
 		completion_reward = {
+			hidden_effect = {
+				play_song = Panzer
+			}
 			add_timed_idea = { idea = GER_prioritise_tanks_idea days = 365 }
 		}
 	}
@@ -2932,7 +2957,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_grosraumwirtschaft
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 1
@@ -3281,7 +3306,13 @@ focus_tree = {
 			date > 1941.1.1
 
 			SPR = { 
-				has_idea = SPA_recovering_from_civil_war_2
+				OR = {
+					has_idea = SPA_recovering_from_civil_war_2
+					has_idea = SPA_recovering_from_civil_war
+					has_idea = SPA_recovering_from_civil_war_3
+
+				}
+
 				has_government = fascism
 			}
 		}
@@ -3997,16 +4028,55 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			army_experience = 10
+			army_experience = 15
 
 			D01 = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 2000
+					amount = 6000
 				}
 				add_equipment_to_stockpile = {
 					type = artillery_equipment_1
-					amount = 350
+					amount = 550
+				}
+
+			}
+
+		
+		}
+	}
+
+	focus = {
+		id = GER_finland_help
+		icon = GFX_FIN_eastern_defence.dds
+		prerequisite = { focus = GER_army_innovation }
+		relative_position_id = GER_army_innovation
+		x = -1
+		y = 1
+		available = {
+			FIN = {
+				has_war_with = SOV
+			}
+
+		}
+		cost = 2
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			army_experience = 15
+
+			FIN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 5000
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 560
 				}
 
 			}
@@ -4764,6 +4834,9 @@ focus_tree = {
 			}
 		}	
 		completion_reward = {
+			hidden_effect = {
+				play_song = "S_stands_for"
+			}
 			IF = {
 				limit = { SOV = { has_civil_war = no } }
 				create_wargoal = {
@@ -5163,6 +5236,9 @@ focus_tree = {
 			}
 		}	
 		completion_reward = {
+			hidden_effect = {
+				play_song = Senate
+			}
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			if = {
 				limit = {
@@ -10882,7 +10958,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_desperate_time
-		cost = 3
+		cost = 2
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
@@ -11115,7 +11191,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_make_them_suffer
-		cost = 3
+		cost = 2
 	
 		search_filters = { FOCUS_FILTER_POLITICAL  }
 
@@ -11182,7 +11258,7 @@ focus_tree = {
 		relative_position_id = GER_the_winter_of_1941
 		x = -2
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
@@ -11323,7 +11399,7 @@ focus_tree = {
 		relative_position_id = GER_the_winter_of_1941
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
@@ -11771,6 +11847,9 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
+			hidden_effect = {
+				play_song = Jews
+			}
 			add_ideas = GER_the_last_stand_of_the_reich 
 			add_stability = -0.2
 		} 

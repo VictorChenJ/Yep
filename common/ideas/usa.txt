@@ -2255,7 +2255,6 @@ ideas = {
 				air_equipment = 0.15
 			}
 			
-			traits = { messerschmitt_manufacturer }
 			
 			modifier = {
 			}
@@ -2293,7 +2292,6 @@ ideas = {
 				air_equipment = 0.15
 			}
 			
-			traits = { lockheed_manufacturer }
 			
 			modifier = {
 			}

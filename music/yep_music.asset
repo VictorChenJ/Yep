@@ -1,0 +1,77 @@
+music = {
+	name = "S_stands_for"
+	file = "yesbuddy.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Trump_America"
+	file = "TrumpAmerica.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Trumpster"
+	file = "trumpster.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Red_Army"
+	file = "RedArmy.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Hitler_flad"
+	file = "HitlerFlad.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Panzer"
+	file = "Panzer.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "China"
+	file = "ChinaWar.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Senate"
+	file = "Senate.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Jews"
+	file = "Jews.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "BigShaq"
+	file = "BigShaq.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Deals"
+	file = "GreatDeals.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Soviet"
+	file = "Soviet.ogg"
+	volume = 0.85
+}
+
+music = {
+	name = "Paris"
+	file = "Paris.ogg"
+	volume = 0.85
+}

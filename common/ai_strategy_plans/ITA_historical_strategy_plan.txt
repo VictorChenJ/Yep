@@ -1,0 +1,104 @@
+ITA_historical_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	allowed = {
+		original_tag = ITA
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = ITA_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = ITA_AI_RANDOM_FASCIST_HISTORICAL
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		GER = {
+			has_completed_focus = GER_oppose_hitler
+		}
+	}
+
+	ai_national_focuses = {
+		ITA_ethiopian_war_logistics 				#March 10 1936	
+		ITA_victoryinETH 							#May 20 1936	
+		ITA_industrial_effort 						#July 30 1936
+		ITA_industrial_effort_2 					#February 30 1937	
+		ITA_extra_tech_slot
+		ITA_italian_highways
+		ITA_prospect_for_oil
+		ITA_balkan_trade
+		ITA_romanian_cooperation
+		ITA_hungarian_trade
+		ITA_bulgarian_cooperation
+		ITA_lessons_of_war
+		ITA_new_rifle
+		ITA_new_artillery
+		ITA_alpini
+		ITA_sf_expansion
+		ITA_army_primacy 
+		ITA_mare_nostrum 
+		ITA_legacy_of_the_arditi
+		ITA_reject_innovation
+		ITA_trench_warfare
+		ITA_expand_shock_tactics
+		ITA_embrace_tradition
+		ITA_slovenia_dalmatia_claims
+		ITA_arditi_camouflage_tactics
+		ITA_bulgaria_friend
+		ITA_learn_from_war
+		ITA_albania_war_goal
+		ITA_romania_friend
+		ITA_pact_of_steel
+		ITA_german_rd_treaty
+		ITA_german_millitary_cooperation
+		ITA_german_trade
+		ITA_german_industrial_cooperation
+		ITA_integrate_economies
+		ITA_fortification_effort
+		ITA_infiltration_tactics
+		ITA_greece_war_goal
+		ITA_light_ship_effort 
+		ITA_modernized_artillery 	
+		ITA_air_innovation 
+		ITA_modernized_army 
+		ITA_special_forces 	
+		ITA_capital_ships 	
+		ITA_escort_effort 							#June 30 1939
+		ITA_submarine_effort 
+		ITA_carrier_effort 	
+		ITA_bomber_effort 
+		ITA_naval_air_effort
+		ITA_atlantic_fleet	
+		ITA_marines_and_landing_craft	
+		ITA_claims_on_france 
+		ITA_secret_weapons	
+	
+	}				
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

@@ -1102,6 +1102,9 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
+			hidden_effect = {
+				play_song = China
+			}
 			if = {
 				limit = {
 					CHI = { #if CHI owns one of these states, they get the event
@@ -1326,7 +1329,7 @@
 		icon = GFX_focus_generic_strike_at_democracy3
 		prerequisite = { focus = JAP_non_aggression_pact_with_the_soviet_union }
 		will_lead_to_war_with = ENG
-		x = 0
+		x = -1
 		y = 1
 		cost = 5
 		relative_position_id = JAP_non_aggression_pact_with_the_soviet_union
@@ -1668,10 +1671,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 5
 					instant_build = yes
 				}
 				set_state_flag = JAP_zaibatsus_factories
@@ -5910,6 +5913,119 @@
 			}
 		}
 	}
+
+
+	focus = {
+		id = JAP_siam_focus 
+		prerequisite = { focus = JAP_alliance_with_siam }
+		available = {
+			any_country = {
+				original_tag = SIA
+				is_in_faction_with = ROOT
+			}
+		}
+		bypass = {
+			
+		}
+		icon = GFX_Japanese_Unity
+		x = 0
+		y = 2
+		relative_position_id = JAP_alliance_with_siam
+		cost = 10
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			random_country = {
+				limit = {
+					original_tag = SIA
+					is_in_faction_with = ROOT
+				}
+				add_opinion_modifier = { target = JAP modifier = aided_industry }
+
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+							instant_build = yes
+					}
+					}
+
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = arms_factory
+							level = 3
+								instant_build = yes
+						}
+						}
+
+						random_owned_controlled_state = {
+							limit = {
+								is_coastal = yes
+									free_building_slots = {
+									building = dockyard
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+								type = dockyard
+								level = 3
+									instant_build = yes
+							}
+							}
+			}
+		}
+
+			search_filters = {FOCUS_FILTER_INDUSTRY}
+			completion_reward = {
+				add_political_power = 55
+				SIA = {
+					add_opinion_modifier = { target = JAP modifier = aided_industry }
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = industrial_complex
+							level = 3
+								instant_build = yes
+						}
+						}
+	
+						random_owned_controlled_state = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+								type = arms_factory
+								level = 3
+									instant_build = yes
+							}
+							}
+	
+							random_owned_controlled_state = {
+								limit = {
+									is_coastal = yes
+										free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 3
+								add_building_construction = {
+									type = dockyard
+									level = 3
+										instant_build = yes
+								}
+								}
+		
+					}
+				}
+		
+		}
+	
+
 
 
 

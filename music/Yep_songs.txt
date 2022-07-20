@@ -1,0 +1,105 @@
+music_station = "base_music"
+
+music = {
+	song = "S_stands_for"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Trump_America"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Trumpster"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Red_Army"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Hitler_flad"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Panzer"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "China"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Senate"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Jews"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "BigShaq"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Deals"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Soviet"
+	
+	chance = {
+		factor = 0	
+	}	
+}
+
+music = {
+	song = "Paris"
+	
+	chance = {
+		factor = 0	
+	}	
+}

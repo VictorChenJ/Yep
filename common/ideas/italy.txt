@@ -698,7 +698,6 @@ ideas = {
 				infantry_weapons = 0.15
 			}
 			
-			traits = { beretta }
 		}
 		
 		lancia = {

@@ -1308,8 +1308,9 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			USA_neutrality_level_up = yes
 			USA_great_depression_level_down = yes
-			USA_congress_medium_opposition = yes
+			USA_congress_large_opposition = yes
 			custom_effect_tooltip = federal_housing_tt
 			hidden_effect = {
 				random_owned_controlled_state = {
@@ -1944,6 +1945,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
+			USA_congress_medium_opposition = yes
 			ENG = {
 				add_opinion_modifier = { target = USA modifier = aided_industry }
 				random_owned_controlled_state = {
@@ -1994,6 +1996,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			has_war_support > 0.3
 			democratic > 0.95
 		}
 		bypass = {
@@ -2116,6 +2119,14 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = USA_arsenal_of_democracy }
 		available = {
+			NOT = {
+				OR = {
+					has_idea = great_depression
+					has_idea = great_depression_2
+					has_idea = great_depression_3
+					has_idea = great_depression_4
+				}
+			}
 			OR = {
 				has_war = yes
 				has_war_support > 0.3
@@ -2126,7 +2137,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_arsenal_of_democracy
-		cost = 10
+		cost = 20
 		ai_will_do = {
 			factor = 1
 		}
@@ -2138,6 +2149,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				play_song = "Trump_America"
+			}
 			if = {
 				limit = {
 					NOT = { has_idea = undisturbed_isolation }
@@ -2205,6 +2219,7 @@ focus_tree = {
 		#	factor = 1
 		#}
 		complete_tooltip = {
+			USA_congress_small_opposition = yes
 			army_experience = 10
 			every_state = {
 				limit = { has_state_flag = USA_military_construction_5MF }
@@ -2226,6 +2241,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			USA_congress_small_opposition = yes
 			army_experience = 10
 			random_owned_controlled_state = {
 				limit = {
@@ -2454,6 +2470,8 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			USA_congress_small_opposition = yes
+			USA_neutrality_level_up = yes
 			random_owned_controlled_state = {
 				limit = {
 					arms_factory > 0
@@ -4941,6 +4959,9 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			hidden_effect = {
+				play_song = Trumpster
+			}
 			if = {
 				limit = {
 					OR = {
@@ -5138,6 +5159,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			USA_congress_small_opposition = yes
 			add_tech_bonus = {
 				name = USA_support_rock_island
 				uses = 2
@@ -5362,6 +5384,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 	
 		completion_reward = {
+			USA_congress_medium_opposition = yes
 			air_experience = 25
 			add_doctrine_cost_reduction = {
 				name = USA_air_war_plans_division
@@ -5388,6 +5411,7 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		completion_reward = {
+			USA_congress_small_opposition = yes
 			air_experience = 25
 			add_ideas = air_support_focus
 		}
@@ -5409,6 +5433,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			USA_congress_small_opposition = yes
 			air_experience = 25
 			add_ideas = strategic_bombing_focus
 		}
@@ -5740,6 +5765,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			USA_congress_small_opposition = yes
 			add_ideas = USA_maritime_commission
 		}
 	}
@@ -5777,6 +5803,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			USA_congress_medium_opposition = yes
 			navy_experience = 50
 			add_ideas = bureau_of_ships_focus
 			if = {
@@ -5982,6 +6009,7 @@ focus_tree = {
 	focus = {
 		id = USA_escort_effort
 		icon = GFX_goal_generic_navy_anti_submarine
+		mutually_exclusive = { focus = USA_fleet_submarines }
 		prerequisite = { focus = USA_bureau_of_ships }
 		x = 1
 		y = 1
@@ -6029,6 +6057,7 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_submarine
 		x = 3
 		y = 1
+		mutually_exclusive = { focus = USA_escort_effort }
 		prerequisite = { focus = USA_bureau_of_ships }
 		relative_position_id = USA_bureau_of_ships
 		cost = 10
@@ -6208,7 +6237,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 5 }
+			USA_neutrality_level_up = yes
 			ENG = {
 				add_offsite_building = { type = industrial_complex level = 5 }
 			}
@@ -6422,7 +6451,7 @@ focus_tree = {
 
 		completion_reward = {
 				division_template = {
-					name = "Army group noget"
+					name = " DONT CLICK EDIT "
 					regiments = {
 						medium_armor = { x = 0 y = 0 }
 						medium_armor = { x = 0 y = 1 }
@@ -6457,9 +6486,8 @@ focus_tree = {
 				random_owned_controlled_state = {
 					limit = { ROOT = { has_full_control_of_state = 361 } }
 					prioritize = { 361 }
-					create_unit = {
-						division = "division_template = \"Army group noget\" start_experience_factor = 1"
-						owner = USA
+					create_unit = { 
+						division = "name = \"DONT CLICK EDIT\" division_template = \"DONT CLICK EDIT\" start_experience_factor = 0.5 start_equipment_factor = 1.0" owner = ROOT
 					}
 				}
 			}
@@ -6566,7 +6594,7 @@ focus_tree = {
 			relative_position_id = USA_support_china
 			x = 0
 			y = 2
-			cost = 5
+			cost = 10
 			ai_will_do = {
 				factor = 10 
 			}
@@ -6592,7 +6620,7 @@ focus_tree = {
 			relative_position_id = USA_support_china
 			x = -1
 			y = 3
-			cost = 5
+			cost = 10
 			ai_will_do = {
 				factor = 10
 			}
@@ -6622,7 +6650,7 @@ focus_tree = {
 						bonus = 1 
 						name = USA_form_modern_chinese_airforce
 					}	
-					add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 300 producer = USA }
+					add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 400 producer = USA }
 					add_equipment_to_stockpile = { type = CAS_equipment_1 amount = 200 producer = USA }			
 				}
 				USA = {
@@ -6665,10 +6693,9 @@ focus_tree = {
 			
 			completion_reward = {
 				CHI = {
-					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = USA }
+					add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 6000 producer = USA }
 					add_equipment_to_stockpile = { type = support_equipment_1 amount = 2000 producer = USA }
-					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 500 producer = USA }
-					CHI_hyper_inflation_level_down = yes
+					add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 950 producer = USA }
 				}
 				army_experience = 10
 				air_experience = 50
@@ -6696,25 +6723,6 @@ focus_tree = {
 			
 			completion_reward = {
 				CHI = {
-					if = {
-						limit = { has_idea = CHI_army_corruption_1 }
-						swap_ideas = {
-							remove_idea = CHI_army_corruption_1
-							add_idea = CHI_army_corruption_2
-						}
-					}
-					else_if = {
-						limit = { has_idea = CHI_army_corruption_2 }
-						swap_ideas = {
-							remove_idea = CHI_army_corruption_2
-							add_idea = CHI_army_corruption_3
-						}
-					}
-					else_if = {
-						limit = { has_idea = CHI_army_corruption_3 }
-						remove_ideas = CHI_army_corruption_3
-					}
-	
 					division_template = {
 						name = "US Trained Division"
 						priority = 2
@@ -6746,6 +6754,18 @@ focus_tree = {
 	
 					every_state = {
 						limit = { state = 605 }
+						create_unit = {
+							division = "name = \"1st. US Trained Division division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}
+						create_unit = {
+							division = "name = \"1st. US Trained Division division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}
+						create_unit = {
+							division = "name = \"1st. US Trained Division division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
+							owner = CHI
+						}
 						create_unit = {
 							division = "name = \"1st. US Trained Division division_template = \"USMC Division\" start_experience_factor = 1 start_equipment_factor = 1" 
 							owner = CHI
@@ -6789,7 +6809,7 @@ focus_tree = {
 			relative_position_id = USA_support_china
 			x = 1
 			y = 3
-			cost = 5
+			cost = 10
 			ai_will_do = {
 				factor = 10
 			}
@@ -6910,6 +6930,9 @@ focus_tree = {
 			available_if_capitulated = yes		
 			
 			available = { 
+				has_completed_focus = USA_japan_first
+
+				
 			}
 	
 			bypass = {
