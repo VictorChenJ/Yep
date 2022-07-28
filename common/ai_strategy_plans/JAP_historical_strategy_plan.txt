@@ -43,6 +43,8 @@ JAP_historical_plan = {
 		JAP_liaison_conference #February 30 1937	
 		JAP_greater_east_asian_co_prosperity_sphere #May 10 1937	
 		JAP_intervene_in_china #July 20 1937	
+		JAP_the_occupation_of_china
+		JAP_secure_the_coastlines
 		JAP_expand_army
 		JAP_fighter_modernization #September 30 1937 	før JAP_fighter_modernization
 		JAP_carrier_warfare_experiments #December 10 1937	
@@ -58,7 +60,7 @@ JAP_historical_plan = {
 		#1939
 		# JAP_spiritual_mobilization #October 20 1942
 		JAP_sumitomo	
-		JAP_small_arms_modernization #June 30 1939	
+		 #June 30 1939	
 		JAP_cruiser_modernization #November 30 1938	
 		JAP_long_lance_torpedoes #February 10 1939	
 		# JAP_bicycle_battalions #April 20 1939	
@@ -78,21 +80,24 @@ JAP_historical_plan = {
 		#August 30 1940	
 		 #November 10 1940	
 		JAP_alliance_with_siam
+		JAP_siam_focus
 		JAP_non_aggression_pact_with_the_soviet_union
+		JAP_prepare_southern_expansion
+		JAP_outline_of_the_new_economic_order
+		JAP_zaibatsus_control
 		 #March 30 1941	
 		 #August 20 1941	
 		 #October 30 1941	
 		JAP_secure_china
+		JAP_fortify_coastlines
+		JAP_develop_chinese_aluminium
+		JAP_develop_chinese_steel
 		JAP_strike_the_west
+		JAP_zaibatsus_control_2
 		JAP_pierce_the_giant
+
 		#1942 #January 20 1941	
 		JAP_build_up_islands
-		JAP_bomber_modernization
-		JAP_range_focus #June 10 1941	
-		JAP_modern_artillery #January 10	
-		JAP_strategic_bomber_effort #March 20 1942	
-		JAP_modern_escorts #May 30 1942	
-		#1943
 		JAP_national_defense_state
 		JAP_spiritual_mobilization
 		JAP_warrior_spirit #December 30 1942	
@@ -100,6 +105,14 @@ JAP_historical_plan = {
 		JAP_exploit_the_southern_resource_area #May 20 1943	
 		 #July 30 1943	
 		JAP_strengthen_the_divine_wind
+		JAP_the_emperors_wave
+		JAP_bomber_modernization
+		JAP_range_focus #June 10 1941	
+		JAP_modern_artillery #January 10	
+		JAP_strategic_bomber_effort #March 20 1942	
+		JAP_modern_escorts #May 30 1942	
+		#1943
+		
 	}
 
 	research = {

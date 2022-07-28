@@ -11855,9 +11855,53 @@ focus_tree = {
 		} 
 	}	
 
+	focus = { ## SS
+		id = GER_Schutzstaffel_focus
+		icon = GFX_GER_Schutzstaffel_focus
+		prerequisite = { focus = GER_rhineland }
+		relative_position_id = GER_rhineland
+		x = 0
+		y = 2
+		cost = 5
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		available = {
+			 is_puppet = no
+			 has_government = fascism
+		}
+		
+		completion_reward = {
+			add_ideas = waffen_ss
+			add_tech_bonus = {
+				name = SS_special
+				bonus = 1
+				uses = 2
+				technology = tech_military_police
+				technology = tech_military_police2
+				technology = tech_military_police3
+				technology = tech_military_police4
+			}
+		}
+	}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+	
 }

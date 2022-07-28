@@ -13,7 +13,7 @@ if = {
 }
 
 add_ideas = {
-	USA_neutrality_idea
+	##Nerfed USA_neutrality_idea
 }
 set_research_slots = 4
 set_stability = 0.75

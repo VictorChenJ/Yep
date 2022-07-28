@@ -1996,7 +1996,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_war_support > 0.3
+			## Nerfed has_war_support > 0.3
 			democratic > 0.95
 		}
 		bypass = {
@@ -2137,7 +2137,8 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = USA_arsenal_of_democracy
-		cost = 20
+		cost = 10
+		##Nerfed 20
 		ai_will_do = {
 			factor = 1
 		}

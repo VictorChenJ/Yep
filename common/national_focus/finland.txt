@@ -1967,7 +1967,7 @@
 		icon = GFX_goal_anti_comintern_pact
 		x = 0
 		y = 1
-		relative_position_id = war_is_upon_us
+		relative_position_id = FIN_war_is_upon_us
 		cost = 15
 		available = {
 			SOV = {

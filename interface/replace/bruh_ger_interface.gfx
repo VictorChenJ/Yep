@@ -53,6 +53,106 @@ spriteTypes = {
 	}
 	
 	##### FOCUSES #####
+	spriteType = {
+		name = "GER_krupp_stahl_guns"
+		texturefile = "gfx/interface/goals/ger/GER_krupp_stahl_guns.dds"
+	}
+	spriteType = {
+		name = "GFX_GER_Schutzstaffel_focus"
+		texturefile = "gfx/interface/goals/ger/ger_schutsstaffel.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_weserubung"
+		texturefile = "gfx/interface/goals/GER/GER_wesereberung_icon.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_ussr_war_goal"
+		texturefile = "gfx/interface/goals/GER/GER_barbarossa_icon.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_around_maginot"
+		texturefile = "gfx/interface/goals/GER/GER_around_maginot_icon.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_inspire_fanatasiscm"
+		texturefile = "gfx/interface/goals/GER/GER_inspire_fanatasiscm.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_ig_faben_focus"
+		texturefile = "gfx/interface/goals/GER/GER_ig_faben.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_ig_faben_rubber"
+		texturefile = "gfx/interface/goals/GER/GER_ig_faben_rubber_specialization.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_ig_faben_oil"
+		texturefile = "gfx/interface/goals/GER/GER_ig_faben_oil_specialization.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_rhineland"
+		texturefile = "gfx/interface/goals/GER/GER_rhineland_icon.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_first_vienna_award"
+		texturefile = "gfx/interface/goals/GER/GER_first_vienna_award_icon.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_second_vienna_award"
+		texturefile = "gfx/interface/goals/GER/GER_second_vienna_award_icon.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_end_of_czechoslovakia"
+		texturefile = "gfx/interface/goals/GER/GER_end_of_czechoslovakia_icon.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_demand_memel"
+		texturefile = "gfx/interface/goals/GER/GER_eastern_claims_icon.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_mol_rib_pact"
+		texturefile = "gfx/interface/goals/GER/GER_molotov_ribbentrop_pact_icon.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_danzig_or_war"
+		texturefile = "gfx/interface/goals/GER/GER_danzig_or_war_icon.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_autarky"
+		texturefile = "gfx/interface/goals/ger/GER_autarky.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_hermann_goring_werke"
+		texturefile = "gfx/interface/goals/GER/GER_establish_the_reichswerke.tga"
+	}
+	SpriteType = {
+		name = "GFX_GER_demand_sudetenland"
+		texturefile = "gfx/interface/goals/GER/GER_demand_sudetenland_icon.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_ger_goal_kdf_wagen"
+		texturefile = "gfx/interface/goals/ger/ger_goal_kdf_wagen.tga"			
+	}	
+	SpriteType = {
+		name = "GFX_goal_GER_war_with_poland"
+		texturefile = "gfx/interface/RT56/goals/ger/r56_goal_GER_war_with_poland.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ger_fate_of_czech"
+		texturefile = "gfx/interface/RT56/goals/ger/r56_goal_ger_fate_of_czech.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_GER_anschluss"
+		texturefile = "gfx/interface/RT56/goals/ger/r56_goal_GER_anschluss.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_FIN_eastern_defence.dds"

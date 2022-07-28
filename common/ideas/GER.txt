@@ -2,6 +2,25 @@ ideas = {
 
 	country = {
 		
+		Waffen_SS = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			modifier = {
+				war_support_weekly = 0.001
+				offensive_war_stability_factor = 0.050
+				occupation_cost = -0.01
+				surrender_limit = 0.1
+			}
+		}
+
 		GER_good_weather_army = {
 		allowed = {
 			original_tag = GER

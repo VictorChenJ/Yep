@@ -52,7 +52,7 @@ focus_tree = {
 		id = SOV_infrastructure_effort_nsb
 
 		icon = GFX_goal_generic_construction
-		x = 1
+		x = 6
 		y = 0
 		cost = 5
 
@@ -1837,18 +1837,18 @@ focus_tree = {
 				}
 			}
 			251 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 4
 					instant_build = yes
 				}
 			}
 			252 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2080,7 +2080,7 @@ focus_tree = {
 		id = SOV_transpolar_flights
 
 		icon = GFX_goal_generic_air_fighter2
-		x = 10
+		x = 12
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
 		cost = 5
@@ -4000,7 +4000,7 @@ focus_tree = {
 	focus = {
 		id = SOV_found_the_pcdi
 
-		icon = GFX_goal_generic_defence
+		icon = GFX_SOV_form_the_PCDI
 		x = 15
 		y = 0
 		relative_position_id = SOV_expand_the_red_fleet
@@ -4665,7 +4665,7 @@ focus_tree = {
 	focus = {
 		id = SOV_strengthen_the_mobilization_plan
 		icon = GFX_focus_SOV_mobilization_plan
-		x = 7
+		x = 8
 		y = 0
 		relative_position_id = SOV_found_the_pcdi
 		cost = 5
@@ -6663,7 +6663,7 @@ focus_tree = {
 	focus = {
 		id = SOV_the_path_of_marxism_leninism
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
-		x = 24
+		x = 26
 		y = 0
 		offset = {
 			x = -8
@@ -19216,7 +19216,6 @@ focus = {
 
 					infantry = { x = 2 y = 0 }
 					infantry = { x = 2 y = 1 }
-					infantry = { x = 2 y = 1 }
 				}
 				support = {
 					engineer = { x = 0 y = 0 }   
@@ -19296,6 +19295,218 @@ focus = {
 }
 
 
+focus = {
+	id = SOV_military_industrial_complex
+	icon = GFX_SOV_infantry_development
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	cost = 5 
+	prerequisite = {
+		focus = SOV_finish_the_five_year_plan
+	}
+	available = {
+	}
+
+	x = -5
+	y = 1
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = SOV_finish_the_five_year_plan
+	completion_reward = {
+		random_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			
+		}
+
+	}
+}
+
+focus = {
+	id = SOV_work_harder_not_smarter
+	icon = GFX_SOV_work_harder_not_smarter
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	mutually_exclusive = { focus = SOV_work_smarter_not_harder }
+	cost = 5 
+	prerequisite = {
+		focus = SOV_military_industrial_complex
+	}
+	available = {
+	}
+
+	x = -1
+	y = 1
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = SOV_military_industrial_complex
+	completion_reward = {
+		add_tech_bonus = {
+			category = industry
+			uses = 2
+			bonus = 1
+			name = SOV_work_harder_not_smarter
+		}
+	}
+}
+
+
+focus = {
+	id = SOV_steal_engineers_from_civilian_projects 
+	icon = GFX_SOV_steal_engineers_from_civilian_projects
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	cost = 5 
+	prerequisite = {
+		focus = SOV_work_harder_not_smarter
+	}
+	available = {
+	}
+
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = SOV_work_harder_not_smarter
+	completion_reward = {
+		add_tech_bonus = {
+			technology = concentrated_industry2
+			technology = concentrated_industry3 
+			technology = concentrated_industry4 
+			technology = dispersed_industry2
+			technology = dispersed_industry3 
+			technology = dispersed_industry4 
+			uses = 2
+			bonus = 1 
+		}
+	}
+}
+
+focus = {
+	id = SOV_simplify_the_schematics 
+	icon = GFX_SOV_simplify_schematics
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	cost = 5 
+	prerequisite = {
+		focus = SOV_steal_engineers_from_civilian_projects
+	}
+	available = {
+	}
+
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = SOV_steal_engineers_from_civilian_projects
+	completion_reward = {
+		add_tech_bonus = {
+			technology = improved_machine_tools
+			technology = advanced_machine_tools
+			uses = 2
+			bonus = 0.5 
+			name = SOV_simplify_the_schematics
+		}
+	}
+}
+
+focus = {
+	id = SOV_work_smarter_not_harder
+	icon = GFX_SOV_infantry_development
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	mutually_exclusive = { focus = SOV_work_harder_not_smarter }
+
+	cost = 5 
+	prerequisite = {
+		focus = SOV_military_industrial_complex
+	}
+	available = {
+	}
+
+	x = 1
+	y = 1
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = SOV_military_industrial_complex
+	completion_reward = {
+		add_tech_bonus = {
+			category = industry
+			uses = 2
+			bonus = 1.5
+			name = SOV_work_smarter_not_harder
+		}
+
+	}
+}
+
+focus = {
+	id = SOV_employ_factory_floor_chiefs 
+	icon = GFX_SOV_employ_factory_floor_chiefs
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	cost = 5 
+	prerequisite = {
+		focus = SOV_work_smarter_not_harder
+	}
+	available = {
+	}
+
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = SOV_work_smarter_not_harder
+	completion_reward = {
+		add_tech_bonus = {
+			technology = improved_machine_tools
+			technology = advanced_machine_tools
+			uses = 1 
+			bonus = 1
+		}
+	}
+}
+
+focus = {
+	id = SOV_induct_junior_workers  
+	icon = GFX_SOV_induct_junior_workers
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	cost = 5 
+	prerequisite = {
+		focus = SOV_employ_factory_floor_chiefs
+	}
+	available = {
+	}
+
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 10
+	}
+	relative_position_id = SOV_employ_factory_floor_chiefs
+	completion_reward = {
+		random_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
 
 
 
@@ -19320,7 +19531,7 @@ focus = {
 
 
 
-}
+
 
 
 

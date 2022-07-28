@@ -1,0 +1,118 @@
+ENG_historical_plan = {
+	name = "United Kingdom historical plan"
+	desc = "Historical behavior for United Kingdom"
+
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				OR = {
+					not = { has_dlc = "Man the Guns" }
+					has_game_rule = {
+						rule = ENG_ai_behavior 
+						option = DEFAULT
+					}
+				}
+			}
+			has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
+			has_game_rule = {
+				rule = ENG_ai_behavior 
+				option = DEMOCRATIC_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		GER = {
+			has_completed_focus = GER_oppose_hitler
+		}
+	}
+
+	ai_national_focuses = {
+		limited_rearmament_focus
+		uk_empire_focus
+		shadow_scheme_focus
+		uk_industrial_focus
+		general_rearmament_focus
+		uk_extra_tech_slot
+		ENG_shadow_factories
+		uk_service_focus
+		uk_colonial_focus
+		ENG_bilateral_trade
+		ENG_visit_france
+		ENG_modernize_home_industry
+		ENG_deal_with_irish_treaty_ports
+		ENG_growth_of_advanced_industries
+		uk_commonwealth_focus
+		uk_australia_focus
+		uk_canada_focus
+		uk_south_africa_focus
+		uk_new_zealand_focus
+		uk_india_focus
+		uk_asia_focus
+		naval_rearmament_focus
+		royal_ordinance_focus
+		ENG_dispersed_production
+		ENG_shadow_scheme_2
+		ENG_air_production_group
+		ENG_fund_private
+		ENG_secure_the_imperial_shipping_routes
+		air_defense_focus
+		ENG_steady_as_she_goes
+		ENG_home_defence
+		ENG_issue_gasmasks#June
+		ENG_military_training_act#September
+		ENG_prepare_for_the_inevitable
+		uk_mediterranean_focus#August
+		uk_protect_suez
+		ENG_major_loans_to_shipyards
+		uk_burma_focus
+		ENG_army_rearmament
+		ENG_expand_royal_arsenal
+		ENG_modern_artillery
+		ENG_special_arty
+		uk_rock_focus#May
+		ENG_war_office
+		ENG_special_forces
+		uk_waves_focus#October
+		ul_battleship_focus
+		ENG_expand_the_repair_yards
+		uk_malta_focus
+		ENG_britannia_waves
+		ENG_new_dockyards
+		ENG_anti_sub_weapons
+		ENG_special_air_service#June
+		air_rearmament_focus#September
+		fighter_command_focus
+		aircraft_production_focus
+		uk_destroyer_focus#August
+		ENG_a_s_warfare
+		uk_convoy_focus#January
+		ENG_domestic_industrial_farms
+		ENG_bsa
+		ENG_nuffield_aero
+		crypto_bomb_focus
+		radar_focus
+		tizard_mission_focus#March
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		home_defence_spirit = 1
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

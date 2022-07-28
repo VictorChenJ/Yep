@@ -47,6 +47,128 @@ spriteTypes = {
 
 	##### FOCUSES #####
 
+	spriteType = {
+		name = "GFX_SOV_work_smarter_not_harder"
+		texturefile = "gfx/interface/goals/soviet/SOV_work_smarter_not_harder.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_employ_factory_floor_chiefs"
+		texturefile = "gfx/interface/goals/soviet/SOV_factory_floor_managers.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_SOV_induct_junior_workers"
+		texturefile = "gfx/interface/goals/soviet/SOV_induct_new_trainees.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_SOV_work_harder_not_smarter"
+		texturefile = "gfx/interface/goals/soviet/SOV_work_harder_not_smarter.dds"
+	}
+	spriteType = {
+		name = "GFX_SOV_steal_engineers_from_civilian_projects"
+		texturefile = "gfx/interface/goals/soviet/SOV_prioritize_military_contracts.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_SOV_simplify_schematics"
+		texturefile = "gfx/interface/goals/soviet/SOV_simplify_schematics.dds"
+	}
+
+	
+	SpriteType = {
+		name = "GFX_goal_SOV_supremacy_on_the_bosporus"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_supremacy_on_the_bosporus.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_stalin"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_stalin.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ivan_konev"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_ivan_konev.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_nikita_khrushchev"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_nikita_khrushchev.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SOV_trot_destalinization"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_trot_destalinization.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_SOV_trotsky_victory"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_trotsky_victory.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_sov_soviet_ind_upgrade"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_sov_soviet_ind_upgrade.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_soviet_rocketry"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_soviet_rocketry.dds"
+	}
+	SpriteType = {
+		name = "GFX_5year_plan_complete"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_5year_plan_complete.dds"
+	}
+	SpriteType = {
+		name = "gfx_five_year_plan_continue"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_5year_plan_continue.dds"
+	}
+	SpriteType = {
+		name = "GFX_aviation_cult"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_aviation_cult.dds"
+	}
+	SpriteType = {
+		name = "gfx_cold_railway"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_cold_railway.dds"
+	}
+	SpriteType = {
+		name = "gfx_cold_railway_2"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_snow_railway.dds"
+	}
+	SpriteType = {
+		name = "gfx_counter_coup"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_counter_coup.dds"
+	}
+	SpriteType = {
+		name = "gfx_fifth_column"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_fifth_column.dds"
+	}
+	SpriteType = {
+		name = "gfx_forced_urbanization"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_forced_urbanization.dds"
+	}
+	SpriteType = {
+		name = "gfx_postive_heroism"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_postive_heroism.dds"
+	}
+	SpriteType = {
+		name = "gfx_socialist_science"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_socialist_science.dds"
+	}
+	SpriteType = {
+		name = "gfx_women_in_aviation"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_women_in_aviation.dds"
+	}
+	SpriteType = {
+		name = "gfx_social_welfare"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_worker_cluture.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_SOV_education_initiative"
+		texturefile = "gfx/interface/RT56/goals/sov/goal_SOV_education_initiative.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_SOV_imperial_eagle"
+		texturefile = "gfx/interface/RT56/goals/sov/r56_goal_SOV_imperial_eagle.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_goal_socialist_realism"
 		textureFile = "gfx/interface/goals/sov/SOV_socialist_realism.dds"

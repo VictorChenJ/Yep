@@ -1,5 +1,10 @@
 ﻿l_english:
  #### FOCUSES ####
+ GER_Schutzstaffel_focus:0 "Schutzstaffel"
+ GER_hitler_jugend:0 "Hitlerjugend"
+ GER_hitler_jugend_desc:0 "The children of today are future of the Reich’s economy and security. We must educate the younglings in ways so that they also can make our country stronger and more prosperous."
+ GER_SS_armed_branch:0 "Die Waffen SS"
+ GER_SS_armed_branch_desc:0 "This new war calls for an elite force that can defeat any opposition, and Himmler promises to turn the SS into a fighting force like the world has never seen."
  GER_finland_help:0 "Support the Finns"
  GER_make_them_suffer:0 "Make Them Suffer"
  GER_spring_awakening:0 "Spring Awakening"
