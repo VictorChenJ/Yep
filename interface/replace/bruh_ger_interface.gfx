@@ -53,6 +53,87 @@ spriteTypes = {
 	}
 	
 	##### FOCUSES #####
+
+	SpriteType = {
+		name = "GFX_goal_flag_hungary"
+		texturefile = "gfx/interface/RT56/goals/hun/r56_goal_HUN_flag_hungary.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_reaffirm_romanian_ties"
+		texturefile = "gfx/interface/RT56/goals/pol/r56_focus_generic_reaffirm_romanian_ties.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_autobahn"
+		texturefile = "gfx/interface/goals/GER/GER_inaugurate_the_autobahn.tga"
+	}
+
+	SpriteType = {
+	name = "GFX_GER_synthetic_rubber_refinery"
+	texturefile = "gfx/interface/goals/GER/GER_rubber_refineries.tga"
+	}	
+
+	SpriteType = {
+		name = "GFX_GER_synthetic_oil_refinery"
+		texturefile = "gfx/interface/goals/GER/GER_oil_refineries.tga"
+	}	
+
+	SpriteType = {
+		name = "GFX_focus_ger_goal_kdf_wagen"
+		texturefile = "gfx/interface/goals/ger/ger_goal_kdf_wagen.tga"			
+	}	
+
+	SpriteType = {
+		name = "GFX_GER_armor_design_competition"
+		texturefile = "gfx/interface/goals/ger/ger_second_gen_tanks.tga"			
+	}
+
+	SpriteType = {
+		name = "GFX_GER_light_tanks"
+		texturefile = "gfx/interface/goals/GER/GER_armoured_cars.tga"
+	}	
+
+	SpriteType = {
+		name = "GFX_GER_raketenwerfer"
+		texturefile = "gfx/interface/goals/GER/GER_raketenwerfer.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_infanterie_greift_an_icon"
+		texturefile = "gfx/interface/goals/GER/GER_infanterie_greift_an.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_infantry_weapons_2"
+		texturefile = "gfx/interface/goals/GER/GER_infantry_weapons_2.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_rommel_time_icon"
+		texturefile = "gfx/interface/goals/GER/GER_rommel_time.tga"
+	}	
+
+	spriteType = {
+		name = "GFX_GER_kampfgruppes"
+		texturefile = "gfx/interface/goals/ger/ger_kampfgruppen.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_hummel_spg"
+		texturefile = "gfx/interface/goals/GER/GER_hummel_spg.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_heavy_tank_focus"
+		texturefile = "gfx/interface/goals/GER/GER_heavy_tank_focus.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_a_soldiers_oath"
+		texturefile = "gfx/interface/goals/GER/GER_a_soldiers_oath.tga"
+	}
+
 	spriteType = {
 		name = "GER_krupp_stahl_guns"
 		texturefile = "gfx/interface/goals/ger/GER_krupp_stahl_guns.dds"

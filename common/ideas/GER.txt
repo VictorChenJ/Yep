@@ -1139,6 +1139,7 @@ ideas = {
 			picture = expand_mefo_1
 
 			modifier = {
+				production_factory_max_efficiency_factor = 0.02
 				production_speed_arms_factory_factor = 0.1
 				line_change_production_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.25
@@ -1146,7 +1147,7 @@ ideas = {
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.10
 				political_power_gain = -0.55
-				stability_factor = -0.15
+				stability_factor = -0.1
 			}
 		}
 
@@ -1210,7 +1211,6 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_start_efficiency_factor = 0.05
 				political_power_gain = -0.2
-				stability_factor = 0.05
 			}
 		}
 		
