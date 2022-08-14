@@ -41,6 +41,16 @@ spriteTypes = {
 	}
 	##### FOCUSES #####
 
+	spriteType = {
+		name = "GFX_ITA_Ultranationalism_2"
+		texturefile = "gfx/interface/goals/ita/Ultranationalism_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_equpiment"
+		texturefile = "gfx/interface/goals/coopicons/GOAL_equpiment.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_goal_ita_hungary"
 		textureFile = "gfx/interface/goals/ita/goal_ita_hungary.dds"

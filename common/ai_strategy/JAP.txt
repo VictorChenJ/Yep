@@ -1426,9 +1426,9 @@ JAP_hold_up_in_china = { #We got this far but there are bigger targets to worry 
 	}
 
 	enable = {
-		date > 1941.1.1
+		date > 1941.6.6
 		date < 1945.1.1
-		is_historical_focus_on = no
+		is_historical_focus_on = yes
 		CHI = { has_capitulated = no }
 
 		613 = { # Nanjing

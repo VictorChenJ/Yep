@@ -28,6 +28,27 @@ spriteTypes = {
 	}
 
 	##### FOCUSES #####
+
+	spriteType = {
+		name = "GFX_GER_air_shield"
+		texturefile = "gfx/interface/goals/ger/GER_air_defence.tga"
+	}	
+
+	SpriteType = {
+		name = "GFX_GOAL_litsuwu_line"
+		texturefile = "gfx/interface/goals/coopicons/GOAL_litsuwu_line.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_SOV_nkvd_deportation_2"
+		texturefile = "gfx/interface/goals/soviet/SOV_nkvd_deportation_2.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_GER_arbeitseinsatz"
+		texturefile = "gfx/interface/goals/ger/GER_arbeitsinsatz.tga"
+	}
+
 	SpriteType = {
 		name = "GFX_JAP_the_emperors_wave"
 		texturefile = "gfx/interface/goals/jap/JAP_the_emperors_wave.dds"

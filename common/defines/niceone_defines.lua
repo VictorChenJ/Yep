@@ -23,14 +23,14 @@
 	NDefines.NAI.PLAN_ATTACK_MIN_ORG_FACTOR_MED = 0.7;		-- (LOW,MED,HIGH) corresponds to the plan execution agressiveness level.
 	NDefines.NAI.PLAN_ATTACK_MIN_STRENGTH_FACTOR_MED = 0.3;
 	NDefines.NAI.PLAN_ATTACK_MIN_ORG_FACTOR_HIGH = 0.2;
-	NDefines.NAI.MAIN_ENEMY_FRONT_IMPORTANCE = 5;			-- How much extra focus the AI should put on who it considers to be its current main enemy.
-	NDefines.NAI.EASY_TARGET_FRONT_IMPORTANCE = 6;		-- How much extra focus the AI should put on who it considers to be the easiest target.
+	NDefines.NAI.MAIN_ENEMY_FRONT_IMPORTANCE = 7;			-- How much extra focus the AI should put on who it considers to be its current main enemy.
+	NDefines.NAI.EASY_TARGET_FRONT_IMPORTANCE = 2;		-- How much extra focus the AI should put on who it considers to be the easiest target.
 	NDefines.NAI.MICRO_POCKET_SIZE = 5;						-- Pockets with a size equal to or lower than this will be mocroed by the AI, for efficiency.
 	NDefines.NAI.DESPERATE_AI_WEAK_UNIT_STR_LIMIT = 0.35;					-- ai will increase number of units assigned to break from desperate situations when units are start falling lower than this str limit
 	NDefines.NAI.DESPERATE_AI_MIN_ORG_BEFORE_ATTACK = 0.3;				-- ai will wait for this much org to attack an enemy prov in desperate situations
 	NDefines.NAI.DESPERATE_AI_MIN_ORG_BEFORE_MOVE = 0.06;				-- ai will wait for this much org to move in desperate situations
 	NDefines.NAI.DESPERATE_ATTACK_WITHOUT_ORG_WHEN_NO_ORG_GAIN = 140;	-- if ai can't regain enough org to attack in this many hours, it will go truly desperate and attack anyway (still has to wait for move org)
 	NDefines.NAI.NAVY_PREFERED_MAX_SIZE = 25;					-- AI will generally attempt to merge fleets into this size, but as a soft limit.
-	NDefines.NAI.MAX_MICRO_ATTACKS_PER_ORDER = 9;					-- AI goes through its orders and checks if there are situations to take advantage of was at three
+	NDefines.NAI.MAX_MICRO_ATTACKS_PER_ORDER = 10;					-- AI goes through its orders and checks if there are situations to take advantage of was at three
 	
 	NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 40;				-- This much progress can be saved while not having a focus selected

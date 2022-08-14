@@ -1,0 +1,67 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+SIA_build_early_civ = {
+	allowed = {
+		original_tag = SIA
+	}
+	enable = {
+		date < 1937.10.15
+		has_war = no
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 16
+	}
+}
+
+SIA_build_army = {
+	allowed = {
+		original_tag = SIA
+	}
+	enable = {
+		date < 1939.10.15
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_build_armies
+		value = 70
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
+	}
+}
+
+SIA_Japan_Friend = {
+	allowed = {
+		original_tag = SIA
+	}
+	enable = {
+		date > 1939.1.1
+	}
+	ai_strategy = {
+		type = befriend
+		id = JAP
+		value = 100
+	}
+
+}

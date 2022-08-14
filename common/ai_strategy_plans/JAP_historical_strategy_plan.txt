@@ -72,6 +72,9 @@ JAP_historical_plan = {
 		JAP_promote_rivalry
 		JAP_mitsubishi_deal
 		JAP_mitsubishi_factories
+		JAP_imperial_factories
+		JAP_imperial_economy
+		JAP_imperial_mines
 		JAP_sign_tripartite_pact
 		JAP_agility_focus #January 30 1940	
 		JAP_first_air_fleet #April 10 1940	
@@ -92,6 +95,7 @@ JAP_historical_plan = {
 		JAP_fortify_coastlines
 		JAP_develop_chinese_aluminium
 		JAP_develop_chinese_steel
+		JAP_dockyards_in_china
 		JAP_strike_the_west
 		JAP_zaibatsus_control_2
 		JAP_pierce_the_giant

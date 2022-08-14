@@ -1,0 +1,115 @@
+CHI_nationalist_historical_plan = {
+	name = "Nationalist China historical plan"
+	desc = "Essentially historical behavior for Nationalist China"
+
+	allowed = {
+		original_tag = CHI
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = CHI_ai_behavior
+					option = DEFAULT
+				}	
+			}
+			has_country_flag = CHI_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = CHI_ai_behavior
+				option = HISTORICAL
+			}
+		}
+	}
+	abort = {
+		JAP = {
+			OR = {
+				has_completed_focus = JAP_strengthen_civilian_government
+				has_completed_focus = JAP_the_unthinkable_option
+				has_completed_focus = JAP_support_the_kodoha_faction
+				is_in_faction_with = ENG 
+				is_in_faction_with = USA 
+			}
+		}
+		has_game_rule = {
+			rule = CHI_ai_behavior
+			option = ALTERNATE
+		}
+		MAN = {
+			is_subject = no
+		}
+	}
+
+	ai_national_focuses = {
+		CHI_expand_the_academica_sinica
+		CHI_chemical_research_institute
+		CHI_war_of_national_liberation
+		CHI_war_of_anti_imperialism
+		CHI_industrial_evacuations
+		CHI_scorched_earth_tactics
+
+		CHI_invite_foreign_investors
+		CHI_unified_industrial_planning #March 10 1936
+		CHI_rural_reconstruction_movement #July 30 1936
+		CHI_mining_commission #August 30 1940
+		CHI_develop_the_hanyan_arsenal
+		CHI_financial_policy
+		CHI_price_controls
+		CHI_taiyuan_arsenal
+		CHI_reform_the_national_bank
+		CHI_military_affairs_commission
+		CHI_army_reform
+		CHI_bureau_of_investigation_and_statistics
+		CHI_whampoa_military_academy
+		CHI_three_principles_of_the_people
+		CHI_nationalism
+		CHI_foreign_threats
+		CHI_united_front
+		CHI_grain_tax
+		CHI_60_divisions_plan
+
+		CHI_war_of_resistance
+		CHI_forced_loans
+		CHI_british_cooperation
+		CHI_burma_road
+		CHI_construction_battalions
+		CHI_fighter_purchases
+		CHI_fortify_shanghai
+		CHI_camco
+		CHI_mission_to_the_us
+		CHI_hire_chennault
+		CHI_the_hump
+		CHI_ledo_road
+		CHI_modern_logistics
+		CHI_mission_to_germany
+		CHI_give_falkenhausen_citizenship
+		CHI_closer_ties_with_germany
+		CHI_chinese_general_staff
+		CHI_wargaming_division
+		CHI_the_chinese_hindenburg_line
+		CHI_mission_to_the_soviet_union
+		CHI_invite_soviet_advisers
+		CHI_the_soviet_volunteer_group
+		CHI_land_tax_reform
+		CHI_democracy
+		CHI_executive_yuan
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		CHI_soong_mei_ling = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

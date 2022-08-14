@@ -1,5 +1,15 @@
 ﻿l_english:
  #### FOCUSES ####
+ ITA_Convert_WW1_Weapons_and_equipment:0 " Convert WW1 Weapons and Equipment"
+ ITA_Convert_WW1_Weapons_and_equipment_desc:0 "We can convert old WW1 equipment and weapons and re-use them instead of letting them rot in storages."
+ ITA_6_Million_Bayonets:0 "8 Million Bayonets"
+ ITA_6_Million_Bayonets_desc:0 "Mussolini believes Italy can field a giant army that will crush any opposition with numbers."
+ ITA_Modern_Celere_Divisions:0 "Modern Celere Division"
+ ITA_Modern_Celere_Divisions_desc:0 "Our fast division is terribly obsolete, horses shall be replaced with trucks and the unit will recieve more firepower."
+ ITA_Heavy_Infantry_Division:0 "Heavy Infantry Division"
+ ITA_Heavy_Infantry_Division_desc:0 "Italy lacks a modern infantry division, more firepower and punching power is needed."
+ ITA_afrikakorps:0 "Deutsches Afrikakorps!"
+ ITA_afrikakorps_desc:0 ""
  ITA_expand_marines:0 "Expanded Navy"
  ITA_expand_marines_desc:0 "The final big expansion of our mighty navy, shall make it available for us to make strategic amphibious invasions."
  ITA_denounce_the_sanctions:0 "Denounce the Sanctions"
