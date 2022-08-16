@@ -107,9 +107,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_attack_factor = -0.4
-				army_defence_factor = -0.4
-				mobilization_speed = -0.4
+				army_attack_factor = -0.37
+				army_defence_factor = -0.37
+				mobilization_speed = -0.37
 			}
 
 		}
@@ -131,9 +131,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_attack_factor = -0.28
-				army_defence_factor = -0.28
-				mobilization_speed = -0.28
+				army_attack_factor = -0.27
+				army_defence_factor = -0.27
+				mobilization_speed = -0.27
 			}
 
 		}
@@ -462,6 +462,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				resistance_decay_on_our_occupied_states = -0.05
+				resistance_growth_on_our_occupied_states = 0.15
 				army_core_defence_factor = 0.15
 			}
 		}
@@ -542,8 +544,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_command_power = 10
-				experience_gain_army = 0.05
+				max_command_power = 15
+				experience_gain_army = 0.09
 			}
 		}
 		

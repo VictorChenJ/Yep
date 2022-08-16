@@ -863,6 +863,48 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			JAP = {
+			608 = {
+				add_resistance = 25
+			}
+			621 = {
+				add_resistance = 20
+			}
+			615 = {
+				add_resistance = 25
+
+			}
+			614 = {
+				add_resistance = 20
+
+			}
+			597 = {
+				add_resistance = 20
+			} 
+			598 = {
+				add_resistance = 20
+
+			}
+			607 = {
+				add_resistance = 20
+
+			}
+			606 = {
+				add_resistance = 20
+
+			}
+			613= {
+				add_resistance = 40
+
+			}
+			744 = {
+				add_resistance = 20
+			}
+			746 = {
+				add_resistance = 20
+
+			}
+		}
 			add_ideas = CHI_war_of_resistance
 		}
 	}
@@ -930,6 +972,48 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			JAP = {
+				608 = {
+					add_resistance = 15
+				}
+				621 = {
+					add_resistance = 10
+				}
+				615 = {
+					add_resistance = 15
+	
+				}
+				614 = {
+					add_resistance = 10
+	
+				}
+				597 = {
+					add_resistance = 10
+				} 
+				598 = {
+					add_resistance = 10
+	
+				}
+				607 = {
+					add_resistance = 10
+	
+				}
+				606 = {
+					add_resistance = 10
+	
+				}
+				613= {
+					add_resistance = 30
+	
+				}
+				744 = {
+					add_resistance = 10
+				}
+				746 = {
+					add_resistance = 10
+	
+				}
+			}
 			if = {
 				limit = {
 					has_idea = CHI_war_of_resistance
@@ -1007,6 +1091,48 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			JAP = {
+				608 = {
+					add_resistance = 25
+				}
+				621 = {
+					add_resistance = 20
+				}
+				615 = {
+					add_resistance = 25
+	
+				}
+				614 = {
+					add_resistance = 20
+	
+				}
+				597 = {
+					add_resistance = 20
+				} 
+				598 = {
+					add_resistance = 20
+	
+				}
+				607 = {
+					add_resistance = 20
+	
+				}
+				606 = {
+					add_resistance = 20
+	
+				}
+				613= {
+					add_resistance = 40
+	
+				}
+				744 = {
+					add_resistance = 20
+				}
+				746 = {
+					add_resistance = 20
+	
+				}
+			}
 			add_ideas = CHI_war_of_anti_imperialism
 		}
 	}
@@ -1410,6 +1536,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			army_experience = 5
 			unlock_decision_category_tooltip = CHI_army_reform
 		}
 	}
@@ -1442,7 +1569,7 @@
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			army_experience = 5
+			army_experience = 10
 			add_stability = 0.1
 			custom_effect_tooltip = available_political_advisor
 			if = {
@@ -1517,6 +1644,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			army_experience = 10
 			every_army_leader = {
 				add_planning = 1
 			}

@@ -6234,7 +6234,7 @@
 						}
 					}
 					743 = {
-						add_compliance = 50
+						add_compliance = 10
 					}				
 				}
 				if = {
@@ -6247,7 +6247,7 @@
 						}
 					}
 					608 = {
-						add_compliance = 50
+						add_compliance = 10
 					}				
 				}
 				if = {
@@ -6260,7 +6260,7 @@
 						}
 					}
 					614 = {
-						add_compliance = 50
+						add_compliance = 10
 					}				
 				}
 				if = {
@@ -6273,7 +6273,7 @@
 						}
 					}
 					597 = {
-						add_compliance = 50
+						add_compliance = 10
 					}				
 				}
 				if = {
@@ -6286,10 +6286,10 @@
 						}
 					}
 					743 = {
-						add_compliance = 50
+						add_compliance = 10
 					}				
 				}
-				custom_effect_tooltip = "We will prepare a defence force of 10 divisions to defend our teritorial gains in China, this will also give us 50 compliance in all northern chinese states"
+				custom_effect_tooltip = "We will prepare a defence force of 10 divisions to defend our teritorial gains in China, this will also give us 10 compliance in all northern chinese states"
 					hidden_effect = {	
 						division_template = {
 							name = "Chinese Defense Force"
@@ -6504,7 +6504,7 @@
 							is_controlled_by = ROOT
 						}
 					}
-					add_compliance = 20
+					add_compliance = 10
 				}		
 			}
 		}
@@ -6537,7 +6537,7 @@
 	
 			completion_reward = {
 				614 = {
-					add_resistance = 7
+					add_resistance = 20
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
@@ -6546,7 +6546,7 @@
 					}				
 				}	
 				607 = {
-					add_resistance = 7
+					add_resistance = 20
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
@@ -6555,7 +6555,7 @@
 					}				
 				}	
 				597 = {
-					add_resistance = 7
+					add_resistance = 15
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
@@ -6791,7 +6791,7 @@
 						}
 					}
 					743 = {
-						add_compliance = 20
+						add_compliance = 10
 					}				
 				}
 				if = {
@@ -6804,7 +6804,7 @@
 						}
 					}
 					608 = {
-						add_compliance = 20
+						add_compliance = 10
 					}				
 				}
 				if = {
@@ -6817,7 +6817,7 @@
 						}
 					}
 					614 = {
-						add_compliance = 20
+						add_compliance = 10
 					}				
 				}
 				if = {
@@ -6830,7 +6830,7 @@
 						}
 					}
 					597 = {
-						add_compliance = 20
+						add_compliance = 10
 					}				
 				}
 				if = {
@@ -6843,7 +6843,7 @@
 						}
 					}
 					743 = {
-						add_compliance = 20
+						add_compliance = 10
 					}				
 				}
 				
@@ -6971,7 +6971,7 @@
 	
 			completion_reward = {
 				613 = {
-					add_resistance = 8
+					add_resistance = 12
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
@@ -6980,7 +6980,7 @@
 					}				
 				}	
 				596 = {
-					add_resistance = 8
+					add_resistance = 12
 					add_extra_state_shared_building_slots =3
 					add_building_construction = {
 						type = dockyard
@@ -6989,7 +6989,7 @@
 					}				
 				}
 				592 = {
-					add_resistance = 8
+					add_resistance = 12
 					add_extra_state_shared_building_slots =3
 					add_building_construction = {
 						type = dockyard
@@ -7218,7 +7218,7 @@
 							type = industrial_complex
 							level = 2
 						}
-						add_resistance = 10
+						add_resistance = 15
 					}
 					random_owned_controlled_state = {
 						limit = {
@@ -7251,7 +7251,7 @@
 							type = industrial_complex
 							level = 2
 						}
-						add_resistance = 10
+						add_resistance = 15
 					}
 					random_owned_controlled_state = {
 						limit = {
@@ -7283,7 +7283,7 @@
 							type = industrial_complex
 							level = 2
 						}
-						add_resistance = 10
+						add_resistance = 15
 					}
 					random_owned_controlled_state = {
 						limit = {
@@ -7339,7 +7339,7 @@
 						is_core_of = CHI
 						is_controlled_by = JAP
 					}
-					add_resistance = 5
+					add_resistance = 10
 				}
 			}	
 		}

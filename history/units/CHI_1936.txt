@@ -44,36 +44,28 @@ units = {
 		location = 9843
 		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "38 Bubing Shi"
 		location = 10068
 		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "132 Bubing Shi"
 		location = 11761
 		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "143 Bubing Shi"
 		location = 4140
 		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
-	}
-
-	division = {
-		name = "143 Bubing Shi"
-		location = 4140
-		division_template = "Sanjiao Jun"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 1
 	}
 
 	division = {
@@ -81,14 +73,7 @@ units = {
 		location = 4140
 		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
-	}
-	division = {
-		name = "143 Bubing Shi"
-		location = 4140
-		division_template = "Sanjiao Jun"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 1
 	}
 
 	division = {
@@ -96,7 +81,22 @@ units = {
 		location = 4140
 		division_template = "Sanjiao Jun"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "143 Bubing Shi"
+		location = 4140
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "143 Bubing Shi"
+		location = 4140
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
 	}
 	division = {
 		name = "143 Bubing Shi"

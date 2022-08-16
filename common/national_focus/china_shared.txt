@@ -237,6 +237,7 @@ shared_focus = {
 
 	completion_reward = {
 		every_army_leader = {
+			add_defense = 1
 			add_planning = 1
 		}
 		add_ideas = CHI_chinese_general_staff
@@ -290,7 +291,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = CHI_mission_to_germany
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -331,7 +332,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = CHI_closer_ties_with_germany
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -381,13 +382,13 @@ shared_focus = {
 					limit = {
 						has_completed_focus = CHI_closer_ties_with_germany
 					}
-					add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 100 producer = GER }
+					add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 450 producer = GER }
 				}
 				if = {
 					limit = {
 						has_completed_focus = CHI_rapprochement_with_soviet_union
 					}
-					add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 100 producer = SOV }
+					add_equipment_to_stockpile = { type = light_tank_equipment_1 amount = 450 producer = SOV }
 				}
 			}
 			else = {
@@ -403,13 +404,13 @@ shared_focus = {
 					limit = {
 						has_completed_focus = CHI_closer_ties_with_germany
 					}
-					add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 100 producer = GER  variant_name = "Panzer I Ausf. A"} 
+					add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 450 producer = GER  variant_name = "Panzer I Ausf. A"} 
 				}
 				if = {
 					limit = {
 						has_completed_focus = CHI_rapprochement_with_soviet_union
 					}
-					add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 100 producer = SOV variant_name = "T-26TU mod. 1933" }
+					add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 450 producer = SOV variant_name = "T-26TU mod. 1933" }
 				}
 			}
 		}
@@ -425,7 +426,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = CHI_purchase_tanks
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -463,7 +464,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = CHI_purchase_tanks
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -486,10 +487,10 @@ shared_focus = {
 			limit = {
 				has_state_flag = CHI_tank_plant_AF
 			}
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = arms_factory
-				level = 2
+				level = 4
 				instant_build = yes
 			}
 		}
@@ -505,10 +506,10 @@ shared_focus = {
 					include_locked = yes
 				}
 			}
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = arms_factory
-				level = 2
+				level = 4
 				instant_build = yes
 			}
 			set_state_flag = CHI_tank_plant_AF
@@ -524,7 +525,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = CHI_purchase_tanks
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -591,6 +592,8 @@ shared_focus = {
 					regiments = {
 						light_armor = { x = 0 y = 0 }
 						light_armor = { x = 0 y = 1 }
+						light_armor = { x = 0 y = 2 }
+						light_armor = { x = 0 y = 3 }
 			
 						motorized = { x = 1 y = 0 }
 						motorized = { x = 1 y = 1 }
@@ -745,6 +748,10 @@ shared_focus = {
 							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_equipment_1 = { creator = \"GER\" } }" 
 							owner = ROOT
 						}
+						create_unit = {
+							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_equipment_1 = { creator = \"GER\" } }" 
+							owner = ROOT
+						}
 					}
 				}
 				if = {
@@ -754,6 +761,10 @@ shared_focus = {
 					capital_scope = {
 						create_unit = {
 							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_equipment_1 = { creator = \"SOV\" } }" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_equipment_1 = { creator = \"GER\" } }" 
 							owner = ROOT
 						}
 					}
@@ -769,6 +780,10 @@ shared_focus = {
 							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_chassis_1 = { creator = \"GER\" version_name = \"Panzer I Ausf. A\"} }" 
 							owner = ROOT
 						}
+						create_unit = {
+							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_equipment_1 = { creator = \"GER\" } }" 
+							owner = ROOT
+						}
 					}
 				}
 				if = {
@@ -778,6 +793,10 @@ shared_focus = {
 					capital_scope = {
 						create_unit = {
 							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_chassis_1 = { creator = \"SOV\" version_name = \"T-26TU mod. 1933\"} }" 
+							owner = ROOT
+						}
+						create_unit = {
+							division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0 force_equipment_variants = { light_tank_equipment_1 = { creator = \"GER\" } }" 
 							owner = ROOT
 						}
 					}
@@ -798,7 +817,7 @@ shared_focus = {
 	y = 4
 	relative_position_id = CHI_purchase_tanks
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -842,7 +861,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = CHI_purchase_tanks
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -884,7 +903,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = CHI_purchase_tanks
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -1034,7 +1053,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = CHI_mission_to_the_soviet_union
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -1613,6 +1632,8 @@ shared_focus = {
 	completion_reward = {
 		every_army_leader = {
 			add_logistics = 1
+			add_defense = 1
+			add_attack = 1
 		}
 		add_ideas = CHI_modern_logistics
 		add_tech_bonus = {
@@ -2624,7 +2645,7 @@ shared_focus = {
 			set_state_flag = CHI_needed_for_burma_road
 		}
 		set_variable = { CHI_burma_road_current_level = 2 }
-		add_offsite_building = { type = arms_factory level = 2 }
+		add_offsite_building = { type = arms_factory level = 3 }
 	}
 }
 
@@ -2711,7 +2732,7 @@ shared_focus = {
 			set_state_flag = CHI_needed_for_ledo_road
 		}
 		set_variable = { CHI_ledo_road_current_level = 1 }
-		add_offsite_building = { type = arms_factory level = 2 }
+		add_offsite_building = { type = arms_factory level = 3 }
 	}
 }
 
@@ -2986,7 +3007,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = CHI_the_hump
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1

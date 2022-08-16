@@ -1,5 +1,14 @@
 ﻿l_english:
  #### FOCUSES ####
+ JAP_hold_china:0 "Hold China"
+ JAP_develop_the_coastlines:0 "Develop Coastlines"
+ JAP_develop_beijing:0 "Develop Beijing"
+ JAP_chinese_sweatshops:0 "Chinese Sweatshops"
+ JAP_new_roads_and_telegraph_lines:0 "New Roads and Telegraph Line"
+ JAP_dockyards_in_china:0 "Dockyards in China"
+ JAP_reeducation_centers:0 "Reeducation Centers"
+ JAP_boku_tai_detachments:0 "Boku Tai Detachments"
+
  JAP_the_emperors_wave:0 "The Emperors Wave"
  JAP_outline_of_the_new_economic_order:0 "Outline of The New Economic Order"
  JAP_zaibatsus_control:0 "Leave The Commercial Code Untouched"

@@ -630,7 +630,6 @@ ideas = {
 
 			modifier = {
 				conscription = 0.02
-				resistance_target = -0.10
 			}
 		}
 		

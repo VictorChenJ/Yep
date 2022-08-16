@@ -35,7 +35,7 @@ CHI_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
-		value = 45
+		value = 0
 	}
 
 	ai_strategy = {
@@ -155,32 +155,32 @@ CHI_befriend = {
 	}
 
 	ai_strategy = {
-		type = befriend
+		type = alliance
 		id = RAJ
 		value = 50
 	}
 	ai_strategy = {
-		type = befriend
+		type = alliance
 		id = FRA
 		value = 40
 	}
 	ai_strategy = {
-		type = befriend
+		type = alliance
 		id = SOV
 		value = 50
 	}
 	ai_strategy = {
-		type = befriend
+		type = alliance
 		id = MON
 		value = 50
 	}
 	ai_strategy = {
-		type = befriend
+		type = alliance
 		id = RAJ
 		value = 50
 	}
 	ai_strategy = {
-		type = befriend
+		type = alliance
 		id = ENG
 		value = 50
 	}
@@ -228,16 +228,16 @@ CHI_armored_production = {
 CHI_highered_armored_production = {
 	allowed = { original_tag = CHI }
 	enable = {
-		num_of_military_factories > 109
+		num_of_military_factories > 55
 	}
 	abort = {
-		num_of_military_factories < 110
+		num_of_military_factories < 45
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 0
+		value = 30
 	}
 }
 
@@ -268,6 +268,80 @@ CHI_dont_mess_with_the_soviets = {
 	ai_strategy = {
 		type = contain
 		id = "SOV"			
+		value = -200
+	}
+}
+
+CHI_dont_mess_with_india = {
+
+	allowed = { original_tag = CHI }
+	enable = {	
+		NOT = { has_war_with = RAJ }
+	}
+	
+	abort = {
+		has_war_with = RAJ
+	}
+
+	ai_strategy = {
+		type = contain
+		id = "RAJ"			
+		value = -200
+	}
+}
+
+
+CHI_dont_mess_with_france = {
+
+	allowed = { original_tag = CHI }
+	enable = {	
+		NOT = { has_war_with = FRA }
+	}
+	
+	abort = {
+		has_war_with = FRA
+	}
+
+	ai_strategy = {
+		type = contain
+		id = "FRA"			
+		value = -200
+	}
+}
+
+
+CHI_dont_mess_with_mongolia = {
+
+	allowed = { original_tag = CHI }
+	enable = {	
+		NOT = { has_war_with = MON }
+	}
+	
+	abort = {
+		has_war_with = MON
+	}
+
+	ai_strategy = {
+		type = contain
+		id = "MON"			
+		value = -200
+	}
+}
+
+CHI_dont_mess_with_england = {
+
+	allowed = { original_tag = CHI }
+	enable = {	
+		NOT = { has_war_with = ENG }
+	}
+	
+	abort = {
+		has_war_with = ENG
+	}
+
+	ai_strategy = {
+		type = contain
+		id = "ENG"			
 		value = -200
 	}
 }
