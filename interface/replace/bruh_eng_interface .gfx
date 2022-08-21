@@ -32,6 +32,41 @@ spriteTypes = {
 	}
 
 	##### FOCUSES #####
+	SpriteType = {
+		name = "GFX_develop_australia"
+		textureFile = "gfx/interface/goals/eng/goal_develop_australia.dds"
+	}
+	SpriteType = {
+		name = "GFX_develop_canada"
+		textureFile = "gfx/interface/goals/eng/goal_develop_canada.dds"
+	}
+	SpriteType = {
+		name = "GFX_develop_south"
+		textureFile = "gfx/interface/goals/eng/goal_develop_south_africa.dds"
+	}
+	SpriteType = {
+		name = "GFX_develop_new_zealand"
+		textureFile = "gfx/interface/goals/eng/goal_develop_new_zealand.dds"
+	}
+	SpriteType = {
+		name = "GFX_develop_raj"
+		textureFile = "gfx/interface/goals/eng/goal_develop_the_raj.dds"
+	}
+
+
+
+
+
+
+	SpriteType = {
+		name = "GFX_goal_civil_defence"
+		textureFile = "gfx/interface/goals/eng/goal_civil_defence.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_chain_home"
+		textureFile = "gfx/interface/goals/eng/goal_chain_home.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_ENG_shadow_scheme"

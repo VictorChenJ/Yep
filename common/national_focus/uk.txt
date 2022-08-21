@@ -549,6 +549,246 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+        id = ENG_civil_defence
+        icon = GFX_goal_civil_defence
+        prerequisite = { focus = radar_focus }
+        x = -2
+        y = 1
+        relative_position_id = radar_focus
+        available = {
+            has_completed_focus = ENG_military_training_act
+            has_war = yes
+        }
+
+        bypass = {
+        }
+
+        cost = 3
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        completion_reward = {
+            125 = {
+                if = {
+                    limit = {
+                        is_controlled_by = ROOT
+                    }
+                    add_building_construction = {
+                        type = bunker
+                        level = 1
+                        province = 296
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = bunker
+                        level = 1
+                        province = 9268
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = bunker
+                        level = 2
+                        province = 9239
+                        instant_build = yes
+                    }
+                }
+            }
+            127 = {
+                if = {
+                    limit = {
+                        is_controlled_by = ROOT
+                    }
+                    add_building_construction = {
+                        type = bunker
+                        level = 1
+                        province = 507
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = bunker
+                        level = 3
+                        province = 11333
+                        instant_build = yes
+                    }
+                }
+            }
+            126 = {
+                if = {
+                    limit = {
+                        is_controlled_by = ROOT
+                    }
+                    add_building_construction = {
+                        type = bunker
+                        level = 3
+                        province = 11333
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = bunker
+                        level = 3
+                        province = 6103
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+
+	focus = {
+        id = chain_home
+        prerequisite = { focus = radar_focus }
+        icon = GFX_goal_chain_home
+        x = 0
+        y = 1
+        relative_position_id = radar_focus
+        cost = 6
+        ai_will_do = {
+            factor = 1
+        }
+
+        available_if_capitulated = yes
+
+        completion_reward = {
+            air_experience = 25
+            add_tech_bonus = {
+                name = chain_home
+                bonus = 0.5
+                uses = 1
+                category = radar_tech
+            }
+            if = {
+                limit = {
+                    123 = {
+                        free_building_slots = {
+                            building = radar_station
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                123 = {
+                    add_building_construction = {
+                        type = radar_station
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    127 = {
+                        free_building_slots = {
+                            building = radar_station
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                127 = {
+                    add_building_construction = {
+                        type = radar_station
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    126 = {
+                        free_building_slots = {
+                            building = radar_station
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                126 = {
+                    add_building_construction = {
+                        type = radar_station
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    857 = {
+                        free_building_slots = {
+                            building = radar_station
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                857 = {
+                    add_building_construction = {
+                        type = radar_station
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    860 = {
+                        free_building_slots = {
+                            building = radar_station
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                860 = {
+                    add_building_construction = {
+                        type = radar_station
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    131 = {
+                        free_building_slots = {
+                            building = radar_station
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                131 = {
+                    add_building_construction = {
+                        type = radar_station
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    136 = {
+                        free_building_slots = {
+                            building = radar_station
+                            size > 0
+                            include_locked = yes
+                        }
+                    }
+                }
+                136 = {
+                    add_building_construction = {
+                        type = radar_station
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
 	
 	focus = {
 		id = shadow_scheme_focus
@@ -2660,6 +2900,54 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ENG_state_visit_to_the_usa
+		icon = GFX_focus_chi_mission_to_the_us
+        prerequisite = { focus = ENG_visit_france }
+        x = 0
+        y = 1
+        relative_position_id = ENG_visit_france
+
+		available = {
+            USA = { has_government = ROOT }
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		cost = 3.88
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+            add_opinion_modifier = { target = USA modifier = democratic_leanings_good }
+            reverse_add_opinion_modifier = { target = USA modifier = democratic_leanings_good }
+            add_political_power = 25
+            USA = { add_political_power = 25 }
+
+			random_owned_controlled_state = {
+				prioritize = { 121 }
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+			}			
+			add_political_power = 100 		
+			USA = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			}		
+		}
+	}
+
+	focus = {
 		id = ENG_domestic_industrial_reforms
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = ENG_bilateral_trade }
@@ -2705,7 +2993,7 @@ focus_tree = {
 		prerequisite = { focus = ENG_visit_france focus = ENG_domestic_industrial_reforms }
 
 		relative_position_id = ENG_bilateral_trade
-		x = 0
+		x = 1
 		y = 2
 		cost = 5
 
@@ -5861,7 +6149,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = uk_asia_focus
-		cost = 5
+		cost = 2.88
 		ai_will_do = {
 			factor = 1
 		}
@@ -6119,7 +6407,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = singapore_focus
-		cost = 5
+		cost = 2.88
 		ai_will_do = {
 			factor = 1
 		}	
@@ -6183,7 +6471,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = sp_landward_forts_focus
-		cost = 10
+		cost = 2.88
 		ai_will_do = {
 			factor = 1
 		}	
@@ -6285,7 +6573,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = hongkong_focus
-		cost = 5
+		cost = 2.88
 		ai_will_do = {
 			factor = 1
 		}	
@@ -6335,7 +6623,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = hk_landward_forts_focus
-		cost = 5
+		cost = 2.88
 		ai_will_do = {
 			factor = 1
 		}	
@@ -6395,7 +6683,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = hk_air_focus
-		cost = 5
+		cost = 2.88
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -6586,7 +6874,7 @@ focus_tree = {
 				is_in_faction_with = ROOT
 			}
 		} 
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_develop_raj
 		x = -3
 		y = 1
 		relative_position_id = uk_commonwealth_focus
@@ -6840,7 +7128,7 @@ focus_tree = {
 				}
 			}
 		}
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_develop_australia
 		x = 1
 		y = 1
 		relative_position_id = uk_commonwealth_focus
@@ -7037,7 +7325,7 @@ focus_tree = {
 				}
 			}
 		}
-		icon = GFX_goal_generic_construction
+		icon = GFX_develop_new_zealand
 		x = 0
 		y = 1
 		relative_position_id = uk_australia_focus
@@ -7234,7 +7522,7 @@ focus_tree = {
 				}
 			}
 		}
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_develop_canada
 		x = 0
 		y = 3
 		relative_position_id = uk_commonwealth_focus
@@ -7430,7 +7718,7 @@ focus_tree = {
 				}
 			}
 		}
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_develop_south
 		x = 2
 		y = 3
 		relative_position_id = uk_commonwealth_focus
